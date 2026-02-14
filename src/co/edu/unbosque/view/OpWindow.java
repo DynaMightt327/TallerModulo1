@@ -39,18 +39,18 @@ public class OpWindow extends JFrame {
 		this.setLayout(null);
 		this.getContentPane().setBackground(Color.decode("#ECE7FE"));
 
-		// ==PANEL SUPERIOR==
+		// ==PANEL==
 		
 		topPanel = new JPanel();
 		topPanel.setLayout(null);
 		topPanel.setBounds(0, 0, 880, 120);
-		topPanel.setBackground(Color.decode("#9B89D2"));
+		topPanel.setBackground(Color.decode("#B7AADF"));
 		add(topPanel);
 		
 		centerPanel = new JPanel();
 		centerPanel.setLayout(null);
 		centerPanel.setBounds(60, 180, 750, 380);
-		centerPanel.setBackground(Color.decode("#9B89D2"));
+		centerPanel.setBackground(Color.decode("#B7AADF"));
 		add(centerPanel);
 
 		// ==BOTONES==
