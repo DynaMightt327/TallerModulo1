@@ -131,4 +131,102 @@ public class OpWindow extends JFrame {
 	
 	}
 
+	public JPanel getTopPanel() {
+		return topPanel;
+	}
+
+	public void setTopPanel(JPanel topPanel) {
+		this.topPanel = topPanel;
+	}
+
+	public JPanel getCenterPanel() {
+		return centerPanel;
+	}
+
+	public void setCenterPanel(JPanel centerPanel) {
+		this.centerPanel = centerPanel;
+	}
+
+	public JButton getbCreate() {
+		return bCreate;
+	}
+
+	public void setbCreate(JButton bCreate) {
+		this.bCreate = bCreate;
+	}
+
+	public JButton getbRead() {
+		return bRead;
+	}
+
+	public void setbRead(JButton bRead) {
+		this.bRead = bRead;
+	}
+
+	public JButton getbUpload() {
+		return bUpload;
+	}
+
+	public void setbUpload(JButton bUpload) {
+		this.bUpload = bUpload;
+	}
+
+	public JButton getbDeleted() {
+		return bDeleted;
+	}
+
+	public void setbDeleted(JButton bDeleted) {
+		this.bDeleted = bDeleted;
+	}
+
+/*	public JLabel getTitle() {
+		return title;
+	}*/
+
+	public void setTitle(JLabel title) {
+		this.title = title;
+	}
+
+	public JLabel getLogo() {
+		return logo;
+	}
+
+	public void setLogo(JLabel logo) {
+		this.logo = logo;
+	}
+
+	public JLabel getlCreate() {
+		return lCreate;
+	}
+
+	public void setlCreate(JLabel lCreate) {
+		this.lCreate = lCreate;
+	}
+
+	public JLabel getlRead() {
+		return lRead;
+	}
+
+	public void setlRead(JLabel lRead) {
+		this.lRead = lRead;
+	}
+
+	public JLabel getlUpload() {
+		return lUpload;
+	}
+
+	public void setlUpload(JLabel lUpload) {
+		this.lUpload = lUpload;
+	}
+
+	public JLabel getlDeleted() {
+		return lDeleted;
+	}
+
+	public void setlDeleted(JLabel lDeleted) {
+		this.lDeleted = lDeleted;
+	}
+	
+	
+
 }

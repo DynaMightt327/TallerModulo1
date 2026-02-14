@@ -57,4 +57,30 @@ public class PrincipalWindow extends JFrame {
 
 	}
 
+	/*public JLabel getBackground() {
+		return background;
+	}*/ //No sé pq molesta este label :|
+
+	public void setBackground(JLabel background) {
+		this.background = background;
+	}
+
+	public JButton getStart() {
+		return start;
+	}
+
+	public void setStart(JButton start) {
+		this.start = start;
+	}
+
+	/*public JLabel getTitle() {
+		return title;
+	}*/
+
+	public void setTitle(JLabel title) {
+		this.title = title;
+	}
+	
+	
+
 }
