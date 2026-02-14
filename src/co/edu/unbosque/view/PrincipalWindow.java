@@ -25,12 +25,11 @@ public class PrincipalWindow extends JFrame {
 	public void initComponents() {
 		// CONFIGURACION DE LA VENTANA
 		this.setTitle("Lucky j3");
-		this.setBounds(250, 30, 880, 600);
+		this.setBounds(250, 30, 880, 650);
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 		this.setResizable(false);
 		this.setLayout(null);
 		this.getContentPane().setBackground(Color.decode("#FFFFFF"));
-		
 
 		// ===TITULOS===
 		title = new JLabel("Lucky j3");
@@ -48,7 +47,7 @@ public class PrincipalWindow extends JFrame {
 		// ===IMAGEN DE FONDO===
 		ImageIcon backgroundImage = new ImageIcon(getClass().getResource("background.png"));
 		background = new JLabel(backgroundImage);
-		background.setBounds(0, 0, 900, 600);
+		background.setBounds(0, 0, 900, 650);
 		background.setLayout(null);
 		background.setOpaque(true);
 		add(background);
