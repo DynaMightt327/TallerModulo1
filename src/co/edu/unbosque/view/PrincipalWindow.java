@@ -15,7 +15,6 @@ public class PrincipalWindow extends JFrame {
 	private JLabel background;
 	private JButton start;
 	private JLabel title;
-	private JLabel info;
 
 	public PrincipalWindow() {
 		initComponents();
@@ -33,16 +32,10 @@ public class PrincipalWindow extends JFrame {
 
 		// ===TITULOS===
 		title = new JLabel("Lucky j3");
-		title.setBounds(350, 220, 400, 100);
+		title.setBounds(350, 220, 200, 100);
 		title.setForeground(Color.decode("#18093E"));
 		title.setFont(new Font("Agency FB", Font.BOLD, 70));
 		add(title);
-		
-		info = new JLabel("Tienda de detalles");
-		info.setBounds(375, 320, 300, 30);
-		info.setForeground(Color.decode("#090316"));
-		info.setFont(new Font("Agency FB", Font.BOLD, 25));
-		add(info);
 
 		// ===IMAGEN DE FONDO===
 		ImageIcon backgroundImage = new ImageIcon(getClass().getResource("background.png"));
@@ -51,15 +44,17 @@ public class PrincipalWindow extends JFrame {
 		background.setLayout(null);
 		background.setOpaque(true);
 		add(background);
-		
+
 		// === BOTON DE INICIO DE LA APP===
 		start = new JButton("Tienda de detalles");
-		start.setBounds(320, 370, 150, 50);
-		start.setBackground(Color.decode("#A663F8"));
+		start.setBounds(360, 330, 170, 50);
+		start.setFont(new Font("Agency FB", Font.BOLD, 22));
+		start.setBackground(Color.decode("#130344"));
+		start.setForeground(Color.decode("#FFFFFF"));
 		start.setBorderPainted(false);
-		start.setFont(new Font("Agency FB", Font.BOLD, 20));
-		add(start);
-		
+		start.setFocusPainted(false);
+		background.add(start);
+
 	}
 
 }
