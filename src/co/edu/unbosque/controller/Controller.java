@@ -239,6 +239,18 @@ public class Controller implements ActionListener {
 		// ==BOTONES DE GUARDAR
 		ccw.getbSave().addActionListener(this);
 		ccw.getbSave().setActionCommand("boton_save_candy");
+		
+		cww.getbSave().addActionListener(this);
+		cww.getbSave().setActionCommand("boton_save_woman");
+		
+		cpw.getbSave().addActionListener(this);
+		cpw.getbSave().setActionCommand("boton_save_personal");
+		
+		csw.getbSave().addActionListener(this);
+		csw.getbSave().setActionCommand("boton_save_simple");
+		
+		ccpw.getbSave().addActionListener(this);
+		ccpw.getbSave().setActionCommand("boton_save_cup");
 
 	}
 
