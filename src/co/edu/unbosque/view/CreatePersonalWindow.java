@@ -50,7 +50,7 @@ public class CreatePersonalWindow extends JFrame{
 
 	public void initComponents() {
 		// CONFIGURACION DE LA VENTANA
-		this.setTitle("Lucky j3 - seleccionar producto para crear");
+		this.setTitle("Lucky j3");
 		this.setBounds(250, 30, 880, 650);
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 		this.setResizable(false);

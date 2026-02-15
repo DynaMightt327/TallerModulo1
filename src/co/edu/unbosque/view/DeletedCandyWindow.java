@@ -23,7 +23,7 @@ public class DeletedCandyWindow extends JFrame {
 	private JLabel title;
 	private JLabel logo;
 	private JButton delete;
-	private JTextField posicion;
+	private JTextField posicionDulce;
 
 	public DeletedCandyWindow() {
 		initComponents();
@@ -33,7 +33,7 @@ public class DeletedCandyWindow extends JFrame {
 	public void initComponents() {
 
 		// CONFIGURACION DE LA VENTANA
-		this.setTitle("Lucky j3 - eliminar ancheta de dulce");
+		this.setTitle("Lucky j3");
 		this.setBounds(520, 250, 350, 250);
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 		this.setResizable(false);
@@ -67,12 +67,12 @@ public class DeletedCandyWindow extends JFrame {
 		title.setFont(new Font("Agency FB", Font.BOLD, 19));
 		add(title);
 
-		posicion = new JTextField();
-		posicion.setBounds(143, 80, 50, 50);
-		posicion.setFont(new Font("Agency FB", Font.BOLD, 30));
-		posicion.setForeground(Color.decode("#18093E"));
-		posicion.setBorder(null);
-		add(posicion);
+		posicionDulce = new JTextField();
+		posicionDulce.setBounds(143, 80, 50, 50);
+		posicionDulce.setFont(new Font("Agency FB", Font.BOLD, 30));
+		posicionDulce.setForeground(Color.decode("#18093E"));
+		posicionDulce.setBorder(null);
+		add(posicionDulce);
 		
 
 	}
@@ -118,11 +118,11 @@ public class DeletedCandyWindow extends JFrame {
 	}
 
 	public JTextField getPosicion() {
-		return posicion;
+		return posicionDulce;
 	}
 
 	public void setPosicion(JTextField posicion) {
-		this.posicion = posicion;
+		this.posicionDulce = posicion;
 	}
 
 	
