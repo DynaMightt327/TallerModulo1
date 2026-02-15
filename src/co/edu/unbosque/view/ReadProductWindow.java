@@ -9,8 +9,9 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JTextField;
 
-public class CreateProductWindow extends JFrame {
+public class ReadProductWindow extends JFrame {
 
 	private JButton bBack;
 	private JPanel topPanel;
@@ -28,14 +29,13 @@ public class CreateProductWindow extends JFrame {
 	private JButton bAnchetaSencilla;
 	private JButton bPocilloPersonalizable;
 
-	public CreateProductWindow() {
+	public ReadProductWindow() {
 		initComponents();
 		setVisible(false);
 	}
-
 	public void initComponents() {
 		// CONFIGURACION DE LA VENTANA
-		this.setTitle("Lucky j3");
+		this.setTitle("Lucky j3 - seleccionar producto para mostrar");
 		this.setBounds(250, 30, 880, 650);
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 		this.setResizable(false);
@@ -113,7 +113,7 @@ public class CreateProductWindow extends JFrame {
 		logo.setFont(new Font("Agency FB", Font.BOLD, 70));
 		topPanel.add(logo);
 
-		ImageIcon imageInfo = new ImageIcon(getClass().getResource("infocrear.JPG"));
+		ImageIcon imageInfo = new ImageIcon(getClass().getResource("infoleer.JPG"));
 		lInfo = new JLabel(imageInfo);
 		lInfo.setBounds(30, 390, 200, 160);
 		add(lInfo);
@@ -152,20 +152,20 @@ public class CreateProductWindow extends JFrame {
 		this.topPanel = topPanel;
 	}
 
-	public JLabel getLogo() {
-		return logo;
-	}
-
-	public void setLogo(JLabel logo) {
-		this.logo = logo;
-	}
-
 	public JPanel getCenterPanel() {
 		return centerPanel;
 	}
 
 	public void setCenterPanel(JPanel centerPanel) {
 		this.centerPanel = centerPanel;
+	}
+
+	public JLabel getLogo() {
+		return logo;
+	}
+
+	public void setLogo(JLabel logo) {
+		this.logo = logo;
 	}
 
 	public JLabel getlImageOne() {
@@ -182,6 +182,22 @@ public class CreateProductWindow extends JFrame {
 
 	public void setlImageTwo(JLabel lImageTwo) {
 		this.lImageTwo = lImageTwo;
+	}
+
+	public JLabel getlTortle() {
+		return lTortle;
+	}
+
+	public void setlTortle(JLabel lTortle) {
+		this.lTortle = lTortle;
+	}
+
+	public JLabel getlInfo() {
+		return lInfo;
+	}
+
+	public void setlInfo(JLabel lInfo) {
+		this.lInfo = lInfo;
 	}
 
 	public JButton getbAnchetaDulce() {

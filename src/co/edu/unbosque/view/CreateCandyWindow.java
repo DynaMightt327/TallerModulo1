@@ -48,7 +48,7 @@ public class CreateCandyWindow extends JFrame {
 
 	public void initComponents() {
 		// CONFIGURACION DE LA VENTANA
-		this.setTitle("Lucky j3");
+		this.setTitle("Lucky j3 - crear ancheta de dulces");
 		this.setBounds(250, 30, 880, 650);
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 		this.setResizable(false);

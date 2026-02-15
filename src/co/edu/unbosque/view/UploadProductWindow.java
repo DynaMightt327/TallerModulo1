@@ -9,33 +9,32 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JTextField;
 
-public class CreateProductWindow extends JFrame {
-
+public class UploadProductWindow extends JFrame {
 	private JButton bBack;
 	private JPanel topPanel;
+	private JLabel logo;
 	private JPanel centerPanel;
 
-	private JLabel logo;
 	private JLabel lImageOne;
 	private JLabel lImageTwo;
-	private JLabel lTortle;
 	private JLabel lInfo;
-
+	private JLabel lTortle;
 	private JButton bAnchetaDulce;
 	private JButton bAnchetaParaMujer;
 	private JButton bAnchetaPersonalizable;
 	private JButton bAnchetaSencilla;
 	private JButton bPocilloPersonalizable;
 
-	public CreateProductWindow() {
+	public UploadProductWindow() {
 		initComponents();
 		setVisible(false);
 	}
 
 	public void initComponents() {
 		// CONFIGURACION DE LA VENTANA
-		this.setTitle("Lucky j3");
+		this.setTitle("Lucky j3 - seleccionar producto para actualizar");
 		this.setBounds(250, 30, 880, 650);
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 		this.setResizable(false);
@@ -64,7 +63,7 @@ public class CreateProductWindow extends JFrame {
 		ImageIcon imagen1 = new ImageIcon(getClass().getResource("dulces.JPG"));
 		JLabel labelImagen1 = new JLabel(imagen1);
 		bAnchetaDulce = new JButton(imagen1);
-		bAnchetaDulce.setBounds(140, 185, 170, 170);
+		bAnchetaDulce.setBounds(140, 165, 170, 170);
 		bAnchetaDulce.setBackground(Color.decode("#B7AADF"));
 		bAnchetaDulce.setFocusPainted(false);
 		bAnchetaDulce.setBorderPainted(false);
@@ -73,7 +72,7 @@ public class CreateProductWindow extends JFrame {
 		ImageIcon imagen2 = new ImageIcon(getClass().getResource("maquillaje.JPG"));
 		JLabel labelImagen2 = new JLabel(imagen2);
 		bAnchetaParaMujer = new JButton(imagen2);
-		bAnchetaParaMujer.setBounds(350, 185, 170, 170);
+		bAnchetaParaMujer.setBounds(350, 165, 170, 170);
 		bAnchetaParaMujer.setBackground(Color.decode("#B7AADF"));
 		bAnchetaParaMujer.setFocusPainted(false);
 		bAnchetaParaMujer.setBorderPainted(false);
@@ -82,7 +81,7 @@ public class CreateProductWindow extends JFrame {
 		ImageIcon imagen3 = new ImageIcon(getClass().getResource("osito.JPG"));
 		JLabel labelImagen3 = new JLabel(imagen3);
 		bAnchetaPersonalizable = new JButton(imagen3);
-		bAnchetaPersonalizable.setBounds(560, 185, 170, 170);
+		bAnchetaPersonalizable.setBounds(560, 165, 170, 170);
 		bAnchetaPersonalizable.setBackground(Color.decode("#B7AADF"));
 		bAnchetaPersonalizable.setFocusPainted(false);
 		bAnchetaPersonalizable.setBorderPainted(false);
@@ -113,9 +112,9 @@ public class CreateProductWindow extends JFrame {
 		logo.setFont(new Font("Agency FB", Font.BOLD, 70));
 		topPanel.add(logo);
 
-		ImageIcon imageInfo = new ImageIcon(getClass().getResource("infocrear.JPG"));
+		ImageIcon imageInfo = new ImageIcon(getClass().getResource("infoact.JPG"));
 		lInfo = new JLabel(imageInfo);
-		lInfo.setBounds(30, 390, 200, 160);
+		lInfo.setBounds(650, 390, 200, 160);
 		add(lInfo);
 
 		// ==IMAGES==
@@ -129,9 +128,9 @@ public class CreateProductWindow extends JFrame {
 		lImageTwo.setBounds(650, 0, 200, 160);
 		topPanel.add(lImageTwo);
 
-		ImageIcon imageTortle = new ImageIcon(getClass().getResource("tortuga2.jpg"));
+		ImageIcon imageTortle = new ImageIcon(getClass().getResource("tortuga1.jpg"));
 		lTortle = new JLabel(imageTortle);
-		lTortle.setBounds(680, 350, 146, 210);
+		lTortle.setBounds(40, 350, 146, 210);
 		add(lTortle);
 
 	}

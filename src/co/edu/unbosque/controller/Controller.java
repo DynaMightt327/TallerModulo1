@@ -6,12 +6,12 @@ import co.edu.unbosque.view.CreateCupWindow;
 import co.edu.unbosque.view.CreatePersonalWindow;
 import co.edu.unbosque.view.CreateSimpleWindow;
 import co.edu.unbosque.view.CreateWomanWindow;
-import co.edu.unbosque.view.DeletedWindow;
+import co.edu.unbosque.view.DeletedProductWindow;
 import co.edu.unbosque.view.OpWindow;
 import co.edu.unbosque.view.PrincipalWindow;
 import co.edu.unbosque.view.CreateProductWindow;
-import co.edu.unbosque.view.ReadWindow;
-import co.edu.unbosque.view.UploadWindow;
+import co.edu.unbosque.view.ReadProductWindow;
+import co.edu.unbosque.view.UploadProductWindow;
 import co.edu.unbosque.model.*;
 
 import java.awt.event.ActionEvent;
@@ -30,9 +30,9 @@ public class Controller implements ActionListener {
 	private CreatePersonalWindow cpw;
 	private CreateCandyWindow ccw;
 	private CreateCupWindow ccpw;
-	private ReadWindow rw;
-	private UploadWindow uw;
-	private DeletedWindow dw;
+	private ReadProductWindow rprw;
+	private UploadProductWindow uprw;
+	private DeletedProductWindow dw;
 	private CreateProductWindow cprw;
 
 	public Controller() {
@@ -43,9 +43,9 @@ public class Controller implements ActionListener {
 		cpw = new CreatePersonalWindow();
 		ccw = new CreateCandyWindow();
 		ccpw = new CreateCupWindow();
-		rw = new ReadWindow();
-		uw = new UploadWindow();
-		dw = new DeletedWindow();
+		rprw = new ReadProductWindow();
+		uprw = new UploadProductWindow();
+		dw = new DeletedProductWindow();
 		cprw = new CreateProductWindow();
 		asignarOyentes();
 	}
@@ -104,12 +104,12 @@ public class Controller implements ActionListener {
 		ccpw.getbBack().setActionCommand("boton_back_cup_create");
 
 		// ==VENTANA LEER==
-		rw.getbBack().addActionListener(this);
-		rw.getbBack().setActionCommand("boton_back_read");
+		rprw.getbBack().addActionListener(this);
+		rprw.getbBack().setActionCommand("boton_back_read");
 
 		// ==VENTANA ACTUALIZAR==
-		uw.getbBack().addActionListener(this);
-		uw.getbBack().setActionCommand("boton_back_upload");
+		uprw.getbBack().addActionListener(this);
+		uprw.getbBack().setActionCommand("boton_back_upload");
 
 		// ==VENTANA ELIMINAR==
 		dw.getbBack().addActionListener(this);
@@ -165,12 +165,12 @@ public class Controller implements ActionListener {
 		}
 		case "boton_read": {
 			ow.setVisible(false);
-			rw.setVisible(true);
+			rprw.setVisible(true);
 			break;
 		}
 		case "boton_upload": {
 			ow.setVisible(false);
-			uw.setVisible(true);
+			uprw.setVisible(true);
 			break;
 		}
 		case "boton_deleted": {
@@ -213,12 +213,12 @@ public class Controller implements ActionListener {
 		}
 
 		case "boton_back_read": {
-			rw.setVisible(false);
+			rprw.setVisible(false);
 			ow.setVisible(true);
 			break;
 		}
 		case "boton_back_upload": {
-			uw.setVisible(false);
+			uprw.setVisible(false);
 			ow.setVisible(true);
 			break;
 		}
