@@ -3,18 +3,18 @@ package co.edu.unbosque.model;
 public class AnchetaSencilla {
 	
 	private int cantidadDeProducto;
-	private boolean tienePocillo;
+	private String tienePocillo;
 	private String nivelDeDecoracion;
 	private String tipoEmpaque;
 	private float precio;
-	private boolean aptaParaEntrega;
+	private String aptaParaEntrega;
 	
 	public AnchetaSencilla() {
 		// TODO Auto-generated constructor stub
 	}
 
-	public AnchetaSencilla(int cantidadDeProducto, boolean tienePocillo, String nivelDeDecoracion, String tipoEmpaque,
-			float precio, boolean aptaParaEntrega) {
+	public AnchetaSencilla(int cantidadDeProducto, String tienePocillo, String nivelDeDecoracion, String tipoEmpaque,
+			float precio, String aptaParaEntrega) {
 		super();
 		this.cantidadDeProducto = cantidadDeProducto;
 		this.tienePocillo = tienePocillo;
@@ -32,11 +32,11 @@ public class AnchetaSencilla {
 		this.cantidadDeProducto = cantidadDeProducto;
 	}
 
-	public boolean isTienePocillo() {
+	public String getTienePocillo() {
 		return tienePocillo;
 	}
 
-	public void setTienePocillo(boolean tienePocillo) {
+	public void setTienePocillo(String tienePocillo) {
 		this.tienePocillo = tienePocillo;
 	}
 
@@ -64,11 +64,11 @@ public class AnchetaSencilla {
 		this.precio = precio;
 	}
 
-	public boolean isAptaParaEntrega() {
+	public String getAptaParaEntrega() {
 		return aptaParaEntrega;
 	}
 
-	public void setAptaParaEntrega(boolean aptaParaEntrega) {
+	public void setAptaParaEntrega(String aptaParaEntrega) {
 		this.aptaParaEntrega = aptaParaEntrega;
 	}
 

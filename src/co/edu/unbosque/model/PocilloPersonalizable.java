@@ -6,7 +6,7 @@ public class PocilloPersonalizable {
 	private String color;
 	private String caracteristicaDePocillo;
 	private int tamanoImpresion;
-	private boolean aptoMicroonda;
+	private String aptoMicroonda;
 	private float precio;
 	
 	public PocilloPersonalizable() {
@@ -14,7 +14,7 @@ public class PocilloPersonalizable {
 	}
 
 	public PocilloPersonalizable(String materialPocillo, String color, String caracteristicaDePocillo,
-			int tamanoImpresion, boolean aptoMicroonda, float precio) {
+			int tamanoImpresion, String aptoMicroonda, float precio) {
 		super();
 		this.materialPocillo = materialPocillo;
 		this.color = color;
@@ -56,11 +56,11 @@ public class PocilloPersonalizable {
 		this.tamanoImpresion = tamanoImpresion;
 	}
 
-	public boolean isAptoMicroonda() {
+	public String getAptoMicroonda() {
 		return aptoMicroonda;
 	}
 
-	public void setAptoMicroonda(boolean aptoMicroonda) {
+	public void setAptoMicroonda(String aptoMicroonda) {
 		this.aptoMicroonda = aptoMicroonda;
 	}
 

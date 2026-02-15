@@ -2,7 +2,7 @@ package co.edu.unbosque.model;
 
 public class AnchetaPersonalizable {
 	
-	private boolean tieneGlobo;
+	private String tieneGlobo;
 	private int maximaCantidadProducto;
 	private String mensajeTarjeta;
 	private String colorElegido;
@@ -13,7 +13,7 @@ public class AnchetaPersonalizable {
 		// TODO Auto-generated constructor stub
 	}
 
-	public AnchetaPersonalizable(boolean tieneGlobo, int maximaCantidadProducto, String mensajeTarjeta,
+	public AnchetaPersonalizable(String tieneGlobo, int maximaCantidadProducto, String mensajeTarjeta,
 			String colorElegido, float precio, String tamano) {
 		super();
 		this.tieneGlobo = tieneGlobo;
@@ -24,11 +24,11 @@ public class AnchetaPersonalizable {
 		this.tamano = tamano;
 	}
 
-	public boolean isTieneGlobo() {
+	public String getTieneGlobo() {
 		return tieneGlobo;
 	}
 
-	public void setTieneGlobo(boolean tieneGlobo) {
+	public void setTieneGlobo(String tieneGlobo) {
 		this.tieneGlobo = tieneGlobo;
 	}
 
