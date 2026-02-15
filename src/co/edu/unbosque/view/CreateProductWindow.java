@@ -10,7 +10,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-public class ProductWindow extends JFrame {
+public class CreateProductWindow extends JFrame {
 
 	private JButton bBack;
 	private JPanel topPanel;
@@ -26,7 +26,7 @@ public class ProductWindow extends JFrame {
 	private JButton bAnchetaSencilla;
 	private JButton bPocilloPersonalizable;
 
-	public ProductWindow() {
+	public CreateProductWindow() {
 		initComponents();
 		setVisible(false);
 	}

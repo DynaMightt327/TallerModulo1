@@ -8,7 +8,7 @@ import co.edu.unbosque.view.CreateWomanWindow;
 import co.edu.unbosque.view.DeletedWindow;
 import co.edu.unbosque.view.OpWindow;
 import co.edu.unbosque.view.PrincipalWindow;
-import co.edu.unbosque.view.ProductWindow;
+import co.edu.unbosque.view.CreateProductWindow;
 import co.edu.unbosque.view.ReadWindow;
 import co.edu.unbosque.view.UploadWindow;
 
@@ -31,7 +31,7 @@ public class Controller implements ActionListener {
 	private ReadWindow rw;
 	private UploadWindow uw;
 	private DeletedWindow dw;
-	private ProductWindow prw;
+	private CreateProductWindow cprw;
 
 	public Controller() {
 		pw = new PrincipalWindow();
@@ -44,7 +44,7 @@ public class Controller implements ActionListener {
 		rw = new ReadWindow();
 		uw = new UploadWindow();
 		dw = new DeletedWindow();
-		prw = new ProductWindow();
+		cprw = new CreateProductWindow();
 		asignarOyentes();
 	}
 
@@ -68,23 +68,23 @@ public class Controller implements ActionListener {
 
 		// ==VENTANA CREAR==
 		
-		prw.getbBack().addActionListener(this);
-		prw.getbBack().setActionCommand("boton_back_product");
+		cprw.getbBack().addActionListener(this);
+		cprw.getbBack().setActionCommand("boton_back_product");
 		
-		prw.getbAnchetaDulce().addActionListener(this);
-		prw.getbAnchetaDulce().setActionCommand("boton_candy_create");
+		cprw.getbAnchetaDulce().addActionListener(this);
+		cprw.getbAnchetaDulce().setActionCommand("boton_candy_create");
 		
-		prw.getbAnchetaParaMujer().addActionListener(this);
-		prw.getbAnchetaParaMujer().setActionCommand("boton_woman_create");
+		cprw.getbAnchetaParaMujer().addActionListener(this);
+		cprw.getbAnchetaParaMujer().setActionCommand("boton_woman_create");
 	
-		prw.getbAnchetaPersonalizable().addActionListener(this);
-		prw.getbAnchetaPersonalizable().setActionCommand("boton_personal_create");
+		cprw.getbAnchetaPersonalizable().addActionListener(this);
+		cprw.getbAnchetaPersonalizable().setActionCommand("boton_personal_create");
 		
-		prw.getbAnchetaSencilla().addActionListener(this);
-		prw.getbAnchetaSencilla().setActionCommand("boton_simple_create");
+		cprw.getbAnchetaSencilla().addActionListener(this);
+		cprw.getbAnchetaSencilla().setActionCommand("boton_simple_create");
 		
-		prw.getbPocilloPersonalizable().addActionListener(this);
-		prw.getbPocilloPersonalizable().setActionCommand("boton_cup_create");
+		cprw.getbPocilloPersonalizable().addActionListener(this);
+		cprw.getbPocilloPersonalizable().setActionCommand("boton_cup_create");
 		
 		cww.getbBack().addActionListener(this);
 		cww.getbBack().setActionCommand("boton_back_woman_create");
@@ -128,32 +128,32 @@ public class Controller implements ActionListener {
 		// ==BOTONES VENTANA CRUD==
 		case "boton_create": {
 			ow.setVisible(false);
-			prw.setVisible(true);
+			cprw.setVisible(true);
 			break;
 		}
 
 		case "boton_woman_create": {
-			prw.setVisible(false);
+			cprw.setVisible(false);
 			cww.setVisible(true);
 			break;
 		}
 		case "boton_simple_create": {
-			prw.setVisible(false);
+			cprw.setVisible(false);
 			csw.setVisible(true);
 			break;
 		}
 		case "boton_personal_create": {
-			prw.setVisible(false);
+			cprw.setVisible(false);
 			cpw.setVisible(true);
 			break;
 		}
 		case "boton_candy_create": {
-			prw.setVisible(false);
+			cprw.setVisible(false);
 			ccw.setVisible(true);
 			break;
 		}
 		case "boton_cup_create": {
-			prw.setVisible(false);
+			cprw.setVisible(false);
 			ccpw.setVisible(true);
 			break;
 		}
@@ -175,34 +175,34 @@ public class Controller implements ActionListener {
 
 		// ==BOTONES DE VOLVER AL CRUD==
 		case "boton_back_product": {
-			prw.setVisible(false);
+			cprw.setVisible(false);
 			ow.setVisible(true);
 			break;
 		}
 
 		case "boton_back_woman_create": {
 			cww.setVisible(false);
-			prw.setVisible(true);
+			cprw.setVisible(true);
 			break;
 		}
 		case "boton_back_simple_create": {
 			csw.setVisible(false);
-			prw.setVisible(true);
+			cprw.setVisible(true);
 			break;
 		}
 		case "boton_back_personal_create": {
 			cpw.setVisible(false);
-			prw.setVisible(true);
+			cprw.setVisible(true);
 			break;
 		}
 		case "boton_back_candy_create": {
 			ccw.setVisible(false);
-			prw.setVisible(true);
+			cprw.setVisible(true);
 			break;
 		}
 		case "boton_back_cup_create": {
 			ccpw.setVisible(false);
-			prw.setVisible(true);
+			cprw.setVisible(true);
 			break;
 		}
 
