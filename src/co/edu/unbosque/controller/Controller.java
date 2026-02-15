@@ -414,7 +414,7 @@ public class Controller implements ActionListener {
 			break;
 		}
 		case "boton_candy_deleted": {
-			dw.setVisible(false);
+			dw.setVisible(true);
 			dcw.setVisible(true);
 			break;
 		}

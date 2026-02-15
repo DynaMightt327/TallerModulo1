@@ -107,28 +107,28 @@ public class OpWindow extends JFrame {
 		title.setFont(new Font("Agency FB", Font.BOLD, 70));
 		centerPanel.add(title);
 		
-		lCreate = new JLabel("CREATE");
-		lCreate.setBounds(150, 280, 80, 30);
+		lCreate = new JLabel("CREAR");
+		lCreate.setBounds(155, 272, 80, 30);
 		lCreate.setForeground(Color.decode("#18093E"));
-		lCreate.setFont(new Font("Agency FB", Font.BOLD, 28));
+		lCreate.setFont(new Font("Agency FB", Font.BOLD, 22));
 		centerPanel.add(lCreate);
 		
-		lRead = new JLabel("READ");
-		lRead.setBounds(300, 280, 80, 30);
+		lRead = new JLabel("MOSTRAR");
+		lRead.setBounds(290, 272, 80, 30);
 		lRead.setForeground(Color.decode("#18093E"));
-		lRead.setFont(new Font("Agency FB", Font.BOLD, 28));
+		lRead.setFont(new Font("Agency FB", Font.BOLD, 22));
 		centerPanel.add(lRead);
 		
-		lUpload = new JLabel("UPLOAD");
-		lUpload.setBounds(430, 280, 80, 30);
+		lUpload = new JLabel("ACTUALIZAR");
+		lUpload.setBounds(420, 272, 100, 30);
 		lUpload.setForeground(Color.decode("#18093E"));
-		lUpload.setFont(new Font("Agency FB", Font.BOLD, 28));
+		lUpload.setFont(new Font("Agency FB", Font.BOLD, 22));
 		centerPanel.add(lUpload);
 		
-		lDeleted = new JLabel("DELETED");
-		lDeleted.setBounds(570, 280, 80, 30);
+		lDeleted = new JLabel("ELIMINAR");
+		lDeleted.setBounds(570, 272, 80, 30);
 		lDeleted.setForeground(Color.decode("#18093E"));
-		lDeleted.setFont(new Font("Agency FB", Font.BOLD, 28));
+		lDeleted.setFont(new Font("Agency FB", Font.BOLD, 22));
 		centerPanel.add(lDeleted);
 		
 		ImageIcon imageOne = new ImageIcon(getClass().getResource("foto.jpg"));
