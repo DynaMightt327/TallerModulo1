@@ -9,18 +9,22 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
-import javax.swing.JTable;
+import javax.swing.JTextArea;
 import javax.swing.table.DefaultTableModel;
 
 public class ReadCandyWindow extends JFrame {
 
-	private JTable tablaDulce;
+	
 	private JLabel lImageOne;
 	private JLabel lImageTwo;
 	private JButton bBack;
 	private JPanel topPanel;
+	private JPanel centerPanel;
 	private JLabel title;
 	private JLabel logo;
+	
+	private JTextArea showInfoCandy;
+	private JScrollPane scrollShowInfoCandy;
 
 	public ReadCandyWindow() {
 		initComponents();
@@ -44,15 +48,21 @@ public class ReadCandyWindow extends JFrame {
 		topPanel.setBackground(Color.decode("#B7AADF"));
 		add(topPanel);
 
-		// ==TABLA INFO==
-		String[] columnas = { "Cantidad Dulces", "Tipos Dulces", "Nivel Dulzor", "Marca Reconocida",
-				"Productos sin azúcar", "Precio" };
-		DefaultTableModel modelo = new DefaultTableModel(columnas, 0);
-		tablaDulce = new JTable(modelo);
-		JScrollPane scroll = new JScrollPane(tablaDulce);
-		scroll.setBounds(60, 220, 750, 300);
-		scroll.setBackground(Color.decode("#B7AADF"));
-		getContentPane().add(scroll);
+		centerPanel = new JPanel();
+		centerPanel.setLayout(null);
+		centerPanel.setBounds(30, 150, 800, 420);
+		centerPanel.setBackground(Color.decode("#B7AADF"));
+		add(centerPanel);
+		
+		//== CAMPO PARA MOSTRAR==
+		showInfoCandy = new JTextArea();
+		showInfoCandy.setBackground(Color.decode("#D6D0E6"));
+		showInfoCandy.setEditable(false);
+
+		scrollShowInfoCandy = new JScrollPane(showInfoCandy);
+		scrollShowInfoCandy.setBounds(50, 100, 700, 300);
+		scrollShowInfoCandy.setBackground(Color.decode("#1F192F"));
+		centerPanel.add(scrollShowInfoCandy);
 
 		// ==BOTONES==
 		bBack = new JButton("VOLVER");
@@ -66,10 +76,10 @@ public class ReadCandyWindow extends JFrame {
 
 		//==LABELS==
 		title = new JLabel("-> Información guardada de regalos dulces");
-		title.setBounds(60, 160, 700, 50);
+		title.setBounds(85, 25, 700, 50);
 		title.setForeground(Color.decode("#18093E"));
 		title.setFont(new Font("Agency FB", Font.BOLD, 40));
-		add(title);
+		centerPanel.add(title);
 		
 		logo = new JLabel("LUCKY J3");
 		logo.setBounds(330, 15, 550, 100);
@@ -87,14 +97,6 @@ public class ReadCandyWindow extends JFrame {
 		lImageTwo = new JLabel(imageTwo);
 		lImageTwo.setBounds(650, 0, 200, 160);
 		topPanel.add(lImageTwo);
-	}
-
-	public JTable getTablaDulce() {
-		return tablaDulce;
-	}
-
-	public void setTablaDulce(JTable tablaDulce) {
-		this.tablaDulce = tablaDulce;
 	}
 
 	public JLabel getlImageOne() {
@@ -127,6 +129,46 @@ public class ReadCandyWindow extends JFrame {
 
 	public void setTopPanel(JPanel topPanel) {
 		this.topPanel = topPanel;
+	}
+
+	public JPanel getCenterPanel() {
+		return centerPanel;
+	}
+
+	public void setCenterPanel(JPanel centerPanel) {
+		this.centerPanel = centerPanel;
+	}
+
+	/*public JLabel getTitle() {
+		return title;
+	}*/
+
+	public void setTitle(JLabel title) {
+		this.title = title;
+	}
+
+	public JLabel getLogo() {
+		return logo;
+	}
+
+	public void setLogo(JLabel logo) {
+		this.logo = logo;
+	}
+
+	public JTextArea getShowInfoCandy() {
+		return showInfoCandy;
+	}
+
+	public void setShowInfoCandy(JTextArea showInfoCandy) {
+		this.showInfoCandy = showInfoCandy;
+	}
+
+	public JScrollPane getScrollShowInfoCandy() {
+		return scrollShowInfoCandy;
+	}
+
+	public void setScrollShowInfoCandy(JScrollPane scrollShowInfoCandy) {
+		this.scrollShowInfoCandy = scrollShowInfoCandy;
 	}
 
 }
