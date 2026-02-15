@@ -29,7 +29,7 @@ public class CreateSimpleWindow extends JFrame {
 	private JTextField tCantidadProducto;
 
 	private JLabel lTienePocillo;
-	private JTextField tTienePocillo;
+	private JComboBox<String> tTienePocillo;
 
 	private JLabel lNivelDeco;
 	private JTextField tNivelDeco;
@@ -138,7 +138,7 @@ public class CreateSimpleWindow extends JFrame {
 		lTienePocillo.setForeground(Color.decode("#18093E"));
 		centerPanel.add(lTienePocillo);
 
-		tTienePocillo = new JTextField();
+		tTienePocillo = new JComboBox<>(new String[] { "...", "Si", "No" });
 		tTienePocillo.setBounds(73, 170, 164, 28);
 		tTienePocillo.setFont(new Font("Agency FB", Font.BOLD, 15));
 		tTienePocillo.setForeground(Color.decode("#18093E"));
@@ -287,11 +287,12 @@ public class CreateSimpleWindow extends JFrame {
 		this.lTienePocillo = lTienePocillo;
 	}
 
-	public JTextField gettTienePocillo() {
+
+	public JComboBox<String> gettTienePocillo() {
 		return tTienePocillo;
 	}
 
-	public void settTienePocillo(JTextField tTienePocillo) {
+	public void settTienePocillo(JComboBox<String> tTienePocillo) {
 		this.tTienePocillo = tTienePocillo;
 	}
 

@@ -508,7 +508,7 @@ public class Controller implements ActionListener {
 		case "boton_save_simple": {
 			try {
 				int cantidadDeProducto = Integer.parseInt(csw.gettCantidadProducto().getText());
-				String tienePocillo = csw.gettTienePocillo().getText();
+				String tienePocillo = (String) csw.gettTienePocillo().getSelectedItem();
 				String nivelDeDecoracion = csw.gettNivelDeco().getText();
 				String tipoEmpaque = csw.gettTipoEmpaque().getText();
 				int precio = Integer.parseInt(csw.gettPrecio().getText());
