@@ -293,27 +293,87 @@ public class Controller implements ActionListener {
 		case "boton_candy_read": {
 			rprw.setVisible(false);
 			rcw.setVisible(true);
+			
+			StringBuilder sb = new StringBuilder();
+			if(listaAnchetaDulce.isEmpty()) {
+				sb.append("No hay anchetas dulces registradas. \n");
+			} else {
+				for (int i = 0; i < listaAnchetaDulce.size(); i++) {
+					AnchetaDulce a = listaAnchetaDulce.get(i);
+					sb.append("Ancheta #").append(i + 1).append(":\n");
+					sb.append(a.toString()).append("\n\n");
+				}
+			}
+			
+			rcw.getShowInfoCandy().setText(sb.toString());
+			rcw.getShowInfoCandy().setCaretPosition(0);
+			
 			break;
 		}
 
 		case "boton_personal_read": {
 			rprw.setVisible(false);
 			rpw.setVisible(true);
+			
+			StringBuilder sb = new StringBuilder();
+			if(listaAnchetaPersonalizable.isEmpty()) {
+				sb.append("No hay anchetas personalizadas registradas. \n");
+			} else {
+				for (int i = 0; i < listaAnchetaPersonalizable.size(); i++) {
+					AnchetaPersonalizable a = listaAnchetaPersonalizable.get(i);
+					sb.append("Ancheta #").append(i + 1).append(":\n");
+					sb.append(a.toString()).append("\n\n");
+				}
+			}
+			
 			break;
 		}
 		case "boton_simple_read": {
 			rprw.setVisible(false);
 			rsw.setVisible(true);
+			
+			StringBuilder sb = new StringBuilder();
+			if(listaAnchetaSencilla.isEmpty()) {
+				sb.append("No hay anchetas sencilla registradas. \n");
+			} else {
+				for (int i = 0; i < listaAnchetaSencilla.size(); i++) {
+					AnchetaSencilla a = listaAnchetaSencilla.get(i);
+					sb.append("Ancheta #").append(i + 1).append(":\n");
+					sb.append(a.toString()).append("\n\n");
+				}
+			}
 			break;
 		}
 		case "boton_woman_read": {
 			rprw.setVisible(false);
 			rww.setVisible(true);
+			
+			StringBuilder sb = new StringBuilder();
+			if(listaAnchetaMujer.isEmpty()) {
+				sb.append("No hay anchetas de mujeres registradas. \n");
+			} else {
+				for (int i = 0; i < listaAnchetaMujer.size(); i++) {
+					AnchetaParaMujer a = listaAnchetaMujer.get(i);
+					sb.append("Ancheta #").append(i + 1).append(":\n");
+					sb.append(a.toString()).append("\n\n");
+				}
+			}
 			break;
 		}
 		case "boton_cup_read": {
 			rprw.setVisible(false);
 			rcpw.setVisible(true);
+			
+			StringBuilder sb = new StringBuilder();
+			if(listaPocilloPersonalizable.isEmpty()) {
+				sb.append("No hay pocillo personalizable registradas. \n");
+			} else {
+				for (int i = 0; i < listaPocilloPersonalizable.size(); i++) {
+					PocilloPersonalizable a = listaPocilloPersonalizable.get(i);
+					sb.append("pocillo #").append(i + 1).append(":\n");
+					sb.append(a.toString()).append("\n\n");
+				}
+			}
 			break;
 		}
 		//-----------------------------------
@@ -569,7 +629,6 @@ public class Controller implements ActionListener {
 		}
 	}
 	
-
 
 	public void iniciar() {
 		pw.setVisible(true);

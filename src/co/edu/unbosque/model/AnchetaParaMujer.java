@@ -75,7 +75,7 @@ public class AnchetaParaMujer {
 	@Override
 	public String toString() {
 		return "Ancheta Para Mujer: \nestilo: " + estilo + "\naccesorios: " + accesorio + "\npaleta de colores:" + paletaColor
-				+ "\nenfoque: " + enfoque + "\nprecio: " + precio + "\nnivel de detalle: " + nivelDeDetalle;
+				+ "\nenfoque: " + enfoque + "\nprecio: " + precio + "\nnivel de detalle: " + nivelDeDetalle + "\nrecuerde que cada tarda 24 horas" + "\n---------------------";
 	}
 	
 	

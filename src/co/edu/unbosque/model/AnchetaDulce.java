@@ -76,7 +76,7 @@ public class AnchetaDulce {
 	public String toString() {
 		return "Ancheta Dulce: \ncantidad de dulces: " + cantidadDulce + "\ntipos de Dulces: " + tiposDeDulce + "\nnivel de dulzor: "
 				+ nivelDulzor + "\nincluye marca reconocida: " + incluyeMarcaReconocida + "\ntiene producto sin azucar: "
-				+ tieneProductoSinAzucar + "\nprecio: " + precio;
+				+ tieneProductoSinAzucar + "\nprecio: " + precio + "\nrecuerde que cada tarda 24 horas" + "\n---------------------";
 	}
 	
 	

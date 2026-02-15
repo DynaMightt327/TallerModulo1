@@ -76,7 +76,7 @@ public class AnchetaSencilla {
 	public String toString() {
 		return "Ancheta Sencilla: \ncantidad de productos: " + cantidadDeProducto + "\ntiene pocillo: " + tienePocillo
 				+ "\nnivel de decoracion: " + nivelDeDecoracion + "\ntipo de empaque: " + tipoEmpaque + "\nprecio: " + precio
-				+ "\napta para la entrega: " + aptaParaEntrega;
+				+ "\napta para la entrega: " + aptaParaEntrega + "\nrecuerde que cada tarda 24 horas" + "\n---------------------";
 	}
 	
 	
