@@ -466,6 +466,80 @@ public class Controller implements ActionListener {
 			}
 			break;
 
+		} 
+		case "boton_save_woman": {
+			try {
+				String estilo = cww.gettEstilo().getText();
+				String accesorio = cww.gettAccesorio().getText();
+				String paletaColor = cww.gettPaletaColor().getText();
+				String enfoque = cww.gettEnfoque().getText();
+				int precio = Integer.parseInt(cww.gettPrecio().getText());
+				
+				AnchetaParaMujer anchetaParaMujer = new AnchetaParaMujer(estilo, accesorio, paletaColor, enfoque, precio, enfoque);
+				JOptionPane.showMessageDialog(null, "Ancheta creada: \n\n" + anchetaParaMujer.toString());
+				
+			} catch (NumberFormatException ex) {
+				JOptionPane.showMessageDialog(null, "Error en el ingreso de datos, intente de nuevo",
+						"Error de formarto", JOptionPane.ERROR_MESSAGE);
+				// TODO: handle exception
+			}
+			break;
+			
+		}
+		case "boton_save_personal": {
+			try {
+				String tieneGlobo = cpw.gettTieneGlobo().getText();
+				int maximaCantidadProducto = Integer.parseInt(cpw.gettMaximaCantidadProducto().getText());
+				String mensajeTarjeta = cpw.gettMensajeTarjeta().getText();
+				String colorElegido = cpw.gettColorElegido().getText();
+				int precio = Integer.parseInt(cpw.gettPrecio().getText());
+				
+				AnchetaPersonalizable anchetaPersonalizable = new AnchetaPersonalizable(tieneGlobo, maximaCantidadProducto, mensajeTarjeta, colorElegido, precio, colorElegido);
+				JOptionPane.showMessageDialog(null, "Ancheta creada: \n\n" + anchetaPersonalizable.toString());
+				
+			} catch (NumberFormatException ex) {
+				JOptionPane.showMessageDialog(null, "Error en el ingreso de datos, intente de nuevo",
+						"Error de formarto", JOptionPane.ERROR_MESSAGE);
+				// TODO: handle exception
+			}
+			break;
+			
+		}
+		case "boton_save_simple": {
+			try {
+				int cantidadDeProducto = Integer.parseInt(csw.gettCantidadProducto().getText());
+				String tienePocillo = csw.gettTienePocillo().getText();
+				String nivelDeDecoracion = csw.gettNivelDeco().getText();
+				String tipoEmpaque = csw.gettTipoEmpaque().getText();
+				int precio = Integer.parseInt(csw.gettPrecio().getText());
+				String aptaParaEntrega = csw.gettAptaParaEntrega().getText();
+				
+				AnchetaSencilla anchetaSencilla = new AnchetaSencilla(cantidadDeProducto, tienePocillo, nivelDeDecoracion, tipoEmpaque, precio, aptaParaEntrega);
+				JOptionPane.showMessageDialog(null, "Ancheta creada: \n\n" + anchetaSencilla.toString());
+				
+			} catch (NumberFormatException ex) {
+				JOptionPane.showMessageDialog(null, "Error en el ingreso de datos, intente de nuevo",
+						"Error de formarto", JOptionPane.ERROR_MESSAGE);
+				// TODO: handle exception
+			}
+			break;
+			
+		}
+		case "boton_save_cup": {
+			try {
+			String materialPocillo = ccpw.gettMaterial().getText();
+			String color = ccpw.gettColor().getText();
+			String caracteristicaDePocillo = ccpw.gettCaracteristica().getText();
+			int tamanoImpresion = Integer.parseInt(ccpw.gettTamanoImpresion().getText());
+			String aptoMicroondas = ccpw.gettAptoMicro().getText();
+			int precio = Integer.parseInt(ccpw.gettPrecio().getText());
+			
+			PocilloPersonalizable pocilloPersonalizable = new PocilloPersonalizable(materialPocillo, color, caracteristicaDePocillo, tamanoImpresion, aptoMicroondas, precio);
+			} catch(NumberFormatException ex) {
+				JOptionPane.showMessageDialog(null, "Error en el ingreso de datos, intente de nuevo",
+						"Error de formarto", JOptionPane.ERROR_MESSAGE);
+			}
+			break;
 		}
 		default:
 			break;

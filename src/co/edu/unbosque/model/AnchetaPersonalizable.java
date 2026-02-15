@@ -6,7 +6,7 @@ public class AnchetaPersonalizable {
 	private int maximaCantidadProducto;
 	private String mensajeTarjeta;
 	private String colorElegido;
-	private float precio;
+	private int precio;
 	private String tamano;
 	
 	public AnchetaPersonalizable() {
@@ -14,7 +14,7 @@ public class AnchetaPersonalizable {
 	}
 
 	public AnchetaPersonalizable(String tieneGlobo, int maximaCantidadProducto, String mensajeTarjeta,
-			String colorElegido, float precio, String tamano) {
+			String colorElegido, int precio, String tamano) {
 		super();
 		this.tieneGlobo = tieneGlobo;
 		this.maximaCantidadProducto = maximaCantidadProducto;
@@ -60,7 +60,7 @@ public class AnchetaPersonalizable {
 		return precio;
 	}
 
-	public void setPrecio(float precio) {
+	public void setPrecio(int precio) {
 		this.precio = precio;
 	}
 

@@ -6,14 +6,14 @@ public class AnchetaParaMujer {
 	private String accesorio;
 	private String paletaColor;
 	private String enfoque;
-	private float precio;
+	private int precio;
 	private String nivelDeDetalle;
 	
 	public AnchetaParaMujer() {
 		// TODO Auto-generated constructor stub
 	}
 
-	public AnchetaParaMujer(String estilo, String accesorio, String paletaColor, String enfoque, float precio,
+	public AnchetaParaMujer(String estilo, String accesorio, String paletaColor, String enfoque, int precio,
 			String nivelDeDetalle) {
 		super();
 		this.estilo = estilo;
@@ -60,7 +60,7 @@ public class AnchetaParaMujer {
 		return precio;
 	}
 
-	public void setPrecio(float precio) {
+	public void setPrecio(int precio) {
 		this.precio = precio;
 	}
 

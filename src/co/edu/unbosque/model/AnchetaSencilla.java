@@ -6,7 +6,7 @@ public class AnchetaSencilla {
 	private String tienePocillo;
 	private String nivelDeDecoracion;
 	private String tipoEmpaque;
-	private float precio;
+	private int precio;
 	private String aptaParaEntrega;
 	
 	public AnchetaSencilla() {
@@ -14,7 +14,7 @@ public class AnchetaSencilla {
 	}
 
 	public AnchetaSencilla(int cantidadDeProducto, String tienePocillo, String nivelDeDecoracion, String tipoEmpaque,
-			float precio, String aptaParaEntrega) {
+			int precio, String aptaParaEntrega) {
 		super();
 		this.cantidadDeProducto = cantidadDeProducto;
 		this.tienePocillo = tienePocillo;
@@ -60,7 +60,7 @@ public class AnchetaSencilla {
 		return precio;
 	}
 
-	public void setPrecio(float precio) {
+	public void setPrecio(int precio) {
 		this.precio = precio;
 	}
 

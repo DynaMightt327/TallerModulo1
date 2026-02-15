@@ -7,14 +7,14 @@ public class PocilloPersonalizable {
 	private String caracteristicaDePocillo;
 	private int tamanoImpresion;
 	private String aptoMicroonda;
-	private float precio;
+	private int precio;
 	
 	public PocilloPersonalizable() {
 		// TODO Auto-generated constructor stub
 	}
 
 	public PocilloPersonalizable(String materialPocillo, String color, String caracteristicaDePocillo,
-			int tamanoImpresion, String aptoMicroonda, float precio) {
+			int tamanoImpresion, String aptoMicroonda, int precio) {
 		super();
 		this.materialPocillo = materialPocillo;
 		this.color = color;
@@ -68,7 +68,7 @@ public class PocilloPersonalizable {
 		return precio;
 	}
 
-	public void setPrecio(float precio) {
+	public void setPrecio(int precio) {
 		this.precio = precio;
 	}
 
