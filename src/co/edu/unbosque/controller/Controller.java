@@ -26,6 +26,8 @@ import co.edu.unbosque.model.*;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
+
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import javax.swing.*;
@@ -38,6 +40,12 @@ public class Controller implements ActionListener {
 	private AnchetaPersonalizable anchetaPersonalizable;
 	private AnchetaSencilla anchetaSencilla;
 	private PocilloPersonalizable pocilloPersonalizable;
+	
+	private ArrayList<AnchetaDulce> listaAnchetaDulce = new ArrayList<>();
+	private ArrayList<AnchetaParaMujer> listaAnchetaMujer = new ArrayList<>();
+	private ArrayList<AnchetaPersonalizable> listaAnchetaPersonalizable = new ArrayList<>();
+	private ArrayList<AnchetaSencilla> listaAnchetaSencilla = new ArrayList<>();
+	private ArrayList<PocilloPersonalizable> listaPocilloPersonalizable = new ArrayList<>();
 	
 	private PrincipalWindow pw;
 	private OpWindow ow;
@@ -455,6 +463,7 @@ public class Controller implements ActionListener {
 				
 					AnchetaDulce anchetaDulce = new AnchetaDulce(cantidad, tipos, nivel, marcaStr, siAzucarStr, precio);
 					JOptionPane.showMessageDialog(null, "Ancheta creada: \n\n" + anchetaDulce.toString());
+					listaAnchetaDulce.add(anchetaDulce);
 				}
 
 
@@ -477,6 +486,7 @@ public class Controller implements ActionListener {
 				
 				AnchetaParaMujer anchetaParaMujer = new AnchetaParaMujer(estilo, accesorio, paletaColor, enfoque, precio, enfoque);
 				JOptionPane.showMessageDialog(null, "Ancheta creada: \n\n" + anchetaParaMujer.toString());
+				listaAnchetaMujer.add(anchetaParaMujer);
 				
 			} catch (NumberFormatException ex) {
 				JOptionPane.showMessageDialog(null, "Error en el ingreso de datos, intente de nuevo",
@@ -496,6 +506,7 @@ public class Controller implements ActionListener {
 				
 				AnchetaPersonalizable anchetaPersonalizable = new AnchetaPersonalizable(tieneGlobo, maximaCantidadProducto, mensajeTarjeta, colorElegido, precio, colorElegido);
 				JOptionPane.showMessageDialog(null, "Ancheta creada: \n\n" + anchetaPersonalizable.toString());
+				listaAnchetaPersonalizable.add(anchetaPersonalizable);
 				
 			} catch (NumberFormatException ex) {
 				JOptionPane.showMessageDialog(null, "Error en el ingreso de datos, intente de nuevo",
@@ -516,6 +527,7 @@ public class Controller implements ActionListener {
 				
 				AnchetaSencilla anchetaSencilla = new AnchetaSencilla(cantidadDeProducto, tienePocillo, nivelDeDecoracion, tipoEmpaque, precio, aptaParaEntrega);
 				JOptionPane.showMessageDialog(null, "Ancheta creada: \n\n" + anchetaSencilla.toString());
+				listaAnchetaSencilla.add(anchetaSencilla);
 				
 			} catch (NumberFormatException ex) {
 				JOptionPane.showMessageDialog(null, "Error en el ingreso de datos, intente de nuevo",
@@ -535,6 +547,9 @@ public class Controller implements ActionListener {
 			int precio = Integer.parseInt(ccpw.gettPrecio().getText());
 			
 			PocilloPersonalizable pocilloPersonalizable = new PocilloPersonalizable(materialPocillo, color, caracteristicaDePocillo, tamanoImpresion, aptoMicroondas, precio);
+			JOptionPane.showMessageDialog(null, "Ancheta creada: \n\n" + pocilloPersonalizable.toString());
+			listaPocilloPersonalizable.add(pocilloPersonalizable);
+			
 			} catch(NumberFormatException ex) {
 				JOptionPane.showMessageDialog(null, "Error en el ingreso de datos, intente de nuevo",
 						"Error de formarto", JOptionPane.ERROR_MESSAGE);
