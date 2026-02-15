@@ -168,6 +168,7 @@ public class CreateCandyWindow extends JFrame {
 
 		tMarca = new JComboBox<>(new String[] { "...", "Si", "No" });
 		tMarca.setBounds(340, 110, 164, 28);
+		tMarca.setBorder(null);
 		centerPanel.add(tMarca);
 
 		lProductoSinAzucar = new JLabel("Tiene productos sin azucar?");
@@ -178,6 +179,7 @@ public class CreateCandyWindow extends JFrame {
 
 		tProductoSinAzucar = new JComboBox<>(new String[] { "...", "Si", "No" });
 		tProductoSinAzucar.setBounds(340, 170, 164, 28);
+		tProductoSinAzucar.setBorder(null);
 		centerPanel.add(tProductoSinAzucar);
 
 		lPrecio = new JLabel("Precio");

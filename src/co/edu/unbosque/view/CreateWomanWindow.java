@@ -5,6 +5,7 @@ import java.awt.Font;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -21,6 +22,7 @@ public class CreateWomanWindow extends JFrame {
 	private JLabel lImageOne;
 	private JLabel lImageTwo;
 	private JLabel lTitle;
+	private JLabel partner;
 	
 	private JLabel lEstilo;
 	private JTextField tEstilo;
@@ -35,7 +37,7 @@ public class CreateWomanWindow extends JFrame {
 	private JTextField tPrecio;
 	
 	private JLabel lNivelDeDetalle;
-	private JTextField tNivelDetalle;
+	private JComboBox<String> tNivelDetalle;
 	
 	private JLabel lPaletaColor;
 	private JTextField tPaletaColor;
@@ -80,7 +82,7 @@ public class CreateWomanWindow extends JFrame {
 		add(bBack);
 		
 		bSave = new JButton("GUARDAR");
-		bSave.setBounds(640, 320, 130, 40);
+		bSave.setBounds(220, 340, 130, 40);
 		bSave.setFont(new Font("Agency FB", Font.BOLD, 22));
 		bSave.setBackground(Color.decode("#130344"));
 		bSave.setForeground(Color.decode("#ECE7FE"));
@@ -113,9 +115,14 @@ public class CreateWomanWindow extends JFrame {
 		lImageTwo.setBounds(650, 0, 200, 160);
 		topPanel.add(lImageTwo);
 		
+		ImageIcon imageInfo = new ImageIcon(getClass().getResource("parejaa.jpg"));
+		partner = new JLabel(imageInfo);
+		partner.setBounds(550, 100, 215, 255);
+		centerPanel.add(partner);
+		
 		//==ESPACIOS DE TEXTO==
 		lEstilo = new JLabel("Estilo");
-		lEstilo.setBounds(128, 80, 150, 30);
+		lEstilo.setBounds(134, 80, 150, 30);
 		lEstilo.setFont(new Font("Agency FB", Font.BOLD, 22));
 		lEstilo.setForeground(Color.decode("#18093E"));
 		centerPanel.add(lEstilo);
@@ -128,7 +135,7 @@ public class CreateWomanWindow extends JFrame {
 		centerPanel.add(tEstilo);
 
 		lAccesorio = new JLabel("Accesorio");
-		lAccesorio.setBounds(128, 140, 150, 30);
+		lAccesorio.setBounds(110, 140, 150, 30);
 		lAccesorio.setFont(new Font("Agency FB", Font.BOLD, 22));
 		lAccesorio.setForeground(Color.decode("#18093E"));
 		centerPanel.add(lAccesorio);
@@ -172,7 +179,7 @@ public class CreateWomanWindow extends JFrame {
 		lNivelDeDetalle.setForeground(Color.decode("#18093E"));
 		centerPanel.add(lNivelDeDetalle);
 		
-		tNivelDetalle = new JTextField();
+		tNivelDetalle = new JComboBox<>(new String[] { "...", "Bajo", "Medio", "Alto" });
 		tNivelDetalle.setBounds(340, 170, 164, 28);
 		tNivelDetalle.setFont(new Font("Agency FB", Font.BOLD, 15));
 		tNivelDetalle.setForeground(Color.decode("#18093E"));
@@ -323,12 +330,40 @@ public class CreateWomanWindow extends JFrame {
 		this.lNivelDeDetalle = lNivelDetalle;
 	}
 
-	public JTextField gettNivelDetalle() {
+	public JButton getbSave() {
+		return bSave;
+	}
+
+	public void setbSave(JButton bSave) {
+		this.bSave = bSave;
+	}
+
+	public JLabel getPartner() {
+		return partner;
+	}
+
+	public void setPartner(JLabel partner) {
+		this.partner = partner;
+	}
+
+	public JLabel getlNivelDeDetalle() {
+		return lNivelDeDetalle;
+	}
+
+	public void setlNivelDeDetalle(JLabel lNivelDeDetalle) {
+		this.lNivelDeDetalle = lNivelDeDetalle;
+	}
+
+	public JComboBox<String> gettNivelDetalle() {
 		return tNivelDetalle;
 	}
 
-	public void settNivelDetalle(JTextField tNivelDetalle) {
+	public void settNivelDetalle(JComboBox<String> tNivelDetalle) {
 		this.tNivelDetalle = tNivelDetalle;
+	}
+
+	public JLabel getlPrecio() {
+		return lPrecio;
 	}
 
 	public JLabel getlPaletaColor() {

@@ -6,6 +6,7 @@ import java.awt.Font;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -22,6 +23,7 @@ public class CreateSimpleWindow extends JFrame {
 	private JLabel lImageOne;
 	private JLabel lImageTwo;
 	private JLabel lTitle;
+	private JLabel partner;
 
 	private JLabel lCantidadProducto;
 	private JTextField tCantidadProducto;
@@ -39,7 +41,7 @@ public class CreateSimpleWindow extends JFrame {
 	private JTextField tPrecio;
 
 	private JLabel lAptaParaEntrega;
-	private JTextField tAptaParaEntrega;
+	private JComboBox<String> tAptaParaEntrega;
 
 	public CreateSimpleWindow() {
 		initComponents();
@@ -79,7 +81,7 @@ public class CreateSimpleWindow extends JFrame {
 		add(bBack);
 
 		bSave = new JButton("GUARDAR");
-		bSave.setBounds(640, 320, 130, 40);
+		bSave.setBounds(220, 340, 130, 40);
 		bSave.setFont(new Font("Agency FB", Font.BOLD, 22));
 		bSave.setBackground(Color.decode("#130344"));
 		bSave.setForeground(Color.decode("#ECE7FE"));
@@ -110,6 +112,11 @@ public class CreateSimpleWindow extends JFrame {
 		lImageTwo = new JLabel(imageTwo);
 		lImageTwo.setBounds(650, 0, 200, 160);
 		topPanel.add(lImageTwo);
+		
+		ImageIcon imageInfo = new ImageIcon(getClass().getResource("parejaa.jpg"));
+		partner = new JLabel(imageInfo);
+		partner.setBounds(550, 100, 215, 255);
+		centerPanel.add(partner);
 
 		// ==ESPACIOS DE TEXTO==
 		lCantidadProducto = new JLabel("Cantidad de productos");
@@ -183,7 +190,7 @@ public class CreateSimpleWindow extends JFrame {
 		lAptaParaEntrega.setForeground(Color.decode("#18093E"));
 		centerPanel.add(lAptaParaEntrega);
 
-		tAptaParaEntrega = new JTextField();
+		tAptaParaEntrega = new JComboBox<>(new String[] { "...", "Si", "No" });
 		tAptaParaEntrega.setBounds(340, 230, 164, 28);
 		tAptaParaEntrega.setFont(new Font("Agency FB", Font.BOLD, 15));
 		tAptaParaEntrega.setForeground(Color.decode("#18093E"));
@@ -344,13 +351,22 @@ public class CreateSimpleWindow extends JFrame {
 		this.lAptaParaEntrega = lAptaParaEntrega;
 	}
 
-	public JTextField gettAptaParaEntrega() {
+	public JLabel getPartner() {
+		return partner;
+	}
+
+	public void setPartner(JLabel partner) {
+		this.partner = partner;
+	}
+
+	public JComboBox<String> gettAptaParaEntrega() {
 		return tAptaParaEntrega;
 	}
 
-	public void settAptaParaEntrega(JTextField tAptaParaEntrega) {
+	public void settAptaParaEntrega(JComboBox<String> tAptaParaEntrega) {
 		this.tAptaParaEntrega = tAptaParaEntrega;
 	}
 
+	
 	
 }

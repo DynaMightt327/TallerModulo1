@@ -6,6 +6,7 @@ import java.awt.Font;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -21,6 +22,7 @@ public class CreateCupWindow extends JFrame {
 	private JLabel lImageOne;
 	private JLabel lImageTwo;
 	private JLabel lTitle;
+	private JLabel partner;
 
 	private JLabel lMaterial;
 	private JTextField tMaterial;
@@ -35,7 +37,7 @@ public class CreateCupWindow extends JFrame {
 	private JTextField tTamanoImpresion;
 
 	private JLabel lAptoMicro;
-	private JTextField tAptoMicro;
+	private JComboBox<String> tAptoMicro;
 
 	private JLabel lPrecio;
 	private JTextField tPrecio;
@@ -78,7 +80,7 @@ public class CreateCupWindow extends JFrame {
 		add(bBack);
 
 		bSave = new JButton("GUARDAR");
-		bSave.setBounds(640, 320, 130, 40);
+		bSave.setBounds(220, 340, 130, 40);
 		bSave.setFont(new Font("Agency FB", Font.BOLD, 22));
 		bSave.setBackground(Color.decode("#130344"));
 		bSave.setForeground(Color.decode("#ECE7FE"));
@@ -109,6 +111,11 @@ public class CreateCupWindow extends JFrame {
 		lImageTwo = new JLabel(imageTwo);
 		lImageTwo.setBounds(650, 0, 200, 160);
 		topPanel.add(lImageTwo);
+		
+		ImageIcon imageInfo = new ImageIcon(getClass().getResource("parejaa.jpg"));
+		partner = new JLabel(imageInfo);
+		partner.setBounds(550, 100, 215, 255);
+		centerPanel.add(partner);
 
 		// ==ESPACIOS DE TEXTO==
 		lMaterial = new JLabel("Material");
@@ -169,7 +176,7 @@ public class CreateCupWindow extends JFrame {
 		lAptoMicro.setForeground(Color.decode("#18093E"));
 		centerPanel.add(lAptoMicro);
 
-		tAptoMicro = new JTextField();
+		tAptoMicro = new JComboBox<>(new String[] { "...", "Si", "No" });
 		tAptoMicro.setBounds(340, 170, 164, 28);
 		tAptoMicro.setFont(new Font("Agency FB", Font.BOLD, 15));
 		tAptoMicro.setForeground(Color.decode("#18093E"));
@@ -327,11 +334,21 @@ public class CreateCupWindow extends JFrame {
 		this.lAptoMicro = lAptoMicro;
 	}
 
-	public JTextField gettAptoMicro() {
+	
+
+	public JLabel getPartner() {
+		return partner;
+	}
+
+	public void setPartner(JLabel partner) {
+		this.partner = partner;
+	}
+
+	public JComboBox<String> gettAptoMicro() {
 		return tAptoMicro;
 	}
 
-	public void settAptoMicro(JTextField tAptoMicro) {
+	public void settAptoMicro(JComboBox<String> tAptoMicro) {
 		this.tAptoMicro = tAptoMicro;
 	}
 

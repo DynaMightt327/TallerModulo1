@@ -6,6 +6,7 @@ import java.awt.Font;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -21,9 +22,10 @@ public class CreatePersonalWindow extends JFrame{
 	private JLabel lImageOne;
 	private JLabel lImageTwo;
 	private JLabel lTitle;
+	private JLabel partner;
 	
 	private JLabel lTieneGlobo;
-	private JTextField tTieneGlobo;
+	private JComboBox<String> tTieneGlobo;
 	
 	private JLabel lMaximaCantidadProducto;
 	private JTextField tMaximaCantidadProducto;
@@ -80,7 +82,7 @@ public class CreatePersonalWindow extends JFrame{
 		add(bBack);
 		
 		bSave = new JButton("GUARDAR");
-		bSave.setBounds(640, 320, 130, 40);
+		bSave.setBounds(220, 340, 130, 40);
 		bSave.setFont(new Font("Agency FB", Font.BOLD, 22));
 		bSave.setBackground(Color.decode("#130344"));
 		bSave.setForeground(Color.decode("#ECE7FE"));
@@ -113,6 +115,11 @@ public class CreatePersonalWindow extends JFrame{
 		lImageTwo.setBounds(650, 0, 200, 160);
 		topPanel.add(lImageTwo);
 		
+		ImageIcon imageInfo = new ImageIcon(getClass().getResource("parejaa.jpg"));
+		partner = new JLabel(imageInfo);
+		partner.setBounds(550, 100, 215, 255);
+		centerPanel.add(partner);
+		
 		//==ESPACIOS DE TEXTO==
 		lTieneGlobo = new JLabel("Tiene globos? (si/no)");
 		lTieneGlobo.setBounds(128, 80, 150, 30);
@@ -120,7 +127,7 @@ public class CreatePersonalWindow extends JFrame{
 		lTieneGlobo.setForeground(Color.decode("#18093E"));
 		centerPanel.add(lTieneGlobo);
 		
-		tTieneGlobo = new JTextField();
+		tTieneGlobo = new JComboBox<>(new String[] { "...", "Si", "No" });
 		tTieneGlobo.setBounds(73, 110, 164, 28);
 		tTieneGlobo.setFont(new Font("Agency FB", Font.BOLD, 15));
 		tTieneGlobo.setForeground(Color.decode("#18093E"));
@@ -266,11 +273,21 @@ public class CreatePersonalWindow extends JFrame{
 		this.lTieneGlobo = lTieneGlobo;
 	}
 
-	public JTextField gettTieneGlobo() {
+	
+
+	public JLabel getPartner() {
+		return partner;
+	}
+
+	public void setPartner(JLabel partner) {
+		this.partner = partner;
+	}
+
+	public JComboBox<String> gettTieneGlobo() {
 		return tTieneGlobo;
 	}
 
-	public void settTieneGlobo(JTextField tTieneGlobo) {
+	public void settTieneGlobo(JComboBox<String> tTieneGlobo) {
 		this.tTieneGlobo = tTieneGlobo;
 	}
 
