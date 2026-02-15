@@ -256,7 +256,7 @@ public class Controller implements ActionListener {
 
 	}
 
-	public void runGui() {
+	public void iniciar() {
 		pw.setVisible(true);
 
 	}
