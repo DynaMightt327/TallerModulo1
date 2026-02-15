@@ -443,13 +443,13 @@ public class Controller implements ActionListener {
 				int cantidad = Integer.parseInt(ccw.getlCantidadDulce().getText());
 				String tipos = ccw.getlTipoDulce().getText();
 				String nivel = ccw.getlNivelDulzor().getText();
-				boolean marca = ccw.getlMarca().getText() != null;
-				boolean siAzucar = ccw.getlProductoSinAzucar().getText() != null;
+				// boolean marca = ccw.getlMarca().getText();
+				// boolean siAzucar = ccw.getlProductoSinAzucar().getText();
 				float precio = Float.parseFloat(ccw.getlPrecio().getText());
 
-				AnchetaDulce anchetaDulce = new AnchetaDulce(cantidad, tipos, nivel, marca, siAzucar, precio);
+				//AnchetaDulce anchetaDulce = new AnchetaDulce(cantidad, tipos, nivel, marca, siAzucar, precio);
 
-				JOptionPane.showMessageDialog(null, "Ancheta creada: \n\n" + anchetaDulce.toString());
+				//JOptionPane.showMessageDialog(null, "Ancheta creada: \n\n" + anchetaDulce.toString());
 
 			} catch (NumberFormatException ex) {
 				JOptionPane.showMessageDialog(null, "Error en el ingreso de datos, intente de nuevo",
