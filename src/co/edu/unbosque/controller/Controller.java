@@ -1,9 +1,11 @@
 package co.edu.unbosque.controller;
 
-import co.edu.unbosque.view.CreateWindow;
+import co.edu.unbosque.view.CreateSimpleWindow;
+import co.edu.unbosque.view.CreateWomanWindow;
 import co.edu.unbosque.view.DeletedWindow;
 import co.edu.unbosque.view.OpWindow;
 import co.edu.unbosque.view.PrincipalWindow;
+import co.edu.unbosque.view.ProductWindow;
 import co.edu.unbosque.view.ReadWindow;
 import co.edu.unbosque.view.UploadWindow;
 
@@ -18,18 +20,22 @@ public class Controller implements ActionListener {
 
 	private PrincipalWindow pw;
 	private OpWindow ow;
-	private CreateWindow cw;
+	private CreateWomanWindow cww;
+	private CreateSimpleWindow csw;
 	private ReadWindow rw;
 	private UploadWindow uw;
 	private DeletedWindow dw;
+	private ProductWindow prw;
 
 	public Controller() {
 		pw = new PrincipalWindow();
 		ow = new OpWindow();
-		cw = new CreateWindow();
+		cww = new CreateWomanWindow();
+		csw = new CreateSimpleWindow();
 		rw = new ReadWindow();
 		uw = new UploadWindow();
 		dw = new DeletedWindow();
+		prw = new ProductWindow();
 		asignarOyentes();
 	}
 
@@ -52,8 +58,31 @@ public class Controller implements ActionListener {
 		ow.getbDeleted().setActionCommand("boton_deleted");
 
 		// ==VENTANA CREAR==
-		cw.getbBack().addActionListener(this);
-		cw.getbBack().setActionCommand("boton_back_create");
+		
+		prw.getbBack().addActionListener(this);
+		prw.getbBack().setActionCommand("boton_back_product");
+		
+		prw.getbAnchetaDulce().addActionListener(this);
+		prw.getbAnchetaDulce().setActionCommand("boton_product_create");
+		
+		prw.getbAnchetaParaMujer().addActionListener(this);
+		prw.getbAnchetaParaMujer().setActionCommand("boton_woman_create");
+	
+		prw.getbAnchetaPersonalizable().addActionListener(this);
+		prw.getbAnchetaPersonalizable().setActionCommand("boton_product_create");
+		
+		prw.getbAnchetaSencilla().addActionListener(this);
+		prw.getbAnchetaSencilla().setActionCommand("boton_simple_create");
+		
+		prw.getbPocilloPersonalizable().addActionListener(this);
+		prw.getbPocilloPersonalizable().setActionCommand("boton_product_create");
+		
+		cww.getbBack().addActionListener(this);
+		cww.getbBack().setActionCommand("boton_back_woman_create");
+		
+		csw.getbBack().addActionListener(this);
+		csw.getbBack().setActionCommand("boton_back_simple_create");
+		
 
 		// ==VENTANA LEER==
 		rw.getbBack().addActionListener(this);
@@ -82,7 +111,23 @@ public class Controller implements ActionListener {
 		// ==BOTONES VENTANA CRUD==
 		case "boton_create": {
 			ow.setVisible(false);
-			cw.setVisible(true);
+			prw.setVisible(true);
+			break;
+		}
+
+		case "boton_woman_create": {
+			prw.setVisible(false);
+			cww.setVisible(true);
+			break;
+		}
+		case "boton_simple_create": {
+			prw.setVisible(false);
+			csw.setVisible(true);
+			break;
+		}
+		case "boton_product_create": {
+			prw.setVisible(false);
+			cww.setVisible(true);
 			break;
 		}
 		case "boton_read": {
@@ -102,9 +147,25 @@ public class Controller implements ActionListener {
 		}
 
 		// ==BOTONES DE VOLVER AL CRUD==
-		case "boton_back_create": {
-			cw.setVisible(false);
+		case "boton_back_product": {
+			prw.setVisible(false);
 			ow.setVisible(true);
+			break;
+		}
+
+		case "boton_back_woman_create": {
+			cww.setVisible(false);
+			prw.setVisible(true);
+			break;
+		}
+		case "boton_back_simple_create": {
+			csw.setVisible(false);
+			prw.setVisible(true);
+			break;
+		}
+		case "boton_back_create": {
+			csw.setVisible(false);
+			prw.setVisible(true);
 			break;
 		}
 

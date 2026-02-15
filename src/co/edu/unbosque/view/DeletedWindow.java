@@ -3,6 +3,7 @@ package co.edu.unbosque.view;
 import java.awt.Color;
 import java.awt.Font;
 
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -14,6 +15,8 @@ public class DeletedWindow extends JFrame {
 	private JPanel topPanel;
 	private JLabel logo;
 	private JPanel centerPanel;
+	private JLabel lImageOne;
+	private JLabel lImageTwo;
 
 	public DeletedWindow() {
 		initComponents();
@@ -58,6 +61,16 @@ public class DeletedWindow extends JFrame {
 		logo.setForeground(Color.decode("#18093E"));
 		logo.setFont(new Font("Agency FB", Font.BOLD, 70));
 		topPanel.add(logo);
+		
+		ImageIcon imageOne = new ImageIcon(getClass().getResource("foto.jpg"));
+		lImageOne = new JLabel(imageOne);
+		lImageOne.setBounds(40, 0, 200, 160);
+		topPanel.add(lImageOne);
+		
+		ImageIcon imageTwo = new ImageIcon(getClass().getResource("foto.jpg"));
+		lImageTwo = new JLabel(imageTwo);
+		lImageTwo.setBounds(650, 0, 200, 160);
+		topPanel.add(lImageTwo);
 
 	}
 

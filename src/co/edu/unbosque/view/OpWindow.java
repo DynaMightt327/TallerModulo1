@@ -23,6 +23,8 @@ public class OpWindow extends JFrame {
 	private JLabel lRead;
 	private JLabel lUpload;
 	private JLabel lDeleted;
+	private JLabel lImageOne;
+	private JLabel lImageTwo;
 
 	public OpWindow() {
 		setVisible(false);
@@ -128,6 +130,16 @@ public class OpWindow extends JFrame {
 		lDeleted.setForeground(Color.decode("#18093E"));
 		lDeleted.setFont(new Font("Agency FB", Font.BOLD, 28));
 		centerPanel.add(lDeleted);
+		
+		ImageIcon imageOne = new ImageIcon(getClass().getResource("foto.jpg"));
+		lImageOne = new JLabel(imageOne);
+		lImageOne.setBounds(40, 0, 200, 160);
+		topPanel.add(lImageOne);
+		
+		ImageIcon imageTwo = new ImageIcon(getClass().getResource("foto.jpg"));
+		lImageTwo = new JLabel(imageTwo);
+		lImageTwo.setBounds(650, 0, 200, 160);
+		topPanel.add(lImageTwo);
 	
 	}
 
