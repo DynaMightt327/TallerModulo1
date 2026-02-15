@@ -323,6 +323,9 @@ public class Controller implements ActionListener {
 					AnchetaPersonalizable a = listaAnchetaPersonalizable.get(i);
 					sb.append("Ancheta #").append(i + 1).append(":\n");
 					sb.append(a.toString()).append("\n\n");
+					
+					rpw.getShowInfoPersonal().setText(sb.toString());
+					rpw.getShowInfoPersonal().setCaretPosition(0);
 				}
 			}
 			
@@ -340,6 +343,9 @@ public class Controller implements ActionListener {
 					AnchetaSencilla a = listaAnchetaSencilla.get(i);
 					sb.append("Ancheta #").append(i + 1).append(":\n");
 					sb.append(a.toString()).append("\n\n");
+					
+					rsw.getShowInfoSimple().setText(sb.toString());
+					rsw.getShowInfoSimple().setCaretPosition(0);
 				}
 			}
 			break;
@@ -356,6 +362,9 @@ public class Controller implements ActionListener {
 					AnchetaParaMujer a = listaAnchetaMujer.get(i);
 					sb.append("Ancheta #").append(i + 1).append(":\n");
 					sb.append(a.toString()).append("\n\n");
+					
+					rww.getShowInfoWoman().setText(sb.toString());
+					rww.getShowInfoWoman().setCaretPosition(0);
 				}
 			}
 			break;
@@ -372,6 +381,9 @@ public class Controller implements ActionListener {
 					PocilloPersonalizable a = listaPocilloPersonalizable.get(i);
 					sb.append("pocillo #").append(i + 1).append(":\n");
 					sb.append(a.toString()).append("\n\n");
+					
+					rcpw.getShowInfoCup().setText(sb.toString());
+					rcpw.getShowInfoCup().setCaretPosition(0);
 				}
 			}
 			break;

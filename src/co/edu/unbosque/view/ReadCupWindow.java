@@ -120,20 +120,20 @@ public class ReadCupWindow extends JFrame {
 		this.title = title;
 	}
 
-	public JTextArea getShowInfoCandy() {
+	public JTextArea getShowInfoCup() {
 		return showInfoCup;
 	}
 
-	public void setShowInfoCandy(JTextArea showInfoCandy) {
-		this.showInfoCup = showInfoCandy;
+	public void setShowInfoCup(JTextArea showInfoCup) {
+		this.showInfoCup = showInfoCup;
 	}
 
-	public JScrollPane getScrollShowInfoCandy() {
+	public JScrollPane getScrollShowInfoCup() {
 		return scrollShowInfoCup;
 	}
 
-	public void setScrollShowInfoCandy(JScrollPane scrollShowInfoCandy) {
-		this.scrollShowInfoCup = scrollShowInfoCandy;
+	public void setScrollShowInfoCup(JScrollPane scrollShowInfoCup) {
+		this.scrollShowInfoCup = scrollShowInfoCup;
 	}
 
 	public JLabel getlImageOne() {

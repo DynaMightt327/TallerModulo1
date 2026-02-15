@@ -107,20 +107,20 @@ public class ReadWomanWindow extends JFrame {
 		this.centerPanel = centerPanel;
 	}
 
-	public JTextArea getShowInfoCandy() {
+	public JTextArea getShowInfoWoman() {
 		return showInfoWoman;
 	}
 
-	public void setShowInfoCandy(JTextArea showInfoCandy) {
-		this.showInfoWoman = showInfoCandy;
+	public void setShowInfoWoman(JTextArea showInfoWoman) {
+		this.showInfoWoman = showInfoWoman;
 	}
 
-	public JScrollPane getScrollShowInfoCandy() {
+	public JScrollPane getScrollShowInfoWoman() {
 		return scrollShowInfoWoman;
 	}
 
-	public void setScrollShowInfoCandy(JScrollPane scrollShowInfoCandy) {
-		this.scrollShowInfoWoman = scrollShowInfoCandy;
+	public void setScrollShowInfoWoman(JScrollPane scrollShowInfoWoman) {
+		this.scrollShowInfoWoman = scrollShowInfoWoman;
 	}
 
 	/*
