@@ -488,7 +488,7 @@ public class Controller implements ActionListener {
 		}
 		case "boton_save_personal": {
 			try {
-				String tieneGlobo = cpw.gettTieneGlobo().getText();
+				String tieneGlobo = (String) cpw.gettTieneGlobo().getSelectedItem();
 				int maximaCantidadProducto = Integer.parseInt(cpw.gettMaximaCantidadProducto().getText());
 				String mensajeTarjeta = cpw.gettMensajeTarjeta().getText();
 				String colorElegido = cpw.gettColorElegido().getText();
@@ -512,7 +512,7 @@ public class Controller implements ActionListener {
 				String nivelDeDecoracion = csw.gettNivelDeco().getText();
 				String tipoEmpaque = csw.gettTipoEmpaque().getText();
 				int precio = Integer.parseInt(csw.gettPrecio().getText());
-				String aptaParaEntrega = csw.gettAptaParaEntrega().getText();
+				String aptaParaEntrega = (String) csw.gettAptaParaEntrega().getSelectedItem();
 				
 				AnchetaSencilla anchetaSencilla = new AnchetaSencilla(cantidadDeProducto, tienePocillo, nivelDeDecoracion, tipoEmpaque, precio, aptaParaEntrega);
 				JOptionPane.showMessageDialog(null, "Ancheta creada: \n\n" + anchetaSencilla.toString());
@@ -531,7 +531,7 @@ public class Controller implements ActionListener {
 			String color = ccpw.gettColor().getText();
 			String caracteristicaDePocillo = ccpw.gettCaracteristica().getText();
 			int tamanoImpresion = Integer.parseInt(ccpw.gettTamanoImpresion().getText());
-			String aptoMicroondas = ccpw.gettAptoMicro().getText();
+			String aptoMicroondas = (String) ccpw.gettAptoMicro().getSelectedItem();
 			int precio = Integer.parseInt(ccpw.gettPrecio().getText());
 			
 			PocilloPersonalizable pocilloPersonalizable = new PocilloPersonalizable(materialPocillo, color, caracteristicaDePocillo, tamanoImpresion, aptoMicroondas, precio);
