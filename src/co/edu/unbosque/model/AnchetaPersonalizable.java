@@ -5,7 +5,7 @@ public class AnchetaPersonalizable {
 	private boolean tieneGlobo;
 	private int maximaCantidadProducto;
 	private String mensajeTarjeta;
-	private String coloresElegidos;
+	private String colorElegido;
 	private float precio;
 	private String tamano;
 	
@@ -14,12 +14,12 @@ public class AnchetaPersonalizable {
 	}
 
 	public AnchetaPersonalizable(boolean tieneGlobo, int maximaCantidadProducto, String mensajeTarjeta,
-			String coloresElegidos, float precio, String tamano) {
+			String colorElegido, float precio, String tamano) {
 		super();
 		this.tieneGlobo = tieneGlobo;
 		this.maximaCantidadProducto = maximaCantidadProducto;
 		this.mensajeTarjeta = mensajeTarjeta;
-		this.coloresElegidos = coloresElegidos;
+		this.colorElegido = colorElegido;
 		this.precio = precio;
 		this.tamano = tamano;
 	}
@@ -48,12 +48,12 @@ public class AnchetaPersonalizable {
 		this.mensajeTarjeta = mensajeTarjeta;
 	}
 
-	public String getColoresElegidos() {
-		return coloresElegidos;
+	public String getColorElegido() {
+		return colorElegido;
 	}
 
-	public void setColoresElegidos(String coloresElegidos) {
-		this.coloresElegidos = coloresElegidos;
+	public void setColorElegido(String coloresElegido) {
+		this.colorElegido = coloresElegido;
 	}
 
 	public float getPrecio() {
@@ -75,7 +75,7 @@ public class AnchetaPersonalizable {
 	@Override
 	public String toString() {
 		return "AnchetaPersonalizable: \ntieneGlobo: " + tieneGlobo + "\nmaximaCantidadProducto: " + maximaCantidadProducto
-				+ "\nmensajeTarjeta: " + mensajeTarjeta + "\ncoloresElegidos: " + coloresElegidos + "\nprecio: "
+				+ "\nmensajeTarjeta: " + mensajeTarjeta + "\ncoloresElegidos: " + colorElegido + "\nprecio: "
 				+ precio + "\ntamano: " + tamano;
 	}
 	

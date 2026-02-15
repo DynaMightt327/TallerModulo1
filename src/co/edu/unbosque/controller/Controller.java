@@ -1,6 +1,7 @@
 package co.edu.unbosque.controller;
 
 import co.edu.unbosque.view.CreateCandyWindow;
+
 import co.edu.unbosque.view.CreateCupWindow;
 import co.edu.unbosque.view.CreatePersonalWindow;
 import co.edu.unbosque.view.CreateSimpleWindow;
@@ -11,6 +12,7 @@ import co.edu.unbosque.view.PrincipalWindow;
 import co.edu.unbosque.view.CreateProductWindow;
 import co.edu.unbosque.view.ReadWindow;
 import co.edu.unbosque.view.UploadWindow;
+import co.edu.unbosque.model.*;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -112,6 +114,10 @@ public class Controller implements ActionListener {
 		// ==VENTANA ELIMINAR==
 		dw.getbBack().addActionListener(this);
 		dw.getbBack().setActionCommand("boton_back_deleted");
+		
+		ccw.getbSave().addActionListener(this);
+		ccw.getbSave().setActionCommand("boton_save_candy");
+
 
 	}
 
@@ -220,6 +226,29 @@ public class Controller implements ActionListener {
 			dw.setVisible(false);
 			ow.setVisible(true);
 			break;
+		}
+		
+		//Botones guardar
+		case "boton_save_candy": {
+			try {
+				int cantidad = Integer.parseInt(ccw.getlCantidadDulce().getText());
+				String tipos = ccw.getlTipoDulce().getText();
+				String nivel = ccw.getlNivelDulzor().getText();
+				//boolean marca = ccw.getlMarca().is
+				//boolean siAzucar = ccw.getlProductoSinAzucar().getText();
+				float precio = Float.parseFloat(ccw.getlPrecio().getText());
+				
+				AnchetaDulce anchetaDulce = new AnchetaDulce(cantidad, tipos, nivel, false, false, precio);
+				
+				JOptionPane.showMessageDialog(null, "Ancheta creada: \n\n" + anchetaDulce.toString());
+				
+			} catch (NumberFormatException ex) {
+				JOptionPane.showMessageDialog(null, "Error en el ingreso de datos, intente de nuevo", "Error de formarto",
+				JOptionPane.ERROR_MESSAGE);
+				// TODO: handle exception
+			}
+			break;
+			
 		}
 		default:
 			break;

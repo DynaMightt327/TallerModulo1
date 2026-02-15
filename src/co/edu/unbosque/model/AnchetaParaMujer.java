@@ -3,7 +3,7 @@ package co.edu.unbosque.model;
 public class AnchetaParaMujer {
 	
 	private String estilo;
-	private String accesorios;
+	private String accesorio;
 	private String paletaColor;
 	private String enfoque;
 	private float precio;
@@ -13,11 +13,11 @@ public class AnchetaParaMujer {
 		// TODO Auto-generated constructor stub
 	}
 
-	public AnchetaParaMujer(String estilo, String accesorios, String paletaColor, String enfoque, float precio,
+	public AnchetaParaMujer(String estilo, String accesorio, String paletaColor, String enfoque, float precio,
 			String nivelDeDetalle) {
 		super();
 		this.estilo = estilo;
-		this.accesorios = accesorios;
+		this.accesorio = accesorio;
 		this.paletaColor = paletaColor;
 		this.enfoque = enfoque;
 		this.precio = precio;
@@ -32,12 +32,12 @@ public class AnchetaParaMujer {
 		this.estilo = estilo;
 	}
 
-	public String getAccesorios() {
-		return accesorios;
+	public String getAccesorio() {
+		return accesorio;
 	}
 
-	public void setAccesorios(String accesorios) {
-		this.accesorios = accesorios;
+	public void setAccesorio(String accesorio) {
+		this.accesorio = accesorio;
 	}
 
 	public String getPaletaColor() {
@@ -74,7 +74,7 @@ public class AnchetaParaMujer {
 
 	@Override
 	public String toString() {
-		return "AnchetaParaMujer: \nestilo: " + estilo + "\naccesorios: " + accesorios + "\npaletaColor:" + paletaColor
+		return "AnchetaParaMujer: \nestilo: " + estilo + "\naccesorios: " + accesorio + "\npaletaColor:" + paletaColor
 				+ "\nenfoque: " + enfoque + "\nprecio: " + precio + "\nnivelDeDetalle: " + nivelDeDetalle;
 	}
 	

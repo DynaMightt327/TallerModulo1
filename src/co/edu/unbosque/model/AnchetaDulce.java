@@ -2,8 +2,8 @@ package co.edu.unbosque.model;
 
 public class AnchetaDulce {
 	
-	private int cantidadDulces;
-	private String tiposDeDulces;
+	private int cantidadDulce;
+	private String tiposDeDulce;
 	private String nivelDulzor;
 	private boolean incluyeMarcaReconocida;
 	private boolean tieneProductoSinAzucar;
@@ -13,31 +13,31 @@ public class AnchetaDulce {
 		// TODO Auto-generated constructor stub
 	}
 
-	public AnchetaDulce(int cantidadDulces, String tiposDeDulces, String nivelDulzor, boolean incluyeMarcaReconocida,
+	public AnchetaDulce(int cantidadDulce, String tiposDeDulce, String nivelDulzor, boolean incluyeMarcaReconocida,
 			boolean tieneProductoSinAzucar, float precio) {
 		super();
-		this.cantidadDulces = cantidadDulces;
-		this.tiposDeDulces = tiposDeDulces;
+		this.cantidadDulce = cantidadDulce;
+		this.tiposDeDulce = tiposDeDulce;
 		this.nivelDulzor = nivelDulzor;
 		this.incluyeMarcaReconocida = incluyeMarcaReconocida;
 		this.tieneProductoSinAzucar = tieneProductoSinAzucar;
 		this.precio = precio;
 	}
 
-	public int getCantidadDulces() {
-		return cantidadDulces;
+	public int getCantidadDulce() {
+		return cantidadDulce;
 	}
 
-	public void setCantidadDulces(int cantidadDulces) {
-		this.cantidadDulces = cantidadDulces;
+	public void setCantidadDulce(int cantidadDulce) {
+		this.cantidadDulce = cantidadDulce;
 	}
 
-	public String getTiposDeDulces() {
-		return tiposDeDulces;
+	public String getTiposDeDulce() {
+		return tiposDeDulce;
 	}
 
-	public void setTiposDeDulces(String tiposDeDulces) {
-		this.tiposDeDulces = tiposDeDulces;
+	public void setTiposDeDulce(String tiposDeDulce) {
+		this.tiposDeDulce = tiposDeDulce;
 	}
 
 	public String getNivelDulzor() {
@@ -74,7 +74,7 @@ public class AnchetaDulce {
 
 	@Override
 	public String toString() {
-		return "AnchetaDulce: \ncantidadDulces: " + cantidadDulces + "\ntiposDeDulces: " + tiposDeDulces + "\nnivelDulzor: "
+		return "AnchetaDulce: \ncantidadDulces: " + cantidadDulce + "\ntiposDeDulces: " + tiposDeDulce + "\nnivelDulzor: "
 				+ nivelDulzor + "\nincluyeMarcaReconocida: " + incluyeMarcaReconocida + "\ntieneProductoSinAzucar: "
 				+ tieneProductoSinAzucar + "\nprecio: " + precio;
 	}
