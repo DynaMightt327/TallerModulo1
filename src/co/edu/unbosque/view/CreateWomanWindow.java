@@ -31,10 +31,10 @@ public class CreateWomanWindow extends JFrame {
 	private JLabel lEnfoque;
 	private JTextField tEnfoque;
 	
-	private JLabel lOcasion;
-	private JTextField tOcasion;
+	private JLabel lPrecio;
+	private JTextField tPrecio;
 	
-	private JLabel lNivelDetalle;
+	private JLabel lNivelDeDetalle;
 	private JTextField tNivelDetalle;
 	
 	private JLabel lPaletaColor;
@@ -153,24 +153,24 @@ public class CreateWomanWindow extends JFrame {
 		tEnfoque.setBorder(null);
 		centerPanel.add(tEnfoque);
 		
-		lOcasion = new JLabel("Ocasión");
-		lOcasion.setBounds(395, 80, 150, 30);
-		lOcasion.setFont(new Font("Agency FB", Font.BOLD, 22));
-		lOcasion.setForeground(Color.decode("#18093E"));
-		centerPanel.add(lOcasion);
+		lPrecio = new JLabel("Precio");
+		lPrecio.setBounds(395, 80, 150, 30);
+		lPrecio.setFont(new Font("Agency FB", Font.BOLD, 22));
+		lPrecio.setForeground(Color.decode("#18093E"));
+		centerPanel.add(lPrecio);
 		
-		tOcasion = new JTextField();
-		tOcasion.setBounds(340, 110, 164, 28);
-		tOcasion.setFont(new Font("Agency FB", Font.BOLD, 15));
-		tOcasion.setForeground(Color.decode("#ECE7FE"));
-		tOcasion.setBorder(null);
-		centerPanel.add(tOcasion);
+		tPrecio = new JTextField();
+		tPrecio.setBounds(340, 110, 164, 28);
+		tPrecio.setFont(new Font("Agency FB", Font.BOLD, 15));
+		tPrecio.setForeground(Color.decode("#ECE7FE"));
+		tPrecio.setBorder(null);
+		centerPanel.add(tPrecio);
 		
-		lNivelDetalle = new JLabel("Nivel Detalle");
-		lNivelDetalle.setBounds(395, 140, 150, 30);
-		lNivelDetalle.setFont(new Font("Agency FB", Font.BOLD, 22));
-		lNivelDetalle.setForeground(Color.decode("#18093E"));
-		centerPanel.add(lNivelDetalle);
+		lNivelDeDetalle = new JLabel("Nivel Detalle");
+		lNivelDeDetalle.setBounds(395, 140, 150, 30);
+		lNivelDeDetalle.setFont(new Font("Agency FB", Font.BOLD, 22));
+		lNivelDeDetalle.setForeground(Color.decode("#18093E"));
+		centerPanel.add(lNivelDeDetalle);
 		
 		tNivelDetalle = new JTextField();
 		tNivelDetalle.setBounds(340, 170, 164, 28);
@@ -299,28 +299,28 @@ public class CreateWomanWindow extends JFrame {
 		this.tEnfoque = tEnfoque;
 	}
 
-	public JLabel getlOcasion() {
-		return lOcasion;
+	public JLabel getlPreecio() {
+		return lPrecio;
 	}
 
-	public void setlOcasion(JLabel lOcasion) {
-		this.lOcasion = lOcasion;
+	public void setlPrecio(JLabel lPrecio) {
+		this.lPrecio = lPrecio;
 	}
 
-	public JTextField gettOcasion() {
-		return tOcasion;
+	public JTextField gettPrecio() {
+		return tPrecio;
 	}
 
-	public void settOcasion(JTextField tOcasion) {
-		this.tOcasion = tOcasion;
+	public void settPrecio(JTextField tPrecio) {
+		this.tPrecio = tPrecio;
 	}
 
 	public JLabel getlNivelDetalle() {
-		return lNivelDetalle;
+		return lNivelDeDetalle;
 	}
 
 	public void setlNivelDetalle(JLabel lNivelDetalle) {
-		this.lNivelDetalle = lNivelDetalle;
+		this.lNivelDeDetalle = lNivelDetalle;
 	}
 
 	public JTextField gettNivelDetalle() {

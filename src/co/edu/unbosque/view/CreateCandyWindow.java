@@ -38,8 +38,8 @@ public class CreateCandyWindow extends JFrame {
 	private JLabel lProductoSinAzucar;
 	private JTextField tProductoSinAzucar;
 
-	private JLabel lAptoNino;
-	private JTextField tAptoNino;
+	private JLabel lPrecio;
+	private JTextField tPrecio;
 
 	public CreateCandyWindow() {
 		initComponents();
@@ -177,18 +177,18 @@ public class CreateCandyWindow extends JFrame {
 		tProductoSinAzucar.setBorder(null);
 		centerPanel.add(tProductoSinAzucar);
 
-		lAptoNino = new JLabel("apta para niños?");
-		lAptoNino.setBounds(395, 200, 150, 30);
-		lAptoNino.setFont(new Font("Agency FB", Font.BOLD, 22));
-		lAptoNino.setForeground(Color.decode("#18093E"));
-		centerPanel.add(lAptoNino);
+		lPrecio = new JLabel("precio");
+		lPrecio.setBounds(395, 200, 150, 30);
+		lPrecio.setFont(new Font("Agency FB", Font.BOLD, 22));
+		lPrecio.setForeground(Color.decode("#18093E"));
+		centerPanel.add(lPrecio);
 
-		tAptoNino = new JTextField();
-		tAptoNino.setBounds(340, 230, 164, 28);
-		tAptoNino.setFont(new Font("Agency FB", Font.BOLD, 15));
-		tAptoNino.setForeground(Color.decode("#ECE7FE"));
-		tAptoNino.setBorder(null);
-		centerPanel.add(tAptoNino);
+		tPrecio = new JTextField();
+		tPrecio.setBounds(340, 230, 164, 28);
+		tPrecio.setFont(new Font("Agency FB", Font.BOLD, 15));
+		tPrecio.setForeground(Color.decode("#ECE7FE"));
+		tPrecio.setBorder(null);
+		centerPanel.add(tPrecio);
 
 	}
 
@@ -336,20 +336,20 @@ public class CreateCandyWindow extends JFrame {
 		this.tProductoSinAzucar = tProductoSinAzucar;
 	}
 
-	public JLabel getlAptoNino() {
-		return lAptoNino;
+	public JLabel getlPrecio() {
+		return lPrecio;
 	}
 
-	public void setlAptoNino(JLabel lAptoNino) {
-		this.lAptoNino = lAptoNino;
+	public void setlPrecio(JLabel lPrecio) {
+		this.lPrecio = lPrecio;
 	}
 
-	public JTextField gettAptoNino() {
-		return tAptoNino;
+	public JTextField gettPrecio() {
+		return tPrecio;
 	}
 
-	public void settAptoNino(JTextField tAptoNino) {
-		this.tAptoNino = tAptoNino;
+	public void settPrecio(JTextField tPrecio) {
+		this.tPrecio = tPrecio;
 	}
 
 	

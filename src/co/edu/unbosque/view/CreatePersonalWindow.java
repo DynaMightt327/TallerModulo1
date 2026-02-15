@@ -22,23 +22,23 @@ public class CreatePersonalWindow extends JFrame{
 	private JLabel lImageTwo;
 	private JLabel lTitle;
 	
-	private JLabel lEstilo;
-	private JTextField tEstilo;
+	private JLabel lTieneGlobo;
+	private JTextField tTieneGlobo;
 	
-	private JLabel lAccesorio;
-	private JTextField tAccesorio;
+	private JLabel lMaximaCantidadProducto;
+	private JTextField tMaximaCantidadProducto;
 	
-	private JLabel lEnfoque;
-	private JTextField tEnfoque;
+	private JLabel lMensajeTarjeta;
+	private JTextField tMensajeTarjeta;
 	
-	private JLabel lOcasion;
-	private JTextField tOcasion;
+	private JLabel lColorElegido;
+	private JTextField tColorElegido;
 	
-	private JLabel lNivelDetalle;
-	private JTextField tNivelDetalle;
+	private JLabel lPrecio;
+	private JTextField tPrecio;
 	
-	private JLabel lPaletaColor;
-	private JTextField tPaletaColor;
+	private JLabel lTamano;
+	private JTextField tTamano;
 	
 
 	public CreatePersonalWindow() {
@@ -114,83 +114,83 @@ public class CreatePersonalWindow extends JFrame{
 		topPanel.add(lImageTwo);
 		
 		//==ESPACIOS DE TEXTO==
-		lEstilo = new JLabel("Tiene globos? (si/no)");
-		lEstilo.setBounds(128, 80, 150, 30);
-		lEstilo.setFont(new Font("Agency FB", Font.BOLD, 22));
-		lEstilo.setForeground(Color.decode("#18093E"));
-		centerPanel.add(lEstilo);
+		lTieneGlobo = new JLabel("Tiene globos? (si/no)");
+		lTieneGlobo.setBounds(128, 80, 150, 30);
+		lTieneGlobo.setFont(new Font("Agency FB", Font.BOLD, 22));
+		lTieneGlobo.setForeground(Color.decode("#18093E"));
+		centerPanel.add(lTieneGlobo);
 		
-		tEstilo = new JTextField();
-		tEstilo.setBounds(73, 110, 164, 28);
-		tEstilo.setFont(new Font("Agency FB", Font.BOLD, 15));
-		tEstilo.setForeground(Color.decode("#ECE7FE"));
-		tEstilo.setBorder(null);
-		centerPanel.add(tEstilo);
+		tTieneGlobo = new JTextField();
+		tTieneGlobo.setBounds(73, 110, 164, 28);
+		tTieneGlobo.setFont(new Font("Agency FB", Font.BOLD, 15));
+		tTieneGlobo.setForeground(Color.decode("#ECE7FE"));
+		tTieneGlobo.setBorder(null);
+		centerPanel.add(tTieneGlobo);
 
-		lAccesorio = new JLabel("Cantidad Productos");
-		lAccesorio.setBounds(128, 140, 150, 30);
-		lAccesorio.setFont(new Font("Agency FB", Font.BOLD, 22));
-		lAccesorio.setForeground(Color.decode("#18093E"));
-		centerPanel.add(lAccesorio);
+		lMaximaCantidadProducto = new JLabel("Cantidad Productos");
+		lMaximaCantidadProducto.setBounds(128, 140, 150, 30);
+		lMaximaCantidadProducto.setFont(new Font("Agency FB", Font.BOLD, 22));
+		lMaximaCantidadProducto.setForeground(Color.decode("#18093E"));
+		centerPanel.add(lMaximaCantidadProducto);
 		
-		tAccesorio = new JTextField();
-		tAccesorio.setBounds(73, 170, 164, 28);
-		tAccesorio.setFont(new Font("Agency FB", Font.BOLD, 15));
-		tAccesorio.setForeground(Color.decode("#ECE7FE"));
-		tAccesorio.setBorder(null);
-		centerPanel.add(tAccesorio);
+		tMaximaCantidadProducto = new JTextField();
+		tMaximaCantidadProducto.setBounds(73, 170, 164, 28);
+		tMaximaCantidadProducto.setFont(new Font("Agency FB", Font.BOLD, 15));
+		tMaximaCantidadProducto.setForeground(Color.decode("#ECE7FE"));
+		tMaximaCantidadProducto.setBorder(null);
+		centerPanel.add(tMaximaCantidadProducto);
 		
-		lEnfoque = new JLabel("Mensaje Tarjeta");
-		lEnfoque.setBounds(128, 200, 150, 30);
-		lEnfoque.setFont(new Font("Agency FB", Font.BOLD, 22));
-		lEnfoque.setForeground(Color.decode("#18093E"));
-		centerPanel.add(lEnfoque);
+		lMensajeTarjeta = new JLabel("Mensaje Tarjeta");
+		lMensajeTarjeta.setBounds(128, 200, 150, 30);
+		lMensajeTarjeta.setFont(new Font("Agency FB", Font.BOLD, 22));
+		lMensajeTarjeta.setForeground(Color.decode("#18093E"));
+		centerPanel.add(lMensajeTarjeta);
 		
-		tEnfoque = new JTextField();
-		tEnfoque.setBounds(73, 230, 164, 28);
-		tEnfoque.setFont(new Font("Agency FB", Font.BOLD, 15));
-		tEnfoque.setForeground(Color.decode("#ECE7FE"));
-		tEnfoque.setBorder(null);
-		centerPanel.add(tEnfoque);
+		tMensajeTarjeta = new JTextField();
+		tMensajeTarjeta.setBounds(73, 230, 164, 28);
+		tMensajeTarjeta.setFont(new Font("Agency FB", Font.BOLD, 15));
+		tMensajeTarjeta.setForeground(Color.decode("#ECE7FE"));
+		tMensajeTarjeta.setBorder(null);
+		centerPanel.add(tMensajeTarjeta);
 		
-		lOcasion = new JLabel("Colores elegidos");
-		lOcasion.setBounds(395, 80, 150, 30);
-		lOcasion.setFont(new Font("Agency FB", Font.BOLD, 22));
-		lOcasion.setForeground(Color.decode("#18093E"));
-		centerPanel.add(lOcasion);
+		lColorElegido = new JLabel("Colores elegidos");
+		lColorElegido.setBounds(395, 80, 150, 30);
+		lColorElegido.setFont(new Font("Agency FB", Font.BOLD, 22));
+		lColorElegido.setForeground(Color.decode("#18093E"));
+		centerPanel.add(lColorElegido);
 		
-		tOcasion = new JTextField();
-		tOcasion.setBounds(340, 110, 164, 28);
-		tOcasion.setFont(new Font("Agency FB", Font.BOLD, 15));
-		tOcasion.setForeground(Color.decode("#ECE7FE"));
-		tOcasion.setBorder(null);
-		centerPanel.add(tOcasion);
+		tColorElegido = new JTextField();
+		tColorElegido.setBounds(340, 110, 164, 28);
+		tColorElegido.setFont(new Font("Agency FB", Font.BOLD, 15));
+		tColorElegido.setForeground(Color.decode("#ECE7FE"));
+		tColorElegido.setBorder(null);
+		centerPanel.add(tColorElegido);
 		
-		lNivelDetalle = new JLabel("Incluye foto? (si/no)");
-		lNivelDetalle.setBounds(395, 140, 150, 30);
-		lNivelDetalle.setFont(new Font("Agency FB", Font.BOLD, 22));
-		lNivelDetalle.setForeground(Color.decode("#18093E"));
-		centerPanel.add(lNivelDetalle);
+		lPrecio = new JLabel("Precio");
+		lPrecio.setBounds(395, 140, 150, 30);
+		lPrecio.setFont(new Font("Agency FB", Font.BOLD, 22));
+		lPrecio.setForeground(Color.decode("#18093E"));
+		centerPanel.add(lPrecio);
 		
-		tNivelDetalle = new JTextField();
-		tNivelDetalle.setBounds(340, 170, 164, 28);
-		tNivelDetalle.setFont(new Font("Agency FB", Font.BOLD, 15));
-		tNivelDetalle.setForeground(Color.decode("#ECE7FE"));
-		tNivelDetalle.setBorder(null);
-		centerPanel.add(tNivelDetalle);	
+		tPrecio = new JTextField();
+		tPrecio.setBounds(340, 170, 164, 28);
+		tPrecio.setFont(new Font("Agency FB", Font.BOLD, 15));
+		tPrecio.setForeground(Color.decode("#ECE7FE"));
+		tPrecio.setBorder(null);
+		centerPanel.add(tPrecio);	
 		
-		lPaletaColor = new JLabel("Tamaño");
-		lPaletaColor.setBounds(395, 200, 150, 30);
-		lPaletaColor.setFont(new Font("Agency FB", Font.BOLD, 22));
-		lPaletaColor.setForeground(Color.decode("#18093E"));
-		centerPanel.add(lPaletaColor);
+		lTamano = new JLabel("Tamaño");
+		lTamano.setBounds(395, 200, 150, 30);
+		lTamano.setFont(new Font("Agency FB", Font.BOLD, 22));
+		lTamano.setForeground(Color.decode("#18093E"));
+		centerPanel.add(lTamano);
 		
-		tPaletaColor = new JTextField();
-		tPaletaColor.setBounds(340, 230, 164, 28);
-		tPaletaColor.setFont(new Font("Agency FB", Font.BOLD, 15));
-		tPaletaColor.setForeground(Color.decode("#ECE7FE"));
-		tPaletaColor.setBorder(null);
-		centerPanel.add(tPaletaColor);
+		tTamano = new JTextField();
+		tTamano.setBounds(340, 230, 164, 28);
+		tTamano.setFont(new Font("Agency FB", Font.BOLD, 15));
+		tTamano.setForeground(Color.decode("#ECE7FE"));
+		tTamano.setBorder(null);
+		centerPanel.add(tTamano);
 		
 	}
 
@@ -258,100 +258,100 @@ public class CreatePersonalWindow extends JFrame{
 		this.lTitle = lTitle;
 	}
 
-	public JLabel getlEstilo() {
-		return lEstilo;
+	public JLabel getlTieneGlobo() {
+		return lTieneGlobo;
 	}
 
-	public void setlEstilo(JLabel lEstilo) {
-		this.lEstilo = lEstilo;
+	public void setlTieneGlobo(JLabel lTieneGlobo) {
+		this.lTieneGlobo = lTieneGlobo;
 	}
 
-	public JTextField gettEstilo() {
-		return tEstilo;
+	public JTextField gettTieneGlobo() {
+		return tTieneGlobo;
 	}
 
-	public void settEstilo(JTextField tEstilo) {
-		this.tEstilo = tEstilo;
+	public void settTieneGlobo(JTextField tTieneGlobo) {
+		this.tTieneGlobo = tTieneGlobo;
 	}
 
-	public JLabel getlAccesorio() {
-		return lAccesorio;
+	public JLabel getlMaximaCantidadProducto() {
+		return lMaximaCantidadProducto;
 	}
 
-	public void setlAccesorio(JLabel lAccesorio) {
-		this.lAccesorio = lAccesorio;
+	public void setlMaximaCantidadProducto(JLabel lMaximaCantidadProducto) {
+		this.lMaximaCantidadProducto = lMaximaCantidadProducto;
 	}
 
-	public JTextField gettAccesorio() {
-		return tAccesorio;
+	public JTextField gettMaximaCantidadProducto() {
+		return tMaximaCantidadProducto;
 	}
 
-	public void settAccesorio(JTextField tAccesorio) {
-		this.tAccesorio = tAccesorio;
+	public void settMaximaCantidadProducto(JTextField tMaximaCantidadProducto) {
+		this.tMaximaCantidadProducto = tMaximaCantidadProducto;
 	}
 
-	public JLabel getlEnfoque() {
-		return lEnfoque;
+	public JLabel getlMensajeTarjeta() {
+		return lMensajeTarjeta;
 	}
 
-	public void setlEnfoque(JLabel lEnfoque) {
-		this.lEnfoque = lEnfoque;
+	public void setlMensajeTarjeta(JLabel lMensajeTarjeta) {
+		this.lMensajeTarjeta = lMensajeTarjeta;
 	}
 
-	public JTextField gettEnfoque() {
-		return tEnfoque;
+	public JTextField gettMensajeTarjeta() {
+		return tMensajeTarjeta;
 	}
 
-	public void settEnfoque(JTextField tEnfoque) {
-		this.tEnfoque = tEnfoque;
+	public void settMensajeTarjeta(JTextField tMensajeTarjeta) {
+		this.tMensajeTarjeta = tMensajeTarjeta;
 	}
 
-	public JLabel getlOcasion() {
-		return lOcasion;
+	public JLabel getlColorElegido() {
+		return lColorElegido;
 	}
 
-	public void setlOcasion(JLabel lOcasion) {
-		this.lOcasion = lOcasion;
+	public void setlColorElegido(JLabel lColorElegido) {
+		this.lColorElegido = lColorElegido;
 	}
 
-	public JTextField gettOcasion() {
-		return tOcasion;
+	public JTextField gettColorElegido() {
+		return tColorElegido;
 	}
 
-	public void settOcasion(JTextField tOcasion) {
-		this.tOcasion = tOcasion;
+	public void settColorElegido(JTextField tColorElegido) {
+		this.tColorElegido = tColorElegido;
 	}
 
-	public JLabel getlNivelDetalle() {
-		return lNivelDetalle;
+	public JLabel getlPrecio() {
+		return lPrecio;
 	}
 
-	public void setlNivelDetalle(JLabel lNivelDetalle) {
-		this.lNivelDetalle = lNivelDetalle;
+	public void setlPrecio(JLabel lPrecio) {
+		this.lPrecio = lPrecio;
 	}
 
-	public JTextField gettNivelDetalle() {
-		return tNivelDetalle;
+	public JTextField gettPrecio() {
+		return tPrecio;
 	}
 
-	public void settNivelDetalle(JTextField tNivelDetalle) {
-		this.tNivelDetalle = tNivelDetalle;
+	public void settPrecio(JTextField tPrecio) {
+		this.tPrecio = tPrecio;
 	}
 
-	public JLabel getlPaletaColor() {
-		return lPaletaColor;
+	public JLabel getlTamano() {
+		return lTamano;
 	}
 
-	public void setlPaletaColor(JLabel lPaletaColor) {
-		this.lPaletaColor = lPaletaColor;
+	public void setlTamano(JLabel lTamano) {
+		this.lTamano = lTamano;
 	}
 
-	public JTextField gettPaletaColor() {
-		return tPaletaColor;
+	public JTextField gettTamano() {
+		return tTamano;
 	}
 
-	public void settPaletaColor(JTextField tPaletaColor) {
-		this.tPaletaColor = tPaletaColor;
+	public void settTamano(JTextField tTamano) {
+		this.tTamano = tTamano;
 	}
 
 }

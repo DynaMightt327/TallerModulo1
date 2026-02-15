@@ -37,8 +37,8 @@ public class CreateCupWindow extends JFrame {
 	private JLabel lAptoMicro;
 	private JTextField tAptoMicro;
 
-	private JLabel lAptoLavavajilla;
-	private JTextField tAptoLavavajilla;
+	private JLabel lPrecio;
+	private JTextField tPrecio;
 
 	public CreateCupWindow() {
 		initComponents();
@@ -176,18 +176,18 @@ public class CreateCupWindow extends JFrame {
 		tAptoMicro.setBorder(null);
 		centerPanel.add(tAptoMicro);
 
-		lAptoLavavajilla = new JLabel("Apto para lavavajilla?");
-		lAptoLavavajilla.setBounds(395, 200, 150, 30);
-		lAptoLavavajilla.setFont(new Font("Agency FB", Font.BOLD, 22));
-		lAptoLavavajilla.setForeground(Color.decode("#18093E"));
-		centerPanel.add(lAptoLavavajilla);
+		lPrecio = new JLabel("Precio");
+		lPrecio.setBounds(395, 200, 150, 30);
+		lPrecio.setFont(new Font("Agency FB", Font.BOLD, 22));
+		lPrecio.setForeground(Color.decode("#18093E"));
+		centerPanel.add(lPrecio);
 
-		tAptoLavavajilla = new JTextField();
-		tAptoLavavajilla.setBounds(340, 230, 164, 28);
-		tAptoLavavajilla.setFont(new Font("Agency FB", Font.BOLD, 15));
-		tAptoLavavajilla.setForeground(Color.decode("#ECE7FE"));
-		tAptoLavavajilla.setBorder(null);
-		centerPanel.add(tAptoLavavajilla);
+		tPrecio = new JTextField();
+		tPrecio.setBounds(340, 230, 164, 28);
+		tPrecio.setFont(new Font("Agency FB", Font.BOLD, 15));
+		tPrecio.setForeground(Color.decode("#ECE7FE"));
+		tPrecio.setBorder(null);
+		centerPanel.add(tPrecio);
 
 	}
 
@@ -335,20 +335,20 @@ public class CreateCupWindow extends JFrame {
 		this.tAptoMicro = tAptoMicro;
 	}
 
-	public JLabel getlAptoLavavajilla() {
-		return lAptoLavavajilla;
+	public JLabel getlPrecio() {
+		return lPrecio;
 	}
 
-	public void setlAptoLavavajilla(JLabel lAptoLavavajilla) {
-		this.lAptoLavavajilla = lAptoLavavajilla;
+	public void setlPrecio(JLabel lPrecio) {
+		this.lPrecio = lPrecio;
 	}
 
-	public JTextField gettAptoLavavajilla() {
-		return tAptoLavavajilla;
+	public JTextField gettPrecio() {
+		return tPrecio;
 	}
 
-	public void settAptoLavavajilla(JTextField tAptoLavavajilla) {
-		this.tAptoLavavajilla = tAptoLavavajilla;
+	public void settPrecio(JTextField tPrecio) {
+		this.tPrecio = tPrecio;
 	}
 	
 	
