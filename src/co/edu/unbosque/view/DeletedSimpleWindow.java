@@ -12,17 +12,18 @@ import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 
-public class ReadSimpleWindow extends JFrame{
-	
-	private JTable tablaSimple;
+public class DeletedSimpleWindow extends JFrame {
+
+	private JTable tablaSencilla;
 	private JLabel lImageOne;
 	private JLabel lImageTwo;
 	private JButton bBack;
 	private JPanel topPanel;
 	private JLabel title;
 	private JLabel logo;
+	private JButton delete;
 
-	public ReadSimpleWindow() {
+	public DeletedSimpleWindow() {
 		initComponents();
 		setVisible(false);
 	}
@@ -30,7 +31,7 @@ public class ReadSimpleWindow extends JFrame{
 	public void initComponents() {
 
 		// CONFIGURACION DE LA VENTANA
-		this.setTitle("Lucky j3 - mostrar ancheta simple");
+		this.setTitle("Lucky j3 - eliminar regalos sencillos");
 		this.setBounds(250, 30, 880, 650);
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 		this.setResizable(false);
@@ -48,8 +49,8 @@ public class ReadSimpleWindow extends JFrame{
 		String[] columnas = { "Cantidad productos", "Tiene pocillo", "Nivel decoracion", "Tipo de empaque",
 				"Apta para entrega", "Precio" };
 		DefaultTableModel modelo = new DefaultTableModel(columnas, 0);
-		tablaSimple = new JTable(modelo);
-		JScrollPane scroll = new JScrollPane(tablaSimple);
+		tablaSencilla = new JTable(modelo);
+		JScrollPane scroll = new JScrollPane(tablaSencilla);
 		scroll.setBounds(60, 220, 750, 300);
 		scroll.setBackground(Color.decode("#B7AADF"));
 		getContentPane().add(scroll);
@@ -64,19 +65,28 @@ public class ReadSimpleWindow extends JFrame{
 		bBack.setFocusPainted(false);
 		add(bBack);
 
-		//==LABELS==
-		title = new JLabel("-> Información guardada de regalos sencillos");
+		delete = new JButton("ELIMINAR");
+		delete.setBounds(400, 560, 100, 40);
+		delete.setFont(new Font("Agency FB", Font.BOLD, 22));
+		delete.setBackground(Color.decode("#130344"));
+		delete.setForeground(Color.decode("#ECE7FE"));
+		delete.setBorderPainted(false);
+		delete.setFocusPainted(false);
+		add(delete);
+
+		// ==LABELS==
+		title = new JLabel("-> Seleccione el producto que desea eliminar");
 		title.setBounds(60, 160, 700, 50);
 		title.setForeground(Color.decode("#18093E"));
 		title.setFont(new Font("Agency FB", Font.BOLD, 40));
 		add(title);
-		
+
 		logo = new JLabel("LUCKY J3");
 		logo.setBounds(330, 15, 550, 100);
 		logo.setForeground(Color.decode("#18093E"));
 		logo.setFont(new Font("Agency FB", Font.BOLD, 70));
 		topPanel.add(logo);
-		
+
 		// ==IMAGES==
 		ImageIcon imageOne = new ImageIcon(getClass().getResource("foto.jpg"));
 		lImageOne = new JLabel(imageOne);
@@ -89,12 +99,12 @@ public class ReadSimpleWindow extends JFrame{
 		topPanel.add(lImageTwo);
 	}
 
-	public JTable getTablaDulce() {
-		return tablaSimple;
+	public JTable getTablaSencilla() {
+		return tablaSencilla;
 	}
 
-	public void setTablaDulce(JTable tablaDulce) {
-		this.tablaSimple = tablaDulce;
+	public void setTablaSencilla(JTable tablaSencilla) {
+		this.tablaSencilla = tablaSencilla;
 	}
 
 	public JLabel getlImageOne() {
@@ -145,5 +155,12 @@ public class ReadSimpleWindow extends JFrame{
 		this.logo = logo;
 	}
 
+	public JButton getDelete() {
+		return delete;
+	}
+
+	public void setDelete(JButton delete) {
+		this.delete = delete;
+	}
 
 }

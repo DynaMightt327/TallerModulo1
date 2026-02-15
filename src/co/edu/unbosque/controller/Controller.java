@@ -6,7 +6,12 @@ import co.edu.unbosque.view.CreateCupWindow;
 import co.edu.unbosque.view.CreatePersonalWindow;
 import co.edu.unbosque.view.CreateSimpleWindow;
 import co.edu.unbosque.view.CreateWomanWindow;
+import co.edu.unbosque.view.DeletedCandyWindow;
+import co.edu.unbosque.view.DeletedCupWindow;
+import co.edu.unbosque.view.DeletedPersonalWindow;
 import co.edu.unbosque.view.DeletedProductWindow;
+import co.edu.unbosque.view.DeletedSimpleWindow;
+import co.edu.unbosque.view.DeletedWomanWindow;
 import co.edu.unbosque.view.OpWindow;
 import co.edu.unbosque.view.PrincipalWindow;
 import co.edu.unbosque.view.ReadCandyWindow;
@@ -48,6 +53,11 @@ public class Controller implements ActionListener {
 	private UploadProductWindow uprw;
 
 	private DeletedProductWindow dw;
+	private DeletedCandyWindow dcw;
+	private DeletedWomanWindow dww;
+	private DeletedPersonalWindow dpw;
+	private DeletedSimpleWindow dsw;
+	private DeletedCupWindow dcpw;
 
 	public Controller() {
 		pw = new PrincipalWindow();
@@ -70,6 +80,12 @@ public class Controller implements ActionListener {
 		uprw = new UploadProductWindow();
 
 		dw = new DeletedProductWindow();
+		dcw = new DeletedCandyWindow();
+		dww = new DeletedWomanWindow();
+		dpw = new DeletedPersonalWindow();
+		dsw = new DeletedSimpleWindow();
+		dcpw = new DeletedCupWindow();
+		
 		asignarOyentes();
 	}
 
@@ -160,15 +176,46 @@ public class Controller implements ActionListener {
 		
 		rprw.getbPocilloPersonalizable().addActionListener(this);
 		rprw.getbPocilloPersonalizable().setActionCommand("boton_cup_read");
-		// ==VENTANA ACTUALIZAR==
 
+		// ==VENTANA ACTUALIZAR==
 		uprw.getbBack().addActionListener(this);
 		uprw.getbBack().setActionCommand("boton_back_upload");
 
 		// ==VENTANA ELIMINAR==
 		dw.getbBack().addActionListener(this);
 		dw.getbBack().setActionCommand("boton_back_deleted");
+		
+		dcw.getbBack().addActionListener(this);
+		dcw.getbBack().setActionCommand("boton_back_candy_deleted");
+		
+		dw.getbAnchetaDulce().addActionListener(this);
+		dw.getbAnchetaDulce().setActionCommand("boton_candy_deleted");
+		
+		dww.getbBack().addActionListener(this);
+		dww.getbBack().setActionCommand("boton_back_woman_deleted");
+		
+		dw.getbAnchetaParaMujer().addActionListener(this);
+		dw.getbAnchetaParaMujer().setActionCommand("boton_woman_deleted");
 
+		dpw.getbBack().addActionListener(this);
+		dpw.getbBack().setActionCommand("boton_back_personal_deleted");
+		
+		dw.getbAnchetaPersonalizable().addActionListener(this);
+		dw.getbAnchetaPersonalizable().setActionCommand("boton_personal_deleted");
+
+		dsw.getbBack().addActionListener(this);
+		dsw.getbBack().setActionCommand("boton_back_simple_deleted");
+		
+		dw.getbAnchetaSencilla().addActionListener(this);
+		dw.getbAnchetaSencilla().setActionCommand("boton_simple_deleted");
+
+		dcpw.getbBack().addActionListener(this);
+		dcpw.getbBack().setActionCommand("boton_back_cup_deleted");
+		
+		dw.getbPocilloPersonalizable().addActionListener(this);
+		dw.getbPocilloPersonalizable().setActionCommand("boton_cup_deleted");
+
+		//==BOTONES DE GUARDAR
 		ccw.getbSave().addActionListener(this);
 		ccw.getbSave().setActionCommand("boton_save_candy");
 
@@ -248,15 +295,43 @@ public class Controller implements ActionListener {
 			rcpw.setVisible(true);
 			break;
 		}
-//-----------------------------------
+		//-----------------------------------
 		case "boton_upload": {
 			ow.setVisible(false);
 			uprw.setVisible(true);
 			break;
 		}
+		
+		//--------------------------------
 		case "boton_deleted": {
 			ow.setVisible(false);
 			dw.setVisible(true);
+			break;
+		}
+		case "boton_candy_deleted": {
+			dw.setVisible(false);
+			dcw.setVisible(true);
+			break;
+		}
+		case "boton_woman_deleted": {
+			dw.setVisible(false);
+			dww.setVisible(true);
+			break;
+		}
+		case "boton_personal_deleted": {
+			dw.setVisible(false);
+			dpw.setVisible(true);
+			break;
+		}
+
+		case "boton_simple_deleted": {
+			dw.setVisible(false);
+			dsw.setVisible(true);
+			break;
+		}
+		case "boton_cup_deleted": {
+			dw.setVisible(false);
+			dcpw.setVisible(true);
 			break;
 		}
 
@@ -329,9 +404,36 @@ public class Controller implements ActionListener {
 			ow.setVisible(true);
 			break;
 		}
+		//-----------------------------------
 		case "boton_back_deleted": {
 			dw.setVisible(false);
 			ow.setVisible(true);
+			break;
+		}
+		case "boton_back_candy_deleted": {
+			dcw.setVisible(false);
+			dw.setVisible(true);
+			break;
+		}
+		case "boton_back_woman_deleted": {
+			dww.setVisible(false);
+			dw.setVisible(true);
+			break;
+		}
+		case "boton_back_personal_deleted": {
+			dpw.setVisible(false);
+			dw.setVisible(true);
+			break;
+		}
+
+		case "boton_back_simple_deleted": {
+			dsw.setVisible(false);
+			dw.setVisible(true);
+			break;
+		}
+		case "boton_back_cup_deleted": {
+			dcpw.setVisible(false);
+			dw.setVisible(true);
 			break;
 		}
 
