@@ -419,23 +419,23 @@ public class Controller implements ActionListener {
 			break;
 		}
 		case "boton_woman_deleted": {
-			dw.setVisible(false);
+			dw.setVisible(true);
 			dww.setVisible(true);
 			break;
 		}
 		case "boton_personal_deleted": {
-			dw.setVisible(false);
+			dw.setVisible(true);
 			dpw.setVisible(true);
 			break;
 		}
 
 		case "boton_simple_deleted": {
-			dw.setVisible(false);
+			dw.setVisible(true);
 			dsw.setVisible(true);
 			break;
 		}
 		case "boton_cup_deleted": {
-			dw.setVisible(false);
+			dw.setVisible(true);
 			dcpw.setVisible(true);
 			break;
 		}
