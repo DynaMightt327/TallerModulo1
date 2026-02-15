@@ -443,11 +443,11 @@ public class Controller implements ActionListener {
 				int cantidad = Integer.parseInt(ccw.getlCantidadDulce().getText());
 				String tipos = ccw.getlTipoDulce().getText();
 				String nivel = ccw.getlNivelDulzor().getText();
-				// boolean marca = ccw.getlMarca().is
-				// boolean siAzucar = ccw.getlProductoSinAzucar().getText();
+				boolean marca = ccw.getlMarca().getText() != null;
+				boolean siAzucar = ccw.getlProductoSinAzucar().getText() != null;
 				float precio = Float.parseFloat(ccw.getlPrecio().getText());
 
-				AnchetaDulce anchetaDulce = new AnchetaDulce(cantidad, tipos, nivel, false, false, precio);
+				AnchetaDulce anchetaDulce = new AnchetaDulce(cantidad, tipos, nivel, marca, siAzucar, precio);
 
 				JOptionPane.showMessageDialog(null, "Ancheta creada: \n\n" + anchetaDulce.toString());
 
