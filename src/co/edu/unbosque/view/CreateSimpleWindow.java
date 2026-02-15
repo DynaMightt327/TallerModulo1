@@ -121,7 +121,7 @@ public class CreateSimpleWindow extends JFrame {
 		tCantidadProducto = new JTextField();
 		tCantidadProducto.setBounds(73, 110, 164, 28);
 		tCantidadProducto.setFont(new Font("Agency FB", Font.BOLD, 15));
-		tCantidadProducto.setForeground(Color.decode("#ECE7FE"));
+		tCantidadProducto.setForeground(Color.decode("#18093E"));
 		tCantidadProducto.setBorder(null);
 		centerPanel.add(tCantidadProducto);
 
@@ -134,7 +134,7 @@ public class CreateSimpleWindow extends JFrame {
 		tTienePocillo = new JTextField();
 		tTienePocillo.setBounds(73, 170, 164, 28);
 		tTienePocillo.setFont(new Font("Agency FB", Font.BOLD, 15));
-		tTienePocillo.setForeground(Color.decode("#ECE7FE"));
+		tTienePocillo.setForeground(Color.decode("#18093E"));
 		tTienePocillo.setBorder(null);
 		centerPanel.add(tTienePocillo);
 
@@ -147,7 +147,7 @@ public class CreateSimpleWindow extends JFrame {
 		tNivelDeco = new JTextField();
 		tNivelDeco.setBounds(73, 230, 164, 28);
 		tNivelDeco.setFont(new Font("Agency FB", Font.BOLD, 15));
-		tNivelDeco.setForeground(Color.decode("#ECE7FE"));
+		tNivelDeco.setForeground(Color.decode("#18093E"));
 		tNivelDeco.setBorder(null);
 		centerPanel.add(tNivelDeco);
 
@@ -160,7 +160,7 @@ public class CreateSimpleWindow extends JFrame {
 		tTipoEmpaque = new JTextField();
 		tTipoEmpaque.setBounds(340, 110, 164, 28);
 		tTipoEmpaque.setFont(new Font("Agency FB", Font.BOLD, 15));
-		tTipoEmpaque.setForeground(Color.decode("#ECE7FE"));
+		tTipoEmpaque.setForeground(Color.decode("#18093E"));
 		tTipoEmpaque.setBorder(null);
 		centerPanel.add(tTipoEmpaque);
 
@@ -173,7 +173,7 @@ public class CreateSimpleWindow extends JFrame {
 		tPrecio = new JTextField();
 		tPrecio.setBounds(340, 170, 164, 28);
 		tPrecio.setFont(new Font("Agency FB", Font.BOLD, 15));
-		tPrecio.setForeground(Color.decode("#ECE7FE"));
+		tPrecio.setForeground(Color.decode("#18093E"));
 		tPrecio.setBorder(null);
 		centerPanel.add(tPrecio);
 
@@ -186,7 +186,7 @@ public class CreateSimpleWindow extends JFrame {
 		tAptaParaEntrega = new JTextField();
 		tAptaParaEntrega.setBounds(340, 230, 164, 28);
 		tAptaParaEntrega.setFont(new Font("Agency FB", Font.BOLD, 15));
-		tAptaParaEntrega.setForeground(Color.decode("#ECE7FE"));
+		tAptaParaEntrega.setForeground(Color.decode("#18093E"));
 		tAptaParaEntrega.setBorder(null);
 		centerPanel.add(tAptaParaEntrega);
 

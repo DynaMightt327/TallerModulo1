@@ -123,7 +123,7 @@ public class CreateWomanWindow extends JFrame {
 		tEstilo = new JTextField();
 		tEstilo.setBounds(73, 110, 164, 28);
 		tEstilo.setFont(new Font("Agency FB", Font.BOLD, 15));
-		tEstilo.setForeground(Color.decode("#ECE7FE"));
+		tEstilo.setForeground(Color.decode("#18093E"));
 		tEstilo.setBorder(null);
 		centerPanel.add(tEstilo);
 
@@ -136,7 +136,7 @@ public class CreateWomanWindow extends JFrame {
 		tAccesorio = new JTextField();
 		tAccesorio.setBounds(73, 170, 164, 28);
 		tAccesorio.setFont(new Font("Agency FB", Font.BOLD, 15));
-		tAccesorio.setForeground(Color.decode("#ECE7FE"));
+		tAccesorio.setForeground(Color.decode("#18093E"));
 		tAccesorio.setBorder(null);
 		centerPanel.add(tAccesorio);
 		
@@ -149,7 +149,7 @@ public class CreateWomanWindow extends JFrame {
 		tEnfoque = new JTextField();
 		tEnfoque.setBounds(73, 230, 164, 28);
 		tEnfoque.setFont(new Font("Agency FB", Font.BOLD, 15));
-		tEnfoque.setForeground(Color.decode("#ECE7FE"));
+		tEnfoque.setForeground(Color.decode("#18093E"));
 		tEnfoque.setBorder(null);
 		centerPanel.add(tEnfoque);
 		
@@ -162,7 +162,7 @@ public class CreateWomanWindow extends JFrame {
 		tPrecio = new JTextField();
 		tPrecio.setBounds(340, 110, 164, 28);
 		tPrecio.setFont(new Font("Agency FB", Font.BOLD, 15));
-		tPrecio.setForeground(Color.decode("#ECE7FE"));
+		tPrecio.setForeground(Color.decode("#18093E"));
 		tPrecio.setBorder(null);
 		centerPanel.add(tPrecio);
 		
@@ -175,7 +175,7 @@ public class CreateWomanWindow extends JFrame {
 		tNivelDetalle = new JTextField();
 		tNivelDetalle.setBounds(340, 170, 164, 28);
 		tNivelDetalle.setFont(new Font("Agency FB", Font.BOLD, 15));
-		tNivelDetalle.setForeground(Color.decode("#ECE7FE"));
+		tNivelDetalle.setForeground(Color.decode("#18093E"));
 		tNivelDetalle.setBorder(null);
 		centerPanel.add(tNivelDetalle);	
 		
@@ -188,7 +188,7 @@ public class CreateWomanWindow extends JFrame {
 		tPaletaColor = new JTextField();
 		tPaletaColor.setBounds(340, 230, 164, 28);
 		tPaletaColor.setFont(new Font("Agency FB", Font.BOLD, 15));
-		tPaletaColor.setForeground(Color.decode("#ECE7FE"));
+		tPaletaColor.setForeground(Color.decode("#18093E"));
 		tPaletaColor.setBorder(null);
 		centerPanel.add(tPaletaColor);
 		

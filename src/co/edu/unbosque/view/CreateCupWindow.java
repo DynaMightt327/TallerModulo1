@@ -120,7 +120,7 @@ public class CreateCupWindow extends JFrame {
 		tMaterial = new JTextField();
 		tMaterial.setBounds(73, 110, 164, 28);
 		tMaterial.setFont(new Font("Agency FB", Font.BOLD, 15));
-		tMaterial.setForeground(Color.decode("#ECE7FE"));
+		tMaterial.setForeground(Color.decode("#18093E"));
 		tMaterial.setBorder(null);
 		centerPanel.add(tMaterial);
 
@@ -133,7 +133,7 @@ public class CreateCupWindow extends JFrame {
 		tColor = new JTextField();
 		tColor.setBounds(73, 170, 164, 28);
 		tColor.setFont(new Font("Agency FB", Font.BOLD, 15));
-		tColor.setForeground(Color.decode("#ECE7FE"));
+		tColor.setForeground(Color.decode("#18093E"));
 		tColor.setBorder(null);
 		centerPanel.add(tColor);
 
@@ -146,7 +146,7 @@ public class CreateCupWindow extends JFrame {
 		tCaracteristica = new JTextField();
 		tCaracteristica.setBounds(73, 230, 164, 28);
 		tCaracteristica.setFont(new Font("Agency FB", Font.BOLD, 15));
-		tCaracteristica.setForeground(Color.decode("#ECE7FE"));
+		tCaracteristica.setForeground(Color.decode("#18093E"));
 		tCaracteristica.setBorder(null);
 		centerPanel.add(tCaracteristica);
 
@@ -159,7 +159,7 @@ public class CreateCupWindow extends JFrame {
 		tTamanoImpresion = new JTextField();
 		tTamanoImpresion.setBounds(340, 110, 164, 28);
 		tTamanoImpresion.setFont(new Font("Agency FB", Font.BOLD, 15));
-		tTamanoImpresion.setForeground(Color.decode("#ECE7FE"));
+		tTamanoImpresion.setForeground(Color.decode("#18093E"));
 		tTamanoImpresion.setBorder(null);
 		centerPanel.add(tTamanoImpresion);
 
@@ -172,7 +172,7 @@ public class CreateCupWindow extends JFrame {
 		tAptoMicro = new JTextField();
 		tAptoMicro.setBounds(340, 170, 164, 28);
 		tAptoMicro.setFont(new Font("Agency FB", Font.BOLD, 15));
-		tAptoMicro.setForeground(Color.decode("#ECE7FE"));
+		tAptoMicro.setForeground(Color.decode("#18093E"));
 		tAptoMicro.setBorder(null);
 		centerPanel.add(tAptoMicro);
 
@@ -185,7 +185,7 @@ public class CreateCupWindow extends JFrame {
 		tPrecio = new JTextField();
 		tPrecio.setBounds(340, 230, 164, 28);
 		tPrecio.setFont(new Font("Agency FB", Font.BOLD, 15));
-		tPrecio.setForeground(Color.decode("#ECE7FE"));
+		tPrecio.setForeground(Color.decode("#18093E"));
 		tPrecio.setBorder(null);
 		centerPanel.add(tPrecio);
 

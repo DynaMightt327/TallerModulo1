@@ -123,7 +123,7 @@ public class CreatePersonalWindow extends JFrame{
 		tTieneGlobo = new JTextField();
 		tTieneGlobo.setBounds(73, 110, 164, 28);
 		tTieneGlobo.setFont(new Font("Agency FB", Font.BOLD, 15));
-		tTieneGlobo.setForeground(Color.decode("#ECE7FE"));
+		tTieneGlobo.setForeground(Color.decode("#18093E"));
 		tTieneGlobo.setBorder(null);
 		centerPanel.add(tTieneGlobo);
 
@@ -136,7 +136,7 @@ public class CreatePersonalWindow extends JFrame{
 		tMaximaCantidadProducto = new JTextField();
 		tMaximaCantidadProducto.setBounds(73, 170, 164, 28);
 		tMaximaCantidadProducto.setFont(new Font("Agency FB", Font.BOLD, 15));
-		tMaximaCantidadProducto.setForeground(Color.decode("#ECE7FE"));
+		tMaximaCantidadProducto.setForeground(Color.decode("#18093E"));
 		tMaximaCantidadProducto.setBorder(null);
 		centerPanel.add(tMaximaCantidadProducto);
 		
@@ -149,7 +149,7 @@ public class CreatePersonalWindow extends JFrame{
 		tMensajeTarjeta = new JTextField();
 		tMensajeTarjeta.setBounds(73, 230, 164, 28);
 		tMensajeTarjeta.setFont(new Font("Agency FB", Font.BOLD, 15));
-		tMensajeTarjeta.setForeground(Color.decode("#ECE7FE"));
+		tMensajeTarjeta.setForeground(Color.decode("#18093E"));
 		tMensajeTarjeta.setBorder(null);
 		centerPanel.add(tMensajeTarjeta);
 		
@@ -162,7 +162,7 @@ public class CreatePersonalWindow extends JFrame{
 		tColorElegido = new JTextField();
 		tColorElegido.setBounds(340, 110, 164, 28);
 		tColorElegido.setFont(new Font("Agency FB", Font.BOLD, 15));
-		tColorElegido.setForeground(Color.decode("#ECE7FE"));
+		tColorElegido.setForeground(Color.decode("#18093E"));
 		tColorElegido.setBorder(null);
 		centerPanel.add(tColorElegido);
 		
@@ -175,7 +175,7 @@ public class CreatePersonalWindow extends JFrame{
 		tPrecio = new JTextField();
 		tPrecio.setBounds(340, 170, 164, 28);
 		tPrecio.setFont(new Font("Agency FB", Font.BOLD, 15));
-		tPrecio.setForeground(Color.decode("#ECE7FE"));
+		tPrecio.setForeground(Color.decode("#18093E"));
 		tPrecio.setBorder(null);
 		centerPanel.add(tPrecio);	
 		
@@ -188,7 +188,7 @@ public class CreatePersonalWindow extends JFrame{
 		tTamano = new JTextField();
 		tTamano.setBounds(340, 230, 164, 28);
 		tTamano.setFont(new Font("Agency FB", Font.BOLD, 15));
-		tTamano.setForeground(Color.decode("#ECE7FE"));
+		tTamano.setForeground(Color.decode("#18093E"));
 		tTamano.setBorder(null);
 		centerPanel.add(tTamano);
 		

@@ -6,6 +6,7 @@ import java.awt.Font;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import javax.swing.JCheckBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -33,10 +34,10 @@ public class CreateCandyWindow extends JFrame {
 	private JTextField tNivelDulzor;
 
 	private JLabel lMarca;
-	private JTextField tMarca;
+	private JCheckBox tMarca;
 
 	private JLabel lProductoSinAzucar;
-	private JTextField tProductoSinAzucar;
+	private JCheckBox tProductoSinAzucar;
 
 	private JLabel lPrecio;
 	private JTextField tPrecio;
@@ -121,7 +122,7 @@ public class CreateCandyWindow extends JFrame {
 		tCantidadDulce = new JTextField();
 		tCantidadDulce.setBounds(73, 110, 164, 28);
 		tCantidadDulce.setFont(new Font("Agency FB", Font.BOLD, 15));
-		tCantidadDulce.setForeground(Color.decode("#ECE7FE"));
+		tCantidadDulce.setForeground(Color.decode("#18093E"));
 		tCantidadDulce.setBorder(null);
 		centerPanel.add(tCantidadDulce);
 
@@ -134,7 +135,7 @@ public class CreateCandyWindow extends JFrame {
 		tTipoDulce = new JTextField();
 		tTipoDulce.setBounds(73, 170, 164, 28);
 		tTipoDulce.setFont(new Font("Agency FB", Font.BOLD, 15));
-		tTipoDulce.setForeground(Color.decode("#ECE7FE"));
+		tTipoDulce.setForeground(Color.decode("#18093E"));
 		tTipoDulce.setBorder(null);
 		centerPanel.add(tTipoDulce);
 
@@ -147,7 +148,7 @@ public class CreateCandyWindow extends JFrame {
 		tNivelDulzor = new JTextField();
 		tNivelDulzor.setBounds(73, 230, 164, 28);
 		tNivelDulzor.setFont(new Font("Agency FB", Font.BOLD, 15));
-		tNivelDulzor.setForeground(Color.decode("#ECE7FE"));
+		tNivelDulzor.setForeground(Color.decode("#18093E"));
 		tNivelDulzor.setBorder(null);
 		centerPanel.add(tNivelDulzor);
 
@@ -157,10 +158,11 @@ public class CreateCandyWindow extends JFrame {
 		lMarca.setForeground(Color.decode("#18093E"));
 		centerPanel.add(lMarca);
 
-		tMarca = new JTextField();
+		tMarca = new JCheckBox();
 		tMarca.setBounds(340, 110, 164, 28);
 		tMarca.setFont(new Font("Agency FB", Font.BOLD, 15));
 		tMarca.setForeground(Color.decode("#ECE7FE"));
+		tMarca.setBackground(Color.decode("#18093E"));
 		tMarca.setBorder(null);
 		centerPanel.add(tMarca);
 
@@ -170,14 +172,15 @@ public class CreateCandyWindow extends JFrame {
 		lProductoSinAzucar.setForeground(Color.decode("#18093E"));
 		centerPanel.add(lProductoSinAzucar);
 
-		tProductoSinAzucar = new JTextField();
+		tProductoSinAzucar = new JCheckBox();
 		tProductoSinAzucar.setBounds(340, 170, 164, 28);
 		tProductoSinAzucar.setFont(new Font("Agency FB", Font.BOLD, 15));
 		tProductoSinAzucar.setForeground(Color.decode("#ECE7FE"));
+		tProductoSinAzucar.setBackground(Color.decode("#18093E"));
 		tProductoSinAzucar.setBorder(null);
 		centerPanel.add(tProductoSinAzucar);
 
-		lPrecio = new JLabel("precio");
+		lPrecio = new JLabel("Precio");
 		lPrecio.setBounds(395, 200, 150, 30);
 		lPrecio.setFont(new Font("Agency FB", Font.BOLD, 22));
 		lPrecio.setForeground(Color.decode("#18093E"));
@@ -186,7 +189,7 @@ public class CreateCandyWindow extends JFrame {
 		tPrecio = new JTextField();
 		tPrecio.setBounds(340, 230, 164, 28);
 		tPrecio.setFont(new Font("Agency FB", Font.BOLD, 15));
-		tPrecio.setForeground(Color.decode("#ECE7FE"));
+		tPrecio.setForeground(Color.decode("#18093E"));
 		tPrecio.setBorder(null);
 		centerPanel.add(tPrecio);
 
@@ -312,11 +315,11 @@ public class CreateCandyWindow extends JFrame {
 		this.lMarca = lMarca;
 	}
 
-	public JTextField gettMarca() {
+	public JCheckBox gettMarca() {
 		return tMarca;
 	}
 
-	public void settMarca(JTextField tMarca) {
+	public void settMarca(JCheckBox tMarca) {
 		this.tMarca = tMarca;
 	}
 
@@ -328,11 +331,11 @@ public class CreateCandyWindow extends JFrame {
 		this.lProductoSinAzucar = lProductoSinAzucar;
 	}
 
-	public JTextField gettProductoSinAzucar() {
+	public JCheckBox gettProductoSinAzucar() {
 		return tProductoSinAzucar;
 	}
 
-	public void settProductoSinAzucar(JTextField tProductoSinAzucar) {
+	public void settProductoSinAzucar(JCheckBox tProductoSinAzucar) {
 		this.tProductoSinAzucar = tProductoSinAzucar;
 	}
 
