@@ -42,6 +42,8 @@ public class CreateCandyWindow extends JFrame {
 
 	private JLabel lPrecio;
 	private JTextField tPrecio;
+	
+	private JLabel partner;
 
 	public CreateCandyWindow() {
 		initComponents();
@@ -81,7 +83,7 @@ public class CreateCandyWindow extends JFrame {
 		add(bBack);
 
 		bSave = new JButton("GUARDAR");
-		bSave.setBounds(640, 320, 130, 40);
+		bSave.setBounds(220, 340, 130, 40);
 		bSave.setFont(new Font("Agency FB", Font.BOLD, 22));
 		bSave.setBackground(Color.decode("#130344"));
 		bSave.setForeground(Color.decode("#ECE7FE"));
@@ -112,6 +114,11 @@ public class CreateCandyWindow extends JFrame {
 		lImageTwo = new JLabel(imageTwo);
 		lImageTwo.setBounds(650, 0, 200, 160);
 		topPanel.add(lImageTwo);
+		
+		ImageIcon imageInfo = new ImageIcon(getClass().getResource("parejaa.jpg"));
+		partner = new JLabel(imageInfo);
+		partner.setBounds(550, 100, 215, 255);
+		centerPanel.add(partner);
 
 		// ==ESPACIOS DE TEXTO==
 		lCantidadDulce = new JLabel("Cantidad dulces");
