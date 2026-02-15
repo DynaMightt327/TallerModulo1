@@ -1,5 +1,4 @@
 package co.edu.unbosque.view;
-
 import java.awt.Color;
 import java.awt.Font;
 
@@ -12,9 +11,9 @@ import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 
-public class ReadWomanWindow extends JFrame {
-	
-	private JTable tablaMujer;
+public class ReadCupWindow extends JFrame {
+
+	private JTable tablaPocillo;
 	private JLabel lImageOne;
 	private JLabel lImageTwo;
 	private JButton bBack;
@@ -22,7 +21,7 @@ public class ReadWomanWindow extends JFrame {
 	private JLabel title;
 	private JLabel logo;
 
-	public ReadWomanWindow() {
+	public ReadCupWindow() {
 		initComponents();
 		setVisible(false);
 	}
@@ -30,7 +29,7 @@ public class ReadWomanWindow extends JFrame {
 	public void initComponents() {
 
 		// CONFIGURACION DE LA VENTANA
-		this.setTitle("Lucky j3 - mostrar ancheta para mujer");
+		this.setTitle("Lucky j3 - mostrar pocillos personalizados");
 		this.setBounds(250, 30, 880, 650);
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 		this.setResizable(false);
@@ -45,11 +44,11 @@ public class ReadWomanWindow extends JFrame {
 		add(topPanel);
 
 		// ==TABLA INFO==
-		String[] columnas = { "Estilo", "Accesorios", "Enfoque", "Nivel de detalle",
-				"Paleta de color", "Precio" };
+		String[] columnas = { "Material", "Color", "Caracteriticas", "Tamaño Impresion",
+				"Apto para microondas", "Precio" };
 		DefaultTableModel modelo = new DefaultTableModel(columnas, 0);
-		tablaMujer = new JTable(modelo);
-		JScrollPane scroll = new JScrollPane(tablaMujer);
+		tablaPocillo = new JTable(modelo);
+		JScrollPane scroll = new JScrollPane(tablaPocillo);
 		scroll.setBounds(60, 220, 750, 300);
 		scroll.setBackground(Color.decode("#B7AADF"));
 		getContentPane().add(scroll);
@@ -65,7 +64,7 @@ public class ReadWomanWindow extends JFrame {
 		add(bBack);
 
 		//==LABELS==
-		title = new JLabel("-> Información guardada de regalos para mujer");
+		title = new JLabel("-> Información guardada de pocillos personalizados");
 		title.setBounds(60, 160, 700, 50);
 		title.setForeground(Color.decode("#18093E"));
 		title.setFont(new Font("Agency FB", Font.BOLD, 40));
@@ -89,12 +88,12 @@ public class ReadWomanWindow extends JFrame {
 		topPanel.add(lImageTwo);
 	}
 
-	public JTable getTablaMujer() {
-		return tablaMujer;
+	public JTable getTablaPocillo() {
+		return tablaPocillo;
 	}
 
-	public void setTablaMujer(JTable tablaMujer) {
-		this.tablaMujer = tablaMujer;
+	public void setTablaPocillo(JTable tablaPocillo) {
+		this.tablaPocillo = tablaPocillo;
 	}
 
 	public JLabel getlImageOne() {
@@ -131,11 +130,11 @@ public class ReadWomanWindow extends JFrame {
 
 	/*public JLabel getTitle() {
 		return title;
-	}*/
+	}
 
 	public void setTitle(JLabel title) {
 		this.title = title;
-	}
+	}*/
 
 	public JLabel getLogo() {
 		return logo;
