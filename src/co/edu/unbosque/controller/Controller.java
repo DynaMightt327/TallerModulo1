@@ -47,6 +47,8 @@ public class Controller implements ActionListener {
 	private ArrayList<AnchetaSencilla> listaAnchetaSencilla = new ArrayList<>();
 	private ArrayList<PocilloPersonalizable> listaPocilloPersonalizable = new ArrayList<>();
 	
+	//aaaaa
+	
 	private PrincipalWindow pw;
 	private OpWindow ow;
 
