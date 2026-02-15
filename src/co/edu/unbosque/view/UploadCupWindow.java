@@ -1,4 +1,5 @@
 package co.edu.unbosque.view;
+
 import java.awt.Color;
 import java.awt.Font;
 
@@ -9,8 +10,20 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
+import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;
 
-public class UploadCupWindow extends JFrame{
+public class UploadCupWindow extends JFrame {
 
+	
+
+	public UploadCupWindow() {
+		initComponents();
+		setVisible(false);
+	}
+
+	public void initComponents() {
+
+	}
+	
 }
