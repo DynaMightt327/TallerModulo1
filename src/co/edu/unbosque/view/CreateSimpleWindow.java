@@ -94,8 +94,8 @@ public class CreateSimpleWindow extends JFrame {
 		logo.setFont(new Font("Agency FB", Font.BOLD, 70));
 		topPanel.add(logo);
 
-		lTitle = new JLabel("-> Ingrese los datos del regalo");
-		lTitle.setBounds(10, 15, 550, 52);
+		lTitle = new JLabel("-> Ingrese los datos de la ancheta simple");
+		lTitle.setBounds(10, 15, 700, 52);
 		lTitle.setForeground(Color.decode("#18093E"));
 		lTitle.setFont(new Font("Agency FB", Font.BOLD, 45));
 		centerPanel.add(lTitle);

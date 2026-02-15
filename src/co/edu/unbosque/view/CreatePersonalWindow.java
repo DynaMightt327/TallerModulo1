@@ -1,5 +1,6 @@
 package co.edu.unbosque.view;
 
+import javax.swing.JFrame;
 import java.awt.Color;
 import java.awt.Font;
 
@@ -9,9 +10,8 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
-
-public class CreateWomanWindow extends JFrame {
-
+public class CreatePersonalWindow extends JFrame{
+	
 	private JButton bBack;
 	private JButton bSave;
 	
@@ -41,7 +41,7 @@ public class CreateWomanWindow extends JFrame {
 	private JTextField tPaletaColor;
 	
 
-	public CreateWomanWindow() {
+	public CreatePersonalWindow() {
 		initComponents();
 		setVisible(false);
 	}
@@ -95,7 +95,7 @@ public class CreateWomanWindow extends JFrame {
 		logo.setFont(new Font("Agency FB", Font.BOLD, 70));
 		topPanel.add(logo);
 		
-		lTitle = new JLabel("-> Ingrese los datos del regalo para mujer");
+		lTitle = new JLabel("-> Ingrese los datos del regalo personalizado");
 		lTitle.setBounds(10, 15, 700, 52);
 		lTitle.setForeground(Color.decode("#18093E"));
 		lTitle.setFont(new Font("Agency FB", Font.BOLD, 45));
@@ -114,7 +114,7 @@ public class CreateWomanWindow extends JFrame {
 		topPanel.add(lImageTwo);
 		
 		//==ESPACIOS DE TEXTO==
-		lEstilo = new JLabel("Estilo");
+		lEstilo = new JLabel("Tiene globos? (si/no)");
 		lEstilo.setBounds(128, 80, 150, 30);
 		lEstilo.setFont(new Font("Agency FB", Font.BOLD, 22));
 		lEstilo.setForeground(Color.decode("#18093E"));
@@ -127,7 +127,7 @@ public class CreateWomanWindow extends JFrame {
 		tEstilo.setBorder(null);
 		centerPanel.add(tEstilo);
 
-		lAccesorio = new JLabel("Accesorio");
+		lAccesorio = new JLabel("Cantidad Productos");
 		lAccesorio.setBounds(128, 140, 150, 30);
 		lAccesorio.setFont(new Font("Agency FB", Font.BOLD, 22));
 		lAccesorio.setForeground(Color.decode("#18093E"));
@@ -140,7 +140,7 @@ public class CreateWomanWindow extends JFrame {
 		tAccesorio.setBorder(null);
 		centerPanel.add(tAccesorio);
 		
-		lEnfoque = new JLabel("Enfoque");
+		lEnfoque = new JLabel("Mensaje Tarjeta");
 		lEnfoque.setBounds(128, 200, 150, 30);
 		lEnfoque.setFont(new Font("Agency FB", Font.BOLD, 22));
 		lEnfoque.setForeground(Color.decode("#18093E"));
@@ -153,7 +153,7 @@ public class CreateWomanWindow extends JFrame {
 		tEnfoque.setBorder(null);
 		centerPanel.add(tEnfoque);
 		
-		lOcasion = new JLabel("Ocasión");
+		lOcasion = new JLabel("Colores elegidos");
 		lOcasion.setBounds(395, 80, 150, 30);
 		lOcasion.setFont(new Font("Agency FB", Font.BOLD, 22));
 		lOcasion.setForeground(Color.decode("#18093E"));
@@ -166,7 +166,7 @@ public class CreateWomanWindow extends JFrame {
 		tOcasion.setBorder(null);
 		centerPanel.add(tOcasion);
 		
-		lNivelDetalle = new JLabel("Nivel Detalle");
+		lNivelDetalle = new JLabel("Incluye foto? (si/no)");
 		lNivelDetalle.setBounds(395, 140, 150, 30);
 		lNivelDetalle.setFont(new Font("Agency FB", Font.BOLD, 22));
 		lNivelDetalle.setForeground(Color.decode("#18093E"));
@@ -179,7 +179,7 @@ public class CreateWomanWindow extends JFrame {
 		tNivelDetalle.setBorder(null);
 		centerPanel.add(tNivelDetalle);	
 		
-		lPaletaColor = new JLabel("Paleta de colores");
+		lPaletaColor = new JLabel("Tamaño");
 		lPaletaColor.setBounds(395, 200, 150, 30);
 		lPaletaColor.setFont(new Font("Agency FB", Font.BOLD, 22));
 		lPaletaColor.setForeground(Color.decode("#18093E"));
@@ -192,7 +192,6 @@ public class CreateWomanWindow extends JFrame {
 		tPaletaColor.setBorder(null);
 		centerPanel.add(tPaletaColor);
 		
-
 	}
 
 	public JButton getbBack() {
@@ -201,6 +200,14 @@ public class CreateWomanWindow extends JFrame {
 
 	public void setbBack(JButton bBack) {
 		this.bBack = bBack;
+	}
+
+	public JButton getbSave() {
+		return bSave;
+	}
+
+	public void setbSave(JButton bSave) {
+		this.bSave = bSave;
 	}
 
 	public JPanel getTopPanel() {
@@ -346,7 +353,5 @@ public class CreateWomanWindow extends JFrame {
 	public void settPaletaColor(JTextField tPaletaColor) {
 		this.tPaletaColor = tPaletaColor;
 	}
-	
-	
 
 }

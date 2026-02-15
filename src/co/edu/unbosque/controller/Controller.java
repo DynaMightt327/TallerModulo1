@@ -1,5 +1,8 @@
 package co.edu.unbosque.controller;
 
+import co.edu.unbosque.view.CreateCandyWindow;
+import co.edu.unbosque.view.CreateCupWindow;
+import co.edu.unbosque.view.CreatePersonalWindow;
 import co.edu.unbosque.view.CreateSimpleWindow;
 import co.edu.unbosque.view.CreateWomanWindow;
 import co.edu.unbosque.view.DeletedWindow;
@@ -22,6 +25,9 @@ public class Controller implements ActionListener {
 	private OpWindow ow;
 	private CreateWomanWindow cww;
 	private CreateSimpleWindow csw;
+	private CreatePersonalWindow cpw;
+	private CreateCandyWindow ccw;
+	private CreateCupWindow ccpw;
 	private ReadWindow rw;
 	private UploadWindow uw;
 	private DeletedWindow dw;
@@ -32,6 +38,9 @@ public class Controller implements ActionListener {
 		ow = new OpWindow();
 		cww = new CreateWomanWindow();
 		csw = new CreateSimpleWindow();
+		cpw = new CreatePersonalWindow();
+		ccw = new CreateCandyWindow();
+		ccpw = new CreateCupWindow();
 		rw = new ReadWindow();
 		uw = new UploadWindow();
 		dw = new DeletedWindow();
@@ -63,19 +72,19 @@ public class Controller implements ActionListener {
 		prw.getbBack().setActionCommand("boton_back_product");
 		
 		prw.getbAnchetaDulce().addActionListener(this);
-		prw.getbAnchetaDulce().setActionCommand("boton_product_create");
+		prw.getbAnchetaDulce().setActionCommand("boton_candy_create");
 		
 		prw.getbAnchetaParaMujer().addActionListener(this);
 		prw.getbAnchetaParaMujer().setActionCommand("boton_woman_create");
 	
 		prw.getbAnchetaPersonalizable().addActionListener(this);
-		prw.getbAnchetaPersonalizable().setActionCommand("boton_product_create");
+		prw.getbAnchetaPersonalizable().setActionCommand("boton_personal_create");
 		
 		prw.getbAnchetaSencilla().addActionListener(this);
 		prw.getbAnchetaSencilla().setActionCommand("boton_simple_create");
 		
 		prw.getbPocilloPersonalizable().addActionListener(this);
-		prw.getbPocilloPersonalizable().setActionCommand("boton_product_create");
+		prw.getbPocilloPersonalizable().setActionCommand("boton_cup_create");
 		
 		cww.getbBack().addActionListener(this);
 		cww.getbBack().setActionCommand("boton_back_woman_create");
@@ -83,6 +92,14 @@ public class Controller implements ActionListener {
 		csw.getbBack().addActionListener(this);
 		csw.getbBack().setActionCommand("boton_back_simple_create");
 		
+		cpw.getbBack().addActionListener(this);
+		cpw.getbBack().setActionCommand("boton_back_personal_create");
+		
+		ccw.getbBack().addActionListener(this);
+		ccw.getbBack().setActionCommand("boton_back_candy_create");
+		
+		ccpw.getbBack().addActionListener(this);
+		ccpw.getbBack().setActionCommand("boton_back_cup_create");
 
 		// ==VENTANA LEER==
 		rw.getbBack().addActionListener(this);
@@ -125,9 +142,19 @@ public class Controller implements ActionListener {
 			csw.setVisible(true);
 			break;
 		}
-		case "boton_product_create": {
+		case "boton_personal_create": {
 			prw.setVisible(false);
-			cww.setVisible(true);
+			cpw.setVisible(true);
+			break;
+		}
+		case "boton_candy_create": {
+			prw.setVisible(false);
+			ccw.setVisible(true);
+			break;
+		}
+		case "boton_cup_create": {
+			prw.setVisible(false);
+			ccpw.setVisible(true);
 			break;
 		}
 		case "boton_read": {
@@ -163,8 +190,18 @@ public class Controller implements ActionListener {
 			prw.setVisible(true);
 			break;
 		}
-		case "boton_back_create": {
-			csw.setVisible(false);
+		case "boton_back_personal_create": {
+			cpw.setVisible(false);
+			prw.setVisible(true);
+			break;
+		}
+		case "boton_back_candy_create": {
+			ccw.setVisible(false);
+			prw.setVisible(true);
+			break;
+		}
+		case "boton_back_cup_create": {
+			ccpw.setVisible(false);
 			prw.setVisible(true);
 			break;
 		}
