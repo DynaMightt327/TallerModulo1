@@ -7,6 +7,7 @@ import java.awt.Font;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
+import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -34,10 +35,10 @@ public class CreateCandyWindow extends JFrame {
 	private JTextField tNivelDulzor;
 
 	private JLabel lMarca;
-	private JCheckBox tMarca;
+	private JComboBox<String> tMarca;
 
 	private JLabel lProductoSinAzucar;
-	private JCheckBox tProductoSinAzucar;
+	private JComboBox<String> tProductoSinAzucar;
 
 	private JLabel lPrecio;
 	private JTextField tPrecio;
@@ -158,11 +159,8 @@ public class CreateCandyWindow extends JFrame {
 		lMarca.setForeground(Color.decode("#18093E"));
 		centerPanel.add(lMarca);
 
-		tMarca = new JCheckBox();
+		tMarca = new JComboBox<>(new String[] { "...", "Si", "No" });
 		tMarca.setBounds(340, 110, 164, 28);
-		tMarca.setFont(new Font("Agency FB", Font.BOLD, 9));
-		tMarca.setForeground(Color.decode("#ECE7FE"));
-		tMarca.setBorder(null);
 		centerPanel.add(tMarca);
 
 		lProductoSinAzucar = new JLabel("Tiene productos sin azucar?");
@@ -171,11 +169,8 @@ public class CreateCandyWindow extends JFrame {
 		lProductoSinAzucar.setForeground(Color.decode("#18093E"));
 		centerPanel.add(lProductoSinAzucar);
 
-		tProductoSinAzucar = new JCheckBox();
+		tProductoSinAzucar = new JComboBox<>(new String[] { "...", "Si", "No" });
 		tProductoSinAzucar.setBounds(340, 170, 164, 28);
-		tProductoSinAzucar.setFont(new Font("Agency FB", Font.BOLD, 9));
-		tProductoSinAzucar.setForeground(Color.decode("#ECE7FE"));
-		tProductoSinAzucar.setBorder(null);
 		centerPanel.add(tProductoSinAzucar);
 
 		lPrecio = new JLabel("Precio");
@@ -313,11 +308,11 @@ public class CreateCandyWindow extends JFrame {
 		this.lMarca = lMarca;
 	}
 
-	public JCheckBox gettMarca() {
+	public JComboBox gettMarca() {
 		return tMarca;
 	}
 
-	public void settMarca(JCheckBox tMarca) {
+	public void settMarca(JComboBox tMarca) {
 		this.tMarca = tMarca;
 	}
 
@@ -329,11 +324,11 @@ public class CreateCandyWindow extends JFrame {
 		this.lProductoSinAzucar = lProductoSinAzucar;
 	}
 
-	public JCheckBox gettProductoSinAzucar() {
+	public JComboBox gettProductoSinAzucar() {
 		return tProductoSinAzucar;
 	}
 
-	public void settProductoSinAzucar(JCheckBox tProductoSinAzucar) {
+	public void settProductoSinAzucar(JComboBox tProductoSinAzucar) {
 		this.tProductoSinAzucar = tProductoSinAzucar;
 	}
 
@@ -353,5 +348,4 @@ public class CreateCandyWindow extends JFrame {
 		this.tPrecio = tPrecio;
 	}
 
-	
 }

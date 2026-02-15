@@ -5,16 +5,16 @@ public class AnchetaDulce {
 	private int cantidadDulce;
 	private String tiposDeDulce;
 	private String nivelDulzor;
-	private boolean incluyeMarcaReconocida;
-	private boolean tieneProductoSinAzucar;
-	private float precio;
+	private String incluyeMarcaReconocida;
+	private String tieneProductoSinAzucar;
+	private int precio;
 	
 	public AnchetaDulce() {
 		// TODO Auto-generated constructor stub
 	}
 
-	public AnchetaDulce(int cantidadDulce, String tiposDeDulce, String nivelDulzor, boolean incluyeMarcaReconocida,
-			boolean tieneProductoSinAzucar, float precio) {
+	public AnchetaDulce(int cantidadDulce, String tiposDeDulce, String nivelDulzor, String incluyeMarcaReconocida,
+			String tieneProductoSinAzucar, int precio) {
 		super();
 		this.cantidadDulce = cantidadDulce;
 		this.tiposDeDulce = tiposDeDulce;
@@ -48,19 +48,19 @@ public class AnchetaDulce {
 		this.nivelDulzor = nivelDulzor;
 	}
 
-	public boolean isIncluyeMarcaReconocida() {
+	public String isIncluyeMarcaReconocida() {
 		return incluyeMarcaReconocida;
 	}
 
-	public void setIncluyeMarcaReconocida(boolean incluyeMarcaReconocida) {
+	public void setIncluyeMarcaReconocida(String incluyeMarcaReconocida) {
 		this.incluyeMarcaReconocida = incluyeMarcaReconocida;
 	}
 
-	public boolean isTieneProductoSinAzucar() {
+	public String isTieneProductoSinAzucar() {
 		return tieneProductoSinAzucar;
 	}
 
-	public void setTieneProductoSinAzucar(boolean tieneProductoSinAzucar) {
+	public void setTieneProductoSinAzucar(String tieneProductoSinAzucar) {
 		this.tieneProductoSinAzucar = tieneProductoSinAzucar;
 	}
 
@@ -68,7 +68,7 @@ public class AnchetaDulce {
 		return precio;
 	}
 
-	public void setPrecio(float precio) {
+	public void setPrecio(int precio) {
 		this.precio = precio;
 	}
 

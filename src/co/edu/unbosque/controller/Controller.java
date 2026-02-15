@@ -33,6 +33,12 @@ import java.awt.*;
 
 public class Controller implements ActionListener {
 
+	private AnchetaDulce anchetaDulce;
+	private AnchetaParaMujer anchetaParaMujer;
+	private AnchetaPersonalizable anchetaPersonalizable;
+	private AnchetaSencilla anchetaSencilla;
+	private PocilloPersonalizable pocilloPersonalizable;
+	
 	private PrincipalWindow pw;
 	private OpWindow ow;
 
@@ -85,7 +91,7 @@ public class Controller implements ActionListener {
 		dpw = new DeletedPersonalWindow();
 		dsw = new DeletedSimpleWindow();
 		dcpw = new DeletedCupWindow();
-		
+
 		asignarOyentes();
 	}
 
@@ -145,35 +151,34 @@ public class Controller implements ActionListener {
 		// ==VENTANA LEER==
 		rprw.getbBack().addActionListener(this);
 		rprw.getbBack().setActionCommand("boton_back_read");
-				
 
 		rcw.getbBack().addActionListener(this);
 		rcw.getbBack().setActionCommand("boton_back_candy_read");
 
 		rprw.getbAnchetaDulce().addActionListener(this);
 		rprw.getbAnchetaDulce().setActionCommand("boton_candy_read");
-		
+
 		rpw.getbBack().addActionListener(this);
 		rpw.getbBack().setActionCommand("boton_back_personal_read");
-		
+
 		rprw.getbAnchetaPersonalizable().addActionListener(this);
 		rprw.getbAnchetaPersonalizable().setActionCommand("boton_personal_read");
-		
+
 		rsw.getbBack().addActionListener(this);
 		rsw.getbBack().setActionCommand("boton_back_simple_read");
-		
+
 		rprw.getbAnchetaSencilla().addActionListener(this);
 		rprw.getbAnchetaSencilla().setActionCommand("boton_simple_read");
-		
+
 		rww.getbBack().addActionListener(this);
 		rww.getbBack().setActionCommand("boton_back_woman_read");
-		
+
 		rprw.getbAnchetaParaMujer().addActionListener(this);
 		rprw.getbAnchetaParaMujer().setActionCommand("boton_woman_read");
 
 		rcpw.getbBack().addActionListener(this);
 		rcpw.getbBack().setActionCommand("boton_back_cup_read");
-		
+
 		rprw.getbPocilloPersonalizable().addActionListener(this);
 		rprw.getbPocilloPersonalizable().setActionCommand("boton_cup_read");
 
@@ -184,38 +189,38 @@ public class Controller implements ActionListener {
 		// ==VENTANA ELIMINAR==
 		dw.getbBack().addActionListener(this);
 		dw.getbBack().setActionCommand("boton_back_deleted");
-		
+
 		dcw.getbBack().addActionListener(this);
 		dcw.getbBack().setActionCommand("boton_back_candy_deleted");
-		
+
 		dw.getbAnchetaDulce().addActionListener(this);
 		dw.getbAnchetaDulce().setActionCommand("boton_candy_deleted");
-		
+
 		dww.getbBack().addActionListener(this);
 		dww.getbBack().setActionCommand("boton_back_woman_deleted");
-		
+
 		dw.getbAnchetaParaMujer().addActionListener(this);
 		dw.getbAnchetaParaMujer().setActionCommand("boton_woman_deleted");
 
 		dpw.getbBack().addActionListener(this);
 		dpw.getbBack().setActionCommand("boton_back_personal_deleted");
-		
+
 		dw.getbAnchetaPersonalizable().addActionListener(this);
 		dw.getbAnchetaPersonalizable().setActionCommand("boton_personal_deleted");
 
 		dsw.getbBack().addActionListener(this);
 		dsw.getbBack().setActionCommand("boton_back_simple_deleted");
-		
+
 		dw.getbAnchetaSencilla().addActionListener(this);
 		dw.getbAnchetaSencilla().setActionCommand("boton_simple_deleted");
 
 		dcpw.getbBack().addActionListener(this);
 		dcpw.getbBack().setActionCommand("boton_back_cup_deleted");
-		
+
 		dw.getbPocilloPersonalizable().addActionListener(this);
 		dw.getbPocilloPersonalizable().setActionCommand("boton_cup_deleted");
 
-		//==BOTONES DE GUARDAR
+		// ==BOTONES DE GUARDAR
 		ccw.getbSave().addActionListener(this);
 		ccw.getbSave().setActionCommand("boton_save_candy");
 
@@ -440,18 +445,21 @@ public class Controller implements ActionListener {
 		// Botones guardar
 		case "boton_save_candy": {
 			try {
-				int cantidad = Integer.parseInt(ccw.getlCantidadDulce().getText());
-				String tipos = ccw.getlTipoDulce().getText();
-				String nivel = ccw.getlNivelDulzor().getText();
-				// boolean marca = ccw.getlMarca().getText();
-				// boolean siAzucar = ccw.getlProductoSinAzucar().getText();
-				float precio = Float.parseFloat(ccw.getlPrecio().getText());
+				int cantidad = Integer.parseInt(ccw.gettCantidadDulce().getText());
+				String tipos = ccw.gettTipoDulce().getText();
+				String nivel = ccw.gettNivelDulzor().getText();
+				String marcaStr = (String) ccw.gettMarca().getSelectedItem();
+				String siAzucarStr = (String) ccw.gettProductoSinAzucar().getSelectedItem();
+				int precio = Integer.parseInt(ccw.gettPrecio().getText());
+				
+				
+					AnchetaDulce anchetaDulce = new AnchetaDulce(cantidad, tipos, nivel, marcaStr, siAzucarStr, precio);
+					JOptionPane.showMessageDialog(null, "Ancheta creada: \n\n" + anchetaDulce.toString());
+				}
 
-				//AnchetaDulce anchetaDulce = new AnchetaDulce(cantidad, tipos, nivel, marca, siAzucar, precio);
 
-				//JOptionPane.showMessageDialog(null, "Ancheta creada: \n\n" + anchetaDulce.toString());
 
-			} catch (NumberFormatException ex) {
+			 catch (NumberFormatException ex) {
 				JOptionPane.showMessageDialog(null, "Error en el ingreso de datos, intente de nuevo",
 						"Error de formarto", JOptionPane.ERROR_MESSAGE);
 				// TODO: handle exception
@@ -462,8 +470,8 @@ public class Controller implements ActionListener {
 		default:
 			break;
 		}
-
 	}
+
 
 	public void iniciar() {
 		pw.setVisible(true);
