@@ -74,8 +74,8 @@ public class AnchetaDulce {
 
 	@Override
 	public String toString() {
-		return "AnchetaDulce: \ncantidadDulces: " + cantidadDulce + "\ntiposDeDulces: " + tiposDeDulce + "\nnivelDulzor: "
-				+ nivelDulzor + "\nincluyeMarcaReconocida: " + incluyeMarcaReconocida + "\ntieneProductoSinAzucar: "
+		return "Ancheta Dulce: \ncantidad de dulces: " + cantidadDulce + "\ntipos de Dulces: " + tiposDeDulce + "\nnivel de dulzor: "
+				+ nivelDulzor + "\nincluye marca reconocida: " + incluyeMarcaReconocida + "\ntiene producto sin azucar: "
 				+ tieneProductoSinAzucar + "\nprecio: " + precio;
 	}
 	

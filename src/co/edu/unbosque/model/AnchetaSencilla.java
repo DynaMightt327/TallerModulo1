@@ -74,9 +74,9 @@ public class AnchetaSencilla {
 
 	@Override
 	public String toString() {
-		return "AnchetaSencilla: \ncantidadDeProducto: " + cantidadDeProducto + "\ntienePocillo: " + tienePocillo
-				+ "\nnivelDeDecoracion: " + nivelDeDecoracion + "\ntipoEmpaque: " + tipoEmpaque + "\nprecio: " + precio
-				+ "\naptaParaEntrega: " + aptaParaEntrega;
+		return "Ancheta Sencilla: \ncantidad de productos: " + cantidadDeProducto + "\ntiene pocillo: " + tienePocillo
+				+ "\nnivel de decoracion: " + nivelDeDecoracion + "\ntipo de empaque: " + tipoEmpaque + "\nprecio: " + precio
+				+ "\napta para la entrega: " + aptaParaEntrega;
 	}
 	
 	

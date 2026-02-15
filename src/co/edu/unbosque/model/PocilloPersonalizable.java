@@ -74,9 +74,9 @@ public class PocilloPersonalizable {
 
 	@Override
 	public String toString() {
-		return "PocilloPersonalizable: \nmaterialPocillo: " + materialPocillo + "\ncolor: " + color
-				+ "\ncaracteristicaDePocillo: " + caracteristicaDePocillo + "\ntamanoImpresion: " + tamanoImpresion
-				+ "\naptoMicroonda: " + aptoMicroonda + "\nprecio: " + precio;
+		return "Pocillo Personalizable: \nmaterial del pocillo: " + materialPocillo + "\ncolor: " + color
+				+ "\ncaracteristicas del pocillo: " + caracteristicaDePocillo + "\ntamaño de impresion: " + tamanoImpresion
+				+ "\napto para microonda: " + aptoMicroonda + "\nprecio: " + precio;
 	}
 	
 	

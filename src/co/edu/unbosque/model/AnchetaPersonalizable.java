@@ -74,9 +74,9 @@ public class AnchetaPersonalizable {
 
 	@Override
 	public String toString() {
-		return "AnchetaPersonalizable: \ntieneGlobo: " + tieneGlobo + "\nmaximaCantidadProducto: " + maximaCantidadProducto
-				+ "\nmensajeTarjeta: " + mensajeTarjeta + "\ncoloresElegidos: " + colorElegido + "\nprecio: "
-				+ precio + "\ntamano: " + tamano;
+		return "Ancheta Personalizable: \ntiene Globos: " + tieneGlobo + "\nmaxima cantidad de productos: " + maximaCantidadProducto
+				+ "\nmensaje de la tarjeta: " + mensajeTarjeta + "\ncolores elegidos: " + colorElegido + "\nprecio: "
+				+ precio + "\ntamaño: " + tamano;
 	}
 	
 	

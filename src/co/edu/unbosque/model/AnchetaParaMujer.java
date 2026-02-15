@@ -74,8 +74,8 @@ public class AnchetaParaMujer {
 
 	@Override
 	public String toString() {
-		return "AnchetaParaMujer: \nestilo: " + estilo + "\naccesorios: " + accesorio + "\npaletaColor:" + paletaColor
-				+ "\nenfoque: " + enfoque + "\nprecio: " + precio + "\nnivelDeDetalle: " + nivelDeDetalle;
+		return "Ancheta Para Mujer: \nestilo: " + estilo + "\naccesorios: " + accesorio + "\npaleta de colores:" + paletaColor
+				+ "\nenfoque: " + enfoque + "\nprecio: " + precio + "\nnivel de detalle: " + nivelDeDetalle;
 	}
 	
 	
