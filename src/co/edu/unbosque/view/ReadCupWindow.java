@@ -1,4 +1,5 @@
 package co.edu.unbosque.view;
+
 import java.awt.Color;
 import java.awt.Font;
 
@@ -9,17 +10,21 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
+import javax.swing.JTextArea;
 import javax.swing.table.DefaultTableModel;
 
 public class ReadCupWindow extends JFrame {
 
-	private JTable tablaPocillo;
+	
 	private JLabel lImageOne;
 	private JLabel lImageTwo;
 	private JButton bBack;
 	private JPanel topPanel;
+	private JPanel centerPanel;
 	private JLabel title;
 	private JLabel logo;
+	private JTextArea showInfoCup;
+	private JScrollPane scrollShowInfoCup;
 
 	public ReadCupWindow() {
 		initComponents();
@@ -43,15 +48,13 @@ public class ReadCupWindow extends JFrame {
 		topPanel.setBackground(Color.decode("#B7AADF"));
 		add(topPanel);
 
-		// ==TABLA INFO==
-		String[] columnas = { "Material", "Color", "Caracteriticas", "Tamaño Impresion",
-				"Apto para microondas", "Precio" };
-		DefaultTableModel modelo = new DefaultTableModel(columnas, 0);
-		tablaPocillo = new JTable(modelo);
-		JScrollPane scroll = new JScrollPane(tablaPocillo);
-		scroll.setBounds(60, 220, 750, 300);
-		scroll.setBackground(Color.decode("#B7AADF"));
-		getContentPane().add(scroll);
+		centerPanel = new JPanel();
+		centerPanel.setLayout(null);
+		centerPanel.setBounds(30, 150, 800, 420);
+		centerPanel.setBackground(Color.decode("#B7AADF"));
+		add(centerPanel);
+
+		
 
 		// ==BOTONES==
 		bBack = new JButton("VOLVER");
@@ -63,19 +66,30 @@ public class ReadCupWindow extends JFrame {
 		bBack.setFocusPainted(false);
 		add(bBack);
 
-		//==LABELS==
+		// == CAMPO PARA MOSTRAR==
+		showInfoCup = new JTextArea();
+		showInfoCup.setBackground(Color.decode("#D6D0E6"));
+		showInfoCup.setEditable(false);
+		centerPanel.add(showInfoCup);
+
+		scrollShowInfoCup = new JScrollPane(showInfoCup);
+		scrollShowInfoCup.setBounds(50, 100, 700, 300);
+		scrollShowInfoCup.setBackground(Color.decode("#1F192F"));
+		centerPanel.add(scrollShowInfoCup);
+
+		// ==LABELS==
 		title = new JLabel("-> Información guardada de pocillos personalizados");
-		title.setBounds(60, 160, 700, 50);
+		title.setBounds(85, 25, 700, 50);
 		title.setForeground(Color.decode("#18093E"));
 		title.setFont(new Font("Agency FB", Font.BOLD, 40));
-		add(title);
-		
+		centerPanel.add(title);
+
 		logo = new JLabel("LUCKY J3");
 		logo.setBounds(330, 15, 550, 100);
 		logo.setForeground(Color.decode("#18093E"));
 		logo.setFont(new Font("Agency FB", Font.BOLD, 70));
 		topPanel.add(logo);
-		
+
 		// ==IMAGES==
 		ImageIcon imageOne = new ImageIcon(getClass().getResource("foto.jpg"));
 		lImageOne = new JLabel(imageOne);
@@ -88,12 +102,38 @@ public class ReadCupWindow extends JFrame {
 		topPanel.add(lImageTwo);
 	}
 
-	public JTable getTablaPocillo() {
-		return tablaPocillo;
+	
+
+	public JPanel getCenterPanel() {
+		return centerPanel;
 	}
 
-	public void setTablaPocillo(JTable tablaPocillo) {
-		this.tablaPocillo = tablaPocillo;
+	public void setCenterPanel(JPanel centerPanel) {
+		this.centerPanel = centerPanel;
+	}
+
+	/*public JLabel getTitle() {
+		return title;
+	}*/
+
+	public void setTitle(JLabel title) {
+		this.title = title;
+	}
+
+	public JTextArea getShowInfoCandy() {
+		return showInfoCup;
+	}
+
+	public void setShowInfoCandy(JTextArea showInfoCandy) {
+		this.showInfoCup = showInfoCandy;
+	}
+
+	public JScrollPane getScrollShowInfoCandy() {
+		return scrollShowInfoCup;
+	}
+
+	public void setScrollShowInfoCandy(JScrollPane scrollShowInfoCandy) {
+		this.scrollShowInfoCup = scrollShowInfoCandy;
 	}
 
 	public JLabel getlImageOne() {
@@ -128,13 +168,11 @@ public class ReadCupWindow extends JFrame {
 		this.topPanel = topPanel;
 	}
 
-	/*public JLabel getTitle() {
-		return title;
-	}
-
-	public void setTitle(JLabel title) {
-		this.title = title;
-	}*/
+	/*
+	 * public JLabel getTitle() { return title; }
+	 * 
+	 * public void setTitle(JLabel title) { this.title = title; }
+	 */
 
 	public JLabel getLogo() {
 		return logo;
@@ -143,6 +181,5 @@ public class ReadCupWindow extends JFrame {
 	public void setLogo(JLabel logo) {
 		this.logo = logo;
 	}
-
 
 }

@@ -58,6 +58,7 @@ public class ReadCandyWindow extends JFrame {
 		showInfoCandy = new JTextArea();
 		showInfoCandy.setBackground(Color.decode("#D6D0E6"));
 		showInfoCandy.setEditable(false);
+		centerPanel.add(showInfoCandy);
 
 		scrollShowInfoCandy = new JScrollPane(showInfoCandy);
 		scrollShowInfoCandy.setBounds(50, 100, 700, 300);

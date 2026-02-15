@@ -10,11 +10,14 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
+import javax.swing.JTextArea;
 import javax.swing.table.DefaultTableModel;
 
 public class ReadWomanWindow extends JFrame {
-	
-	private JTable tablaMujer;
+
+	private JPanel centerPanel;
+	private JTextArea showInfoWoman;
+	private JScrollPane scrollShowInfoWoman;
 	private JLabel lImageOne;
 	private JLabel lImageTwo;
 	private JButton bBack;
@@ -44,15 +47,22 @@ public class ReadWomanWindow extends JFrame {
 		topPanel.setBackground(Color.decode("#B7AADF"));
 		add(topPanel);
 
-		// ==TABLA INFO==
-		String[] columnas = { "Estilo", "Accesorios", "Enfoque", "Nivel de detalle",
-				"Paleta de color", "Precio" };
-		DefaultTableModel modelo = new DefaultTableModel(columnas, 0);
-		tablaMujer = new JTable(modelo);
-		JScrollPane scroll = new JScrollPane(tablaMujer);
-		scroll.setBounds(60, 220, 750, 300);
-		scroll.setBackground(Color.decode("#B7AADF"));
-		getContentPane().add(scroll);
+		centerPanel = new JPanel();
+		centerPanel.setLayout(null);
+		centerPanel.setBounds(30, 150, 800, 420);
+		centerPanel.setBackground(Color.decode("#B7AADF"));
+		add(centerPanel);
+
+		// == CAMPO PARA MOSTRAR==
+		showInfoWoman = new JTextArea();
+		showInfoWoman.setBackground(Color.decode("#D6D0E6"));
+		showInfoWoman.setEditable(false);
+		centerPanel.add(showInfoWoman);
+
+		scrollShowInfoWoman = new JScrollPane(showInfoWoman);
+		scrollShowInfoWoman.setBounds(50, 100, 700, 300);
+		scrollShowInfoWoman.setBackground(Color.decode("#1F192F"));
+		centerPanel.add(scrollShowInfoWoman);
 
 		// ==BOTONES==
 		bBack = new JButton("VOLVER");
@@ -64,19 +74,19 @@ public class ReadWomanWindow extends JFrame {
 		bBack.setFocusPainted(false);
 		add(bBack);
 
-		//==LABELS==
+		// ==LABELS==
 		title = new JLabel("-> Información guardada de regalos para mujer");
-		title.setBounds(60, 160, 700, 50);
+		title.setBounds(75, 25, 700, 50);
 		title.setForeground(Color.decode("#18093E"));
 		title.setFont(new Font("Agency FB", Font.BOLD, 40));
-		add(title);
-		
+		centerPanel.add(title);
+
 		logo = new JLabel("LUCKY J3");
 		logo.setBounds(330, 15, 550, 100);
 		logo.setForeground(Color.decode("#18093E"));
 		logo.setFont(new Font("Agency FB", Font.BOLD, 70));
 		topPanel.add(logo);
-		
+
 		// ==IMAGES==
 		ImageIcon imageOne = new ImageIcon(getClass().getResource("foto.jpg"));
 		lImageOne = new JLabel(imageOne);
@@ -89,13 +99,33 @@ public class ReadWomanWindow extends JFrame {
 		topPanel.add(lImageTwo);
 	}
 
-	public JTable getTablaMujer() {
-		return tablaMujer;
+	public JPanel getCenterPanel() {
+		return centerPanel;
 	}
 
-	public void setTablaMujer(JTable tablaMujer) {
-		this.tablaMujer = tablaMujer;
+	public void setCenterPanel(JPanel centerPanel) {
+		this.centerPanel = centerPanel;
 	}
+
+	public JTextArea getShowInfoCandy() {
+		return showInfoWoman;
+	}
+
+	public void setShowInfoCandy(JTextArea showInfoCandy) {
+		this.showInfoWoman = showInfoCandy;
+	}
+
+	public JScrollPane getScrollShowInfoCandy() {
+		return scrollShowInfoWoman;
+	}
+
+	public void setScrollShowInfoCandy(JScrollPane scrollShowInfoCandy) {
+		this.scrollShowInfoWoman = scrollShowInfoCandy;
+	}
+
+	/*
+	 * public JLabel getTitle() { return title; }
+	 */
 
 	public JLabel getlImageOne() {
 		return lImageOne;
@@ -129,9 +159,9 @@ public class ReadWomanWindow extends JFrame {
 		this.topPanel = topPanel;
 	}
 
-	/*public JLabel getTitle() {
-		return title;
-	}*/
+	/*
+	 * public JLabel getTitle() { return title; }
+	 */
 
 	public void setTitle(JLabel title) {
 		this.title = title;
@@ -144,6 +174,5 @@ public class ReadWomanWindow extends JFrame {
 	public void setLogo(JLabel logo) {
 		this.logo = logo;
 	}
-
 
 }

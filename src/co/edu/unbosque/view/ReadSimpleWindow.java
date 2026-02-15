@@ -10,11 +10,14 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
+import javax.swing.JTextArea;
 import javax.swing.table.DefaultTableModel;
 
-public class ReadSimpleWindow extends JFrame{
-	
-	private JTable tablaSimple;
+public class ReadSimpleWindow extends JFrame {
+
+	private JPanel centerPanel;
+	private JTextArea showInfoSimple;
+	private JScrollPane scrollShowInfoSimple;
 	private JLabel lImageOne;
 	private JLabel lImageTwo;
 	private JButton bBack;
@@ -44,16 +47,11 @@ public class ReadSimpleWindow extends JFrame{
 		topPanel.setBackground(Color.decode("#B7AADF"));
 		add(topPanel);
 
-		// ==TABLA INFO==
-		String[] columnas = { "Cantidad productos", "Tiene pocillo", "Nivel decoracion", "Tipo de empaque",
-				"Apta para entrega", "Precio" };
-		DefaultTableModel modelo = new DefaultTableModel(columnas, 0);
-		tablaSimple = new JTable(modelo);
-		JScrollPane scroll = new JScrollPane(tablaSimple);
-		scroll.setBounds(60, 220, 750, 300);
-		scroll.setBackground(Color.decode("#B7AADF"));
-		getContentPane().add(scroll);
-
+		centerPanel = new JPanel();
+		centerPanel.setLayout(null);
+		centerPanel.setBounds(30, 150, 800, 420);
+		centerPanel.setBackground(Color.decode("#B7AADF"));
+		add(centerPanel);
 		// ==BOTONES==
 		bBack = new JButton("VOLVER");
 		bBack.setBounds(10, 575, 100, 30);
@@ -64,19 +62,30 @@ public class ReadSimpleWindow extends JFrame{
 		bBack.setFocusPainted(false);
 		add(bBack);
 
-		//==LABELS==
+		// ==LABELS==
 		title = new JLabel("-> Información guardada de regalos sencillos");
-		title.setBounds(60, 160, 700, 50);
+		title.setBounds(85, 25, 700, 50);
 		title.setForeground(Color.decode("#18093E"));
 		title.setFont(new Font("Agency FB", Font.BOLD, 40));
-		add(title);
-		
+		centerPanel.add(title);
+
 		logo = new JLabel("LUCKY J3");
 		logo.setBounds(330, 15, 550, 100);
 		logo.setForeground(Color.decode("#18093E"));
 		logo.setFont(new Font("Agency FB", Font.BOLD, 70));
 		topPanel.add(logo);
-		
+
+		// == CAMPO PARA MOSTRAR==
+		showInfoSimple = new JTextArea();
+		showInfoSimple.setBackground(Color.decode("#D6D0E6"));
+		showInfoSimple.setEditable(false);
+		centerPanel.add(showInfoSimple);
+
+		scrollShowInfoSimple = new JScrollPane(showInfoSimple);
+		scrollShowInfoSimple.setBounds(50, 100, 700, 300);
+		scrollShowInfoSimple.setBackground(Color.decode("#1F192F"));
+		centerPanel.add(scrollShowInfoSimple);
+
 		// ==IMAGES==
 		ImageIcon imageOne = new ImageIcon(getClass().getResource("foto.jpg"));
 		lImageOne = new JLabel(imageOne);
@@ -89,13 +98,34 @@ public class ReadSimpleWindow extends JFrame{
 		topPanel.add(lImageTwo);
 	}
 
-	public JTable getTablaDulce() {
-		return tablaSimple;
+	
+	public JPanel getCenterPanel() {
+		return centerPanel;
 	}
 
-	public void setTablaDulce(JTable tablaDulce) {
-		this.tablaSimple = tablaDulce;
+	public void setCenterPanel(JPanel centerPanel) {
+		this.centerPanel = centerPanel;
 	}
+
+	public JTextArea getShowInfoSimple() {
+		return showInfoSimple;
+	}
+
+	public void setShowInfoSimple(JTextArea showInfoSimple) {
+		this.showInfoSimple = showInfoSimple;
+	}
+
+	public JScrollPane getScrollShowInfoSimple() {
+		return scrollShowInfoSimple;
+	}
+
+	public void setScrollShowInfoSimple(JScrollPane scrollShowInfoSimple) {
+		this.scrollShowInfoSimple = scrollShowInfoSimple;
+	}
+
+	/*public JLabel getTitle() {
+		return title;
+	}*/
 
 	public JLabel getlImageOne() {
 		return lImageOne;
@@ -129,9 +159,9 @@ public class ReadSimpleWindow extends JFrame{
 		this.topPanel = topPanel;
 	}
 
-	/*public JLabel getTitle() {
-		return title;
-	}*/
+	/*
+	 * public JLabel getTitle() { return title; }
+	 */
 
 	public void setTitle(JLabel title) {
 		this.title = title;
@@ -144,6 +174,5 @@ public class ReadSimpleWindow extends JFrame{
 	public void setLogo(JLabel logo) {
 		this.logo = logo;
 	}
-
 
 }

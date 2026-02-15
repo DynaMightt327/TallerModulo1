@@ -1,4 +1,5 @@
 package co.edu.unbosque.view;
+
 import java.awt.Color;
 import java.awt.Font;
 
@@ -9,11 +10,14 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
+import javax.swing.JTextArea;
 import javax.swing.table.DefaultTableModel;
 
-public class ReadPersonalWindow extends JFrame{
-	
-	private JTable tablaPersonal;
+public class ReadPersonalWindow extends JFrame {
+
+	private JPanel centerPanel;
+	private JTextArea showInfoPersonal;
+	private JScrollPane scrollShowInfoPersonal;
 	private JLabel lImageOne;
 	private JLabel lImageTwo;
 	private JButton bBack;
@@ -43,15 +47,22 @@ public class ReadPersonalWindow extends JFrame{
 		topPanel.setBackground(Color.decode("#B7AADF"));
 		add(topPanel);
 
-		// ==TABLA INFO==
-		String[] columnas = { "Tiene globos", "Mensaje Tarjeta", "Colores Elegidos", "Cantidad Productos",
-				"Tamaño", "Precio" };
-		DefaultTableModel modelo = new DefaultTableModel(columnas, 0);
-		tablaPersonal = new JTable(modelo);
-		JScrollPane scroll = new JScrollPane(tablaPersonal);
-		scroll.setBounds(60, 220, 750, 300);
-		scroll.setBackground(Color.decode("#B7AADF"));
-		getContentPane().add(scroll);
+		centerPanel = new JPanel();
+		centerPanel.setLayout(null);
+		centerPanel.setBounds(30, 150, 800, 420);
+		centerPanel.setBackground(Color.decode("#B7AADF"));
+		add(centerPanel);
+
+		// == CAMPO PARA MOSTRAR==
+		showInfoPersonal = new JTextArea();
+		showInfoPersonal.setBackground(Color.decode("#D6D0E6"));
+		showInfoPersonal.setEditable(false);
+		centerPanel.add(showInfoPersonal);
+
+		scrollShowInfoPersonal = new JScrollPane(showInfoPersonal);
+		scrollShowInfoPersonal.setBounds(50, 100, 700, 300);
+		scrollShowInfoPersonal.setBackground(Color.decode("#1F192F"));
+		centerPanel.add(scrollShowInfoPersonal);
 
 		// ==BOTONES==
 		bBack = new JButton("VOLVER");
@@ -63,19 +74,19 @@ public class ReadPersonalWindow extends JFrame{
 		bBack.setFocusPainted(false);
 		add(bBack);
 
-		//==LABELS==
+		// ==LABELS==
 		title = new JLabel("-> Información guardada de regalos personalizados");
-		title.setBounds(60, 160, 780, 50);
+		title.setBounds(85, 25, 780, 50);
 		title.setForeground(Color.decode("#18093E"));
 		title.setFont(new Font("Agency FB", Font.BOLD, 40));
-		add(title);
-		
+		centerPanel.add(title);
+
 		logo = new JLabel("LUCKY J3");
 		logo.setBounds(330, 15, 550, 100);
 		logo.setForeground(Color.decode("#18093E"));
 		logo.setFont(new Font("Agency FB", Font.BOLD, 70));
 		topPanel.add(logo);
-		
+
 		// ==IMAGES==
 		ImageIcon imageOne = new ImageIcon(getClass().getResource("foto.jpg"));
 		lImageOne = new JLabel(imageOne);
@@ -88,12 +99,29 @@ public class ReadPersonalWindow extends JFrame{
 		topPanel.add(lImageTwo);
 	}
 
-	public JTable getTablaPersonal() {
-		return tablaPersonal;
+	
+	public JPanel getCenterPanel() {
+		return centerPanel;
 	}
 
-	public void setTablaPersonal(JTable tablaPersonal) {
-		this.tablaPersonal = tablaPersonal;
+	public void setCenterPanel(JPanel centerPanel) {
+		this.centerPanel = centerPanel;
+	}
+
+	public JTextArea getShowInfoPersonal() {
+		return showInfoPersonal;
+	}
+
+	public void setShowInfoPersonal(JTextArea showInfoPersonal) {
+		this.showInfoPersonal = showInfoPersonal;
+	}
+
+	public JScrollPane getScrollShowInfoPersonal() {
+		return scrollShowInfoPersonal;
+	}
+
+	public void setScrollShowInfoPersonal(JScrollPane scrollShowInfoPersonal) {
+		this.scrollShowInfoPersonal = scrollShowInfoPersonal;
 	}
 
 	public JLabel getlImageOne() {
@@ -128,9 +156,9 @@ public class ReadPersonalWindow extends JFrame{
 		this.topPanel = topPanel;
 	}
 
-	/*public JLabel getTitle() {
-		return title;
-	}*/
+	/*
+	 * public JLabel getTitle() { return title; }
+	 */
 
 	public void setTitle(JLabel title) {
 		this.title = title;
@@ -143,8 +171,5 @@ public class ReadPersonalWindow extends JFrame{
 	public void setLogo(JLabel logo) {
 		this.logo = logo;
 	}
-
-	
-	
 
 }
