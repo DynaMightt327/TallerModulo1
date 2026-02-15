@@ -41,11 +41,11 @@ public class Controller implements ActionListener {
 	private AnchetaSencilla anchetaSencilla;
 	private PocilloPersonalizable pocilloPersonalizable;
 	
-	private ArrayList<AnchetaDulce> listaAnchetaDulce = new ArrayList<>();
-	private ArrayList<AnchetaParaMujer> listaAnchetaMujer = new ArrayList<>();
-	private ArrayList<AnchetaPersonalizable> listaAnchetaPersonalizable = new ArrayList<>();
-	private ArrayList<AnchetaSencilla> listaAnchetaSencilla = new ArrayList<>();
-	private ArrayList<PocilloPersonalizable> listaPocilloPersonalizable = new ArrayList<>();
+	private ArrayList<AnchetaDulce> listaAnchetaDulce;
+	private ArrayList<AnchetaParaMujer> listaAnchetaMujer;
+	private ArrayList<AnchetaPersonalizable> listaAnchetaPersonalizable;
+	private ArrayList<AnchetaSencilla> listaAnchetaSencilla;
+	private ArrayList<PocilloPersonalizable> listaPocilloPersonalizable;
 	
 	//aaaaa
 	
@@ -101,6 +101,12 @@ public class Controller implements ActionListener {
 		dpw = new DeletedPersonalWindow();
 		dsw = new DeletedSimpleWindow();
 		dcpw = new DeletedCupWindow();
+		
+		listaAnchetaDulce = new ArrayList<>();
+		listaAnchetaMujer = new ArrayList<>();
+		listaAnchetaPersonalizable = new ArrayList<>();
+		listaAnchetaSencilla = new ArrayList<>();
+		listaPocilloPersonalizable = new ArrayList<>();
 
 		asignarOyentes();
 	}
@@ -466,7 +472,6 @@ public class Controller implements ActionListener {
 					AnchetaDulce anchetaDulce = new AnchetaDulce(cantidad, tipos, nivel, marcaStr, siAzucarStr, precio);
 					listaAnchetaDulce.add(anchetaDulce);
 					JOptionPane.showMessageDialog(null, "Ancheta creada: \n\n" + anchetaDulce.toString());
-					listaAnchetaDulce.add(anchetaDulce);
 				}
 
 
