@@ -251,6 +251,9 @@ public class Controller implements ActionListener {
 		
 		ccpw.getbSave().addActionListener(this);
 		ccpw.getbSave().setActionCommand("boton_save_cup");
+		
+		dcw.getDelete().addActionListener(this);
+		dcw.getDelete().setActionCommand("boton_delete_candy");
 
 	}
 
@@ -648,6 +651,106 @@ public class Controller implements ActionListener {
 			}
 			break;
 		}
+		
+		case"boton_delete_candy": {
+			
+			try {
+				int indiceUsuario = Integer.parseInt(dcw.getPosicion().getText());
+				int indiceLista = indiceUsuario - 1;
+				if(listaAnchetaDulce.isEmpty()) {
+					JOptionPane.showMessageDialog(null, "No hay anchetas dulces registradas.", "lista vacia", JOptionPane.WARNING_MESSAGE);
+					
+				}else if(indiceLista < 0 || indiceLista >= listaAnchetaDulce.size()) {
+					JOptionPane.showMessageDialog(null, "Indice invalido. Debe estar entre 1 y " + listaAnchetaDulce.size(), "Indice incorrecto", JOptionPane.WARNING_MESSAGE);
+					
+				}else {
+					AnchetaDulce eliminada = listaAnchetaDulce.remove(indiceLista);
+					JOptionPane.showMessageDialog(null, "Ancheta dulce eliminada:\n\n" + eliminada.toString(), "Eliminacion exitosa", JOptionPane.INFORMATION_MESSAGE);
+				}
+			} catch (NumberFormatException ex) {
+				JOptionPane.showMessageDialog(null, "Error: el indice debe ser un numero entero.", "Error de formato", JOptionPane.ERROR_MESSAGE);
+				// TODO: handle exception
+			}
+			break;
+		}
+		case "boton_delete_woman": {
+			
+			try {
+				int indiceUsuario = Integer.parseInt(dww.getPosicion().getText());
+				int indiceLista = indiceUsuario - 1;
+				if(listaAnchetaMujer.isEmpty()) {
+					JOptionPane.showMessageDialog(null, "No hay anchetas para mujer registradas.", "lista vacia", JOptionPane.WARNING_MESSAGE);
+				}else if(indiceLista < 0 || indiceLista >= listaAnchetaMujer.size()) {
+					JOptionPane.showMessageDialog(null, "Indice invalido. Debe estar entre 1 y " + listaAnchetaMujer.size(), "indice incorrecto", JOptionPane.WARNING_MESSAGE);
+				} else {
+					AnchetaParaMujer eliminada = listaAnchetaMujer.remove(indiceLista);
+					JOptionPane.showMessageDialog(null, "Ancheta para mujer eliminada: \n\n" + eliminada.toString(), "Eliminacion exitosa", JOptionPane.INFORMATION_MESSAGE);
+				}	
+			} catch (NumberFormatException ex) {
+				JOptionPane.showMessageDialog(null, "Error: el indice debe ser un numero entero.", "Error de formato", JOptionPane.ERROR_MESSAGE);
+				// TODO: handle exception
+			}
+			break;
+		}
+		case "boton_delete_personal": {
+			
+			try {
+				int indiceUsuario = Integer.parseInt(dpw.getPosicion().getText());
+				int indiceLista = indiceUsuario - 1;
+				if(listaAnchetaPersonalizable.isEmpty()) {
+					JOptionPane.showMessageDialog(null, "No hay anchetas personalizables registradas.", "lista vacia", JOptionPane.WARNING_MESSAGE);
+				}else if(indiceLista < 0 || indiceLista >= listaAnchetaPersonalizable.size()) {
+					JOptionPane.showMessageDialog(null, "Indice invalido. Debe estar entre 1 y " + listaAnchetaPersonalizable.size(), "indice incorrecto", JOptionPane.WARNING_MESSAGE);
+				} else {
+					AnchetaPersonalizable eliminada = listaAnchetaPersonalizable.remove(indiceLista);
+					JOptionPane.showMessageDialog(null, "Ancheta personalizada eliminada: \n\n" + eliminada.toString(), "Eliminacion exitosa", JOptionPane.INFORMATION_MESSAGE);
+				}	
+			} catch (NumberFormatException ex) {
+				JOptionPane.showMessageDialog(null, "Error: el indice debe ser un numero entero.", "Error de formato", JOptionPane.ERROR_MESSAGE);
+				// TODO: handle exception
+			}
+			break;
+		}
+		case "boton_delete_simple": {
+			
+			try {
+				int indiceUsuario = Integer.parseInt(dsw.getPosicion().getText());
+				int indiceLista = indiceUsuario - 1;
+				if(listaAnchetaSencilla.isEmpty()) {
+					JOptionPane.showMessageDialog(null, "No hay anchetas sencillas registradas.", "lista vacia", JOptionPane.WARNING_MESSAGE);
+				}else if(indiceLista < 0 || indiceLista >= listaAnchetaSencilla.size()) {
+					JOptionPane.showMessageDialog(null, "Indice invalido. Debe estar entre 1 y " + listaAnchetaSencilla.size(), "indice incorrecto", JOptionPane.WARNING_MESSAGE);
+				} else {
+					AnchetaSencilla eliminada = listaAnchetaSencilla.remove(indiceLista);
+					JOptionPane.showMessageDialog(null, "Ancheta sencilla eliminada: \n\n" + eliminada.toString(), "Eliminacion exitosa", JOptionPane.INFORMATION_MESSAGE);
+				}	
+			} catch (NumberFormatException ex) {
+				JOptionPane.showMessageDialog(null, "Error: el indice debe ser un numero entero.", "Error de formato", JOptionPane.ERROR_MESSAGE);
+				// TODO: handle exception
+			}
+			break;
+		}
+		case "boton_delete_cup": {
+			
+			try {
+				int indiceUsuario = Integer.parseInt(dcpw.getPosicion().getText());
+				int indiceLista = indiceUsuario - 1;
+				if(listaPocilloPersonalizable.isEmpty()) {
+					JOptionPane.showMessageDialog(null, "No hay pocillos registradas.", "lista vacia", JOptionPane.WARNING_MESSAGE);
+				}else if(indiceLista < 0 || indiceLista >= listaPocilloPersonalizable.size()) {
+					JOptionPane.showMessageDialog(null, "Indice invalido. Debe estar entre 1 y " + listaPocilloPersonalizable.size(), "indice incorrecto", JOptionPane.WARNING_MESSAGE);
+				} else {
+					PocilloPersonalizable eliminada = listaPocilloPersonalizable.remove(indiceLista);
+					JOptionPane.showMessageDialog(null, "Pocillo personalizable eliminado: \n\n" + eliminada.toString(), "Eliminacion exitosa", JOptionPane.INFORMATION_MESSAGE);
+				}	
+			} catch (NumberFormatException ex) {
+				JOptionPane.showMessageDialog(null, "Error: el indice debe ser un numero entero.", "Error de formato", JOptionPane.ERROR_MESSAGE);
+				// TODO: handle exception
+			}
+			break;
+		}
+		
+		
 		default:
 			break;
 		}
