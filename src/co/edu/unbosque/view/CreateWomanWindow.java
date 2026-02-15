@@ -122,78 +122,78 @@ public class CreateWomanWindow extends JFrame {
 		
 		//==ESPACIOS DE TEXTO==
 		lEstilo = new JLabel("Estilo");
-		lEstilo.setBounds(134, 80, 150, 30);
+		lEstilo.setBounds(134, 90, 150, 30);
 		lEstilo.setFont(new Font("Agency FB", Font.BOLD, 22));
 		lEstilo.setForeground(Color.decode("#18093E"));
 		centerPanel.add(lEstilo);
 		
 		tEstilo = new JTextField();
-		tEstilo.setBounds(73, 110, 164, 28);
+		tEstilo.setBounds(73, 120, 164, 28);
 		tEstilo.setFont(new Font("Agency FB", Font.BOLD, 15));
 		tEstilo.setForeground(Color.decode("#18093E"));
 		tEstilo.setBorder(null);
 		centerPanel.add(tEstilo);
 
 		lAccesorio = new JLabel("Accesorio");
-		lAccesorio.setBounds(110, 140, 150, 30);
+		lAccesorio.setBounds(120, 160, 150, 30);
 		lAccesorio.setFont(new Font("Agency FB", Font.BOLD, 22));
 		lAccesorio.setForeground(Color.decode("#18093E"));
 		centerPanel.add(lAccesorio);
 		
 		tAccesorio = new JTextField();
-		tAccesorio.setBounds(73, 170, 164, 28);
+		tAccesorio.setBounds(73, 190, 164, 28);
 		tAccesorio.setFont(new Font("Agency FB", Font.BOLD, 15));
 		tAccesorio.setForeground(Color.decode("#18093E"));
 		tAccesorio.setBorder(null);
 		centerPanel.add(tAccesorio);
 		
 		lEnfoque = new JLabel("Enfoque");
-		lEnfoque.setBounds(128, 200, 150, 30);
+		lEnfoque.setBounds(128, 230, 150, 30);
 		lEnfoque.setFont(new Font("Agency FB", Font.BOLD, 22));
 		lEnfoque.setForeground(Color.decode("#18093E"));
 		centerPanel.add(lEnfoque);
 		
 		tEnfoque = new JTextField();
-		tEnfoque.setBounds(73, 230, 164, 28);
+		tEnfoque.setBounds(73, 260, 164, 28);
 		tEnfoque.setFont(new Font("Agency FB", Font.BOLD, 15));
 		tEnfoque.setForeground(Color.decode("#18093E"));
 		tEnfoque.setBorder(null);
 		centerPanel.add(tEnfoque);
 		
 		lPrecio = new JLabel("Precio");
-		lPrecio.setBounds(395, 80, 150, 30);
+		lPrecio.setBounds(395, 90, 150, 30);
 		lPrecio.setFont(new Font("Agency FB", Font.BOLD, 22));
 		lPrecio.setForeground(Color.decode("#18093E"));
 		centerPanel.add(lPrecio);
 		
 		tPrecio = new JTextField();
-		tPrecio.setBounds(340, 110, 164, 28);
+		tPrecio.setBounds(340, 120, 164, 28);
 		tPrecio.setFont(new Font("Agency FB", Font.BOLD, 15));
 		tPrecio.setForeground(Color.decode("#18093E"));
 		tPrecio.setBorder(null);
 		centerPanel.add(tPrecio);
 		
 		lNivelDeDetalle = new JLabel("Nivel Detalle");
-		lNivelDeDetalle.setBounds(395, 140, 150, 30);
+		lNivelDeDetalle.setBounds(375, 160, 150, 30);
 		lNivelDeDetalle.setFont(new Font("Agency FB", Font.BOLD, 22));
 		lNivelDeDetalle.setForeground(Color.decode("#18093E"));
 		centerPanel.add(lNivelDeDetalle);
 		
 		tNivelDetalle = new JComboBox<>(new String[] { "...", "Bajo", "Medio", "Alto" });
-		tNivelDetalle.setBounds(340, 170, 164, 28);
+		tNivelDetalle.setBounds(340, 190, 164, 28);
 		tNivelDetalle.setFont(new Font("Agency FB", Font.BOLD, 15));
 		tNivelDetalle.setForeground(Color.decode("#18093E"));
 		tNivelDetalle.setBorder(null);
 		centerPanel.add(tNivelDetalle);	
 		
 		lPaletaColor = new JLabel("Paleta de colores");
-		lPaletaColor.setBounds(395, 200, 150, 30);
+		lPaletaColor.setBounds(360, 230, 150, 30);
 		lPaletaColor.setFont(new Font("Agency FB", Font.BOLD, 22));
 		lPaletaColor.setForeground(Color.decode("#18093E"));
 		centerPanel.add(lPaletaColor);
 		
 		tPaletaColor = new JTextField();
-		tPaletaColor.setBounds(340, 230, 164, 28);
+		tPaletaColor.setBounds(340, 260, 164, 28);
 		tPaletaColor.setFont(new Font("Agency FB", Font.BOLD, 15));
 		tPaletaColor.setForeground(Color.decode("#18093E"));
 		tPaletaColor.setBorder(null);

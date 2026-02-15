@@ -120,78 +120,78 @@ public class CreateSimpleWindow extends JFrame {
 
 		// ==ESPACIOS DE TEXTO==
 		lCantidadProducto = new JLabel("Cantidad de productos");
-		lCantidadProducto.setBounds(128, 80, 150, 30);
+		lCantidadProducto.setBounds(80, 90, 180, 30);
 		lCantidadProducto.setFont(new Font("Agency FB", Font.BOLD, 22));
 		lCantidadProducto.setForeground(Color.decode("#18093E"));
 		centerPanel.add(lCantidadProducto);
 
 		tCantidadProducto = new JTextField();
-		tCantidadProducto.setBounds(73, 110, 164, 28);
+		tCantidadProducto.setBounds(73, 120, 164, 28);
 		tCantidadProducto.setFont(new Font("Agency FB", Font.BOLD, 15));
 		tCantidadProducto.setForeground(Color.decode("#18093E"));
 		tCantidadProducto.setBorder(null);
 		centerPanel.add(tCantidadProducto);
 
-		lTienePocillo = new JLabel("Contiene pocillo? (si/no)");
-		lTienePocillo.setBounds(128, 140, 150, 30);
+		lTienePocillo = new JLabel("Contiene pocillo?");
+		lTienePocillo.setBounds(96, 160, 150, 30);
 		lTienePocillo.setFont(new Font("Agency FB", Font.BOLD, 22));
 		lTienePocillo.setForeground(Color.decode("#18093E"));
 		centerPanel.add(lTienePocillo);
 
 		tTienePocillo = new JComboBox<>(new String[] { "...", "Si", "No" });
-		tTienePocillo.setBounds(73, 170, 164, 28);
+		tTienePocillo.setBounds(73, 190, 164, 28);
 		tTienePocillo.setFont(new Font("Agency FB", Font.BOLD, 15));
 		tTienePocillo.setForeground(Color.decode("#18093E"));
 		tTienePocillo.setBorder(null);
 		centerPanel.add(tTienePocillo);
 
 		lNivelDeco = new JLabel("Nivel decoración");
-		lNivelDeco.setBounds(128, 200, 150, 30);
+		lNivelDeco.setBounds(95, 230, 150, 30);
 		lNivelDeco.setFont(new Font("Agency FB", Font.BOLD, 22));
 		lNivelDeco.setForeground(Color.decode("#18093E"));
 		centerPanel.add(lNivelDeco);
 
 		tNivelDeco = new JTextField();
-		tNivelDeco.setBounds(73, 230, 164, 28);
+		tNivelDeco.setBounds(73, 260, 164, 28);
 		tNivelDeco.setFont(new Font("Agency FB", Font.BOLD, 15));
 		tNivelDeco.setForeground(Color.decode("#18093E"));
 		tNivelDeco.setBorder(null);
 		centerPanel.add(tNivelDeco);
 
 		lTipoEmpaque = new JLabel("Tipo de empaque");
-		lTipoEmpaque.setBounds(395, 80, 150, 30);
+		lTipoEmpaque.setBounds(370, 90, 150, 30);
 		lTipoEmpaque.setFont(new Font("Agency FB", Font.BOLD, 22));
 		lTipoEmpaque.setForeground(Color.decode("#18093E"));
 		centerPanel.add(lTipoEmpaque);
 
 		tTipoEmpaque = new JTextField();
-		tTipoEmpaque.setBounds(340, 110, 164, 28);
+		tTipoEmpaque.setBounds(340, 120, 164, 28);
 		tTipoEmpaque.setFont(new Font("Agency FB", Font.BOLD, 15));
 		tTipoEmpaque.setForeground(Color.decode("#18093E"));
 		tTipoEmpaque.setBorder(null);
 		centerPanel.add(tTipoEmpaque);
 
 		lPrecio = new JLabel("Precio");
-		lPrecio.setBounds(395, 140, 150, 30);
+		lPrecio.setBounds(400, 160, 150, 30);
 		lPrecio.setFont(new Font("Agency FB", Font.BOLD, 22));
 		lPrecio.setForeground(Color.decode("#18093E"));
 		centerPanel.add(lPrecio);
 
 		tPrecio = new JTextField();
-		tPrecio.setBounds(340, 170, 164, 28);
+		tPrecio.setBounds(340, 190, 164, 28);
 		tPrecio.setFont(new Font("Agency FB", Font.BOLD, 15));
 		tPrecio.setForeground(Color.decode("#18093E"));
 		tPrecio.setBorder(null);
 		centerPanel.add(tPrecio);
 
 		lAptaParaEntrega = new JLabel("Apta para entrega?");
-		lAptaParaEntrega.setBounds(395, 200, 150, 30);
+		lAptaParaEntrega.setBounds(355, 230, 150, 30);
 		lAptaParaEntrega.setFont(new Font("Agency FB", Font.BOLD, 22));
 		lAptaParaEntrega.setForeground(Color.decode("#18093E"));
 		centerPanel.add(lAptaParaEntrega);
 
 		tAptaParaEntrega = new JComboBox<>(new String[] { "...", "Si", "No" });
-		tAptaParaEntrega.setBounds(340, 230, 164, 28);
+		tAptaParaEntrega.setBounds(340, 260, 164, 28);
 		tAptaParaEntrega.setFont(new Font("Agency FB", Font.BOLD, 15));
 		tAptaParaEntrega.setForeground(Color.decode("#18093E"));
 		tAptaParaEntrega.setBorder(null);

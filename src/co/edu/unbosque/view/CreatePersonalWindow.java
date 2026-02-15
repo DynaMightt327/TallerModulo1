@@ -121,79 +121,79 @@ public class CreatePersonalWindow extends JFrame{
 		centerPanel.add(partner);
 		
 		//==ESPACIOS DE TEXTO==
-		lTieneGlobo = new JLabel("Tiene globos? (si/no)");
-		lTieneGlobo.setBounds(128, 80, 150, 30);
+		lTieneGlobo = new JLabel("Tiene globos?");
+		lTieneGlobo.setBounds(112, 90, 150, 30);
 		lTieneGlobo.setFont(new Font("Agency FB", Font.BOLD, 22));
 		lTieneGlobo.setForeground(Color.decode("#18093E"));
 		centerPanel.add(lTieneGlobo);
 		
 		tTieneGlobo = new JComboBox<>(new String[] { "...", "Si", "No" });
-		tTieneGlobo.setBounds(73, 110, 164, 28);
+		tTieneGlobo.setBounds(73, 120, 164, 28);
 		tTieneGlobo.setFont(new Font("Agency FB", Font.BOLD, 15));
 		tTieneGlobo.setForeground(Color.decode("#18093E"));
 		tTieneGlobo.setBorder(null);
 		centerPanel.add(tTieneGlobo);
 
 		lMaximaCantidadProducto = new JLabel("Cantidad Productos");
-		lMaximaCantidadProducto.setBounds(128, 140, 150, 30);
+		lMaximaCantidadProducto.setBounds(90, 160, 150, 30);
 		lMaximaCantidadProducto.setFont(new Font("Agency FB", Font.BOLD, 22));
 		lMaximaCantidadProducto.setForeground(Color.decode("#18093E"));
 		centerPanel.add(lMaximaCantidadProducto);
 		
 		tMaximaCantidadProducto = new JTextField();
-		tMaximaCantidadProducto.setBounds(73, 170, 164, 28);
+		tMaximaCantidadProducto.setBounds(73, 190, 164, 28);
 		tMaximaCantidadProducto.setFont(new Font("Agency FB", Font.BOLD, 15));
 		tMaximaCantidadProducto.setForeground(Color.decode("#18093E"));
 		tMaximaCantidadProducto.setBorder(null);
 		centerPanel.add(tMaximaCantidadProducto);
 		
 		lMensajeTarjeta = new JLabel("Mensaje Tarjeta");
-		lMensajeTarjeta.setBounds(128, 200, 150, 30);
+		lMensajeTarjeta.setBounds(102, 230, 150, 30);
 		lMensajeTarjeta.setFont(new Font("Agency FB", Font.BOLD, 22));
 		lMensajeTarjeta.setForeground(Color.decode("#18093E"));
 		centerPanel.add(lMensajeTarjeta);
 		
 		tMensajeTarjeta = new JTextField();
-		tMensajeTarjeta.setBounds(73, 230, 164, 28);
+		tMensajeTarjeta.setBounds(73, 260, 164, 28);
 		tMensajeTarjeta.setFont(new Font("Agency FB", Font.BOLD, 15));
 		tMensajeTarjeta.setForeground(Color.decode("#18093E"));
 		tMensajeTarjeta.setBorder(null);
 		centerPanel.add(tMensajeTarjeta);
 		
 		lColorElegido = new JLabel("Colores elegidos");
-		lColorElegido.setBounds(395, 80, 150, 30);
+		lColorElegido.setBounds(370, 90, 150, 30);
 		lColorElegido.setFont(new Font("Agency FB", Font.BOLD, 22));
 		lColorElegido.setForeground(Color.decode("#18093E"));
 		centerPanel.add(lColorElegido);
 		
 		tColorElegido = new JTextField();
-		tColorElegido.setBounds(340, 110, 164, 28);
+		tColorElegido.setBounds(340, 120, 164, 28);
 		tColorElegido.setFont(new Font("Agency FB", Font.BOLD, 15));
 		tColorElegido.setForeground(Color.decode("#18093E"));
 		tColorElegido.setBorder(null);
 		centerPanel.add(tColorElegido);
 		
 		lPrecio = new JLabel("Precio");
-		lPrecio.setBounds(395, 140, 150, 30);
+		lPrecio.setBounds(400, 160, 150, 30);
 		lPrecio.setFont(new Font("Agency FB", Font.BOLD, 22));
 		lPrecio.setForeground(Color.decode("#18093E"));
 		centerPanel.add(lPrecio);
 		
 		tPrecio = new JTextField();
-		tPrecio.setBounds(340, 170, 164, 28);
+		tPrecio.setBounds(340, 190, 164, 28);
 		tPrecio.setFont(new Font("Agency FB", Font.BOLD, 15));
 		tPrecio.setForeground(Color.decode("#18093E"));
 		tPrecio.setBorder(null);
 		centerPanel.add(tPrecio);	
 		
 		lTamano = new JLabel("Tamaño");
-		lTamano.setBounds(395, 200, 150, 30);
+		lTamano.setBounds(395, 230, 150, 30);
 		lTamano.setFont(new Font("Agency FB", Font.BOLD, 22));
 		lTamano.setForeground(Color.decode("#18093E"));
 		centerPanel.add(lTamano);
 		
 		tTamano = new JTextField();
-		tTamano.setBounds(340, 230, 164, 28);
+		tTamano.setBounds(340, 260, 164, 28);
 		tTamano.setFont(new Font("Agency FB", Font.BOLD, 15));
 		tTamano.setForeground(Color.decode("#18093E"));
 		tTamano.setBorder(null);
@@ -272,8 +272,6 @@ public class CreatePersonalWindow extends JFrame{
 	public void setlTieneGlobo(JLabel lTieneGlobo) {
 		this.lTieneGlobo = lTieneGlobo;
 	}
-
-	
 
 	public JLabel getPartner() {
 		return partner;

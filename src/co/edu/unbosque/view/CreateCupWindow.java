@@ -119,78 +119,78 @@ public class CreateCupWindow extends JFrame {
 
 		// ==ESPACIOS DE TEXTO==
 		lMaterial = new JLabel("Material");
-		lMaterial.setBounds(128, 80, 150, 30);
+		lMaterial.setBounds(125, 90, 150, 30);
 		lMaterial.setFont(new Font("Agency FB", Font.BOLD, 22));
 		lMaterial.setForeground(Color.decode("#18093E"));
 		centerPanel.add(lMaterial);
 
 		tMaterial = new JTextField();
-		tMaterial.setBounds(73, 110, 164, 28);
+		tMaterial.setBounds(73, 120, 164, 28);
 		tMaterial.setFont(new Font("Agency FB", Font.BOLD, 15));
 		tMaterial.setForeground(Color.decode("#18093E"));
 		tMaterial.setBorder(null);
 		centerPanel.add(tMaterial);
 
 		lColor = new JLabel("Color");
-		lColor.setBounds(128, 140, 150, 30);
+		lColor.setBounds(135, 160, 150, 30);
 		lColor.setFont(new Font("Agency FB", Font.BOLD, 22));
 		lColor.setForeground(Color.decode("#18093E"));
 		centerPanel.add(lColor);
 
 		tColor = new JTextField();
-		tColor.setBounds(73, 170, 164, 28);
+		tColor.setBounds(73, 190, 164, 28);
 		tColor.setFont(new Font("Agency FB", Font.BOLD, 15));
 		tColor.setForeground(Color.decode("#18093E"));
 		tColor.setBorder(null);
 		centerPanel.add(tColor);
 
 		lCaracteristica = new JLabel("Características");
-		lCaracteristica.setBounds(128, 200, 150, 30);
+		lCaracteristica.setBounds(106, 230, 150, 30);
 		lCaracteristica.setFont(new Font("Agency FB", Font.BOLD, 22));
 		lCaracteristica.setForeground(Color.decode("#18093E"));
 		centerPanel.add(lCaracteristica);
 
 		tCaracteristica = new JTextField();
-		tCaracteristica.setBounds(73, 230, 164, 28);
+		tCaracteristica.setBounds(73, 260, 164, 28);
 		tCaracteristica.setFont(new Font("Agency FB", Font.BOLD, 15));
 		tCaracteristica.setForeground(Color.decode("#18093E"));
 		tCaracteristica.setBorder(null);
 		centerPanel.add(tCaracteristica);
 
 		lTamanoImpresion = new JLabel("Tamaño de impresion");
-		lTamanoImpresion.setBounds(395, 80, 150, 30);
+		lTamanoImpresion.setBounds(348, 90, 150, 30);
 		lTamanoImpresion.setFont(new Font("Agency FB", Font.BOLD, 22));
 		lTamanoImpresion.setForeground(Color.decode("#18093E"));
 		centerPanel.add(lTamanoImpresion);
 
 		tTamanoImpresion = new JTextField();
-		tTamanoImpresion.setBounds(340, 110, 164, 28);
+		tTamanoImpresion.setBounds(340, 120, 164, 28);
 		tTamanoImpresion.setFont(new Font("Agency FB", Font.BOLD, 15));
 		tTamanoImpresion.setForeground(Color.decode("#18093E"));
 		tTamanoImpresion.setBorder(null);
 		centerPanel.add(tTamanoImpresion);
 
 		lAptoMicro = new JLabel("Apto para microondas?");
-		lAptoMicro.setBounds(395, 140, 150, 30);
+		lAptoMicro.setBounds(345, 160, 180, 30);
 		lAptoMicro.setFont(new Font("Agency FB", Font.BOLD, 22));
 		lAptoMicro.setForeground(Color.decode("#18093E"));
 		centerPanel.add(lAptoMicro);
 
 		tAptoMicro = new JComboBox<>(new String[] { "...", "Si", "No" });
-		tAptoMicro.setBounds(340, 170, 164, 28);
+		tAptoMicro.setBounds(340, 190, 164, 28);
 		tAptoMicro.setFont(new Font("Agency FB", Font.BOLD, 15));
 		tAptoMicro.setForeground(Color.decode("#18093E"));
 		tAptoMicro.setBorder(null);
 		centerPanel.add(tAptoMicro);
 
 		lPrecio = new JLabel("Precio");
-		lPrecio.setBounds(395, 200, 150, 30);
+		lPrecio.setBounds(395, 230, 150, 30);
 		lPrecio.setFont(new Font("Agency FB", Font.BOLD, 22));
 		lPrecio.setForeground(Color.decode("#18093E"));
 		centerPanel.add(lPrecio);
 
 		tPrecio = new JTextField();
-		tPrecio.setBounds(340, 230, 164, 28);
+		tPrecio.setBounds(340, 260, 164, 28);
 		tPrecio.setFont(new Font("Agency FB", Font.BOLD, 15));
 		tPrecio.setForeground(Color.decode("#18093E"));
 		tPrecio.setBorder(null);

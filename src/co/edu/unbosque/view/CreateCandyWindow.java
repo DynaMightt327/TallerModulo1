@@ -122,74 +122,74 @@ public class CreateCandyWindow extends JFrame {
 
 		// ==ESPACIOS DE TEXTO==
 		lCantidadDulce = new JLabel("Cantidad dulces");
-		lCantidadDulce.setBounds(100, 80, 150, 30);
+		lCantidadDulce.setBounds(100, 90, 150, 30);
 		lCantidadDulce.setFont(new Font("Agency FB", Font.BOLD, 22));
 		lCantidadDulce.setForeground(Color.decode("#18093E"));
 		centerPanel.add(lCantidadDulce);
 
 		tCantidadDulce = new JTextField();
-		tCantidadDulce.setBounds(73, 110, 164, 28);
+		tCantidadDulce.setBounds(73, 120, 164, 28);
 		tCantidadDulce.setFont(new Font("Agency FB", Font.BOLD, 15));
 		tCantidadDulce.setForeground(Color.decode("#18093E"));
 		tCantidadDulce.setBorder(null);
 		centerPanel.add(tCantidadDulce);
 
 		lTipoDulce = new JLabel("Tipos dulces");
-		lTipoDulce.setBounds(112, 140, 150, 30);
+		lTipoDulce.setBounds(112, 160, 150, 30);
 		lTipoDulce.setFont(new Font("Agency FB", Font.BOLD, 22));
 		lTipoDulce.setForeground(Color.decode("#18093E"));
 		centerPanel.add(lTipoDulce);
 
 		tTipoDulce = new JTextField();
-		tTipoDulce.setBounds(73, 170, 164, 28);
+		tTipoDulce.setBounds(73, 190, 164, 28);
 		tTipoDulce.setFont(new Font("Agency FB", Font.BOLD, 15));
 		tTipoDulce.setForeground(Color.decode("#18093E"));
 		tTipoDulce.setBorder(null);
 		centerPanel.add(tTipoDulce);
 
 		lNivelDulzor = new JLabel("Nivel de dulzor");
-		lNivelDulzor.setBounds(100, 200, 150, 30);
+		lNivelDulzor.setBounds(100, 230, 150, 30);
 		lNivelDulzor.setFont(new Font("Agency FB", Font.BOLD, 22));
 		lNivelDulzor.setForeground(Color.decode("#18093E"));
 		centerPanel.add(lNivelDulzor);
 
 		tNivelDulzor = new JTextField();
-		tNivelDulzor.setBounds(73, 230, 164, 28);
+		tNivelDulzor.setBounds(73, 260, 164, 28);
 		tNivelDulzor.setFont(new Font("Agency FB", Font.BOLD, 15));
 		tNivelDulzor.setForeground(Color.decode("#18093E"));
 		tNivelDulzor.setBorder(null);
 		centerPanel.add(tNivelDulzor);
 
-		lMarca = new JLabel("Incluye marca reconocida");
-		lMarca.setBounds(335, 80, 200, 30);
+		lMarca = new JLabel("Incluye marca reconocida?");
+		lMarca.setBounds(330, 90, 200, 30);
 		lMarca.setFont(new Font("Agency FB", Font.BOLD, 22));
 		lMarca.setForeground(Color.decode("#18093E"));
 		centerPanel.add(lMarca);
 
 		tMarca = new JComboBox<>(new String[] { "...", "Si", "No" });
-		tMarca.setBounds(340, 110, 164, 28);
+		tMarca.setBounds(340, 120, 164, 28);
 		tMarca.setBorder(null);
 		centerPanel.add(tMarca);
 
 		lProductoSinAzucar = new JLabel("Tiene productos sin azucar?");
-		lProductoSinAzucar.setBounds(328, 140, 200, 30);
+		lProductoSinAzucar.setBounds(328, 160, 200, 30);
 		lProductoSinAzucar.setFont(new Font("Agency FB", Font.BOLD, 22));
 		lProductoSinAzucar.setForeground(Color.decode("#18093E"));
 		centerPanel.add(lProductoSinAzucar);
 
 		tProductoSinAzucar = new JComboBox<>(new String[] { "...", "Si", "No" });
-		tProductoSinAzucar.setBounds(340, 170, 164, 28);
+		tProductoSinAzucar.setBounds(340, 190, 164, 28);
 		tProductoSinAzucar.setBorder(null);
 		centerPanel.add(tProductoSinAzucar);
 
 		lPrecio = new JLabel("Precio");
-		lPrecio.setBounds(395, 200, 150, 30);
+		lPrecio.setBounds(395, 230, 150, 30);
 		lPrecio.setFont(new Font("Agency FB", Font.BOLD, 22));
 		lPrecio.setForeground(Color.decode("#18093E"));
 		centerPanel.add(lPrecio);
 
 		tPrecio = new JTextField();
-		tPrecio.setBounds(340, 230, 164, 28);
+		tPrecio.setBounds(340, 260, 164, 28);
 		tPrecio.setFont(new Font("Agency FB", Font.BOLD, 15));
 		tPrecio.setForeground(Color.decode("#18093E"));
 		tPrecio.setBorder(null);
