@@ -7,21 +7,21 @@ public class PocilloPersonalizable {
 	private String caracteristicaDePocillo;
 	private int tamanoImpresion;
 	private boolean aptoMicroonda;
-	private boolean aptoLavavajilla;
+	private float precio;
 	
 	public PocilloPersonalizable() {
 		// TODO Auto-generated constructor stub
 	}
 
 	public PocilloPersonalizable(String materialPocillo, String color, String caracteristicaDePocillo,
-			int tamanoImpresion, boolean aptoMicroonda, boolean aptoLavavajilla) {
+			int tamanoImpresion, boolean aptoMicroonda, float precio) {
 		super();
 		this.materialPocillo = materialPocillo;
 		this.color = color;
 		this.caracteristicaDePocillo = caracteristicaDePocillo;
 		this.tamanoImpresion = tamanoImpresion;
 		this.aptoMicroonda = aptoMicroonda;
-		this.aptoLavavajilla = aptoLavavajilla;
+		this.precio = precio;
 	}
 
 	public String getMaterialPocillo() {
@@ -64,19 +64,19 @@ public class PocilloPersonalizable {
 		this.aptoMicroonda = aptoMicroonda;
 	}
 
-	public boolean isAptoLavavajilla() {
-		return aptoLavavajilla;
+	public float getPrecio() {
+		return precio;
 	}
 
-	public void setAptoLavavajilla(boolean aptoLavavajilla) {
-		this.aptoLavavajilla = aptoLavavajilla;
+	public void setPrecio(float precio) {
+		this.precio = precio;
 	}
 
 	@Override
 	public String toString() {
 		return "PocilloPersonalizable: \nmaterialPocillo: " + materialPocillo + "\ncolor: " + color
 				+ "\ncaracteristicaDePocillo: " + caracteristicaDePocillo + "\ntamanoImpresion: " + tamanoImpresion
-				+ "\naptoMicroonda: " + aptoMicroonda + "\naptoLavavajilla: " + aptoLavavajilla;
+				+ "\naptoMicroonda: " + aptoMicroonda + "\nprecio: " + precio;
 	}
 	
 	

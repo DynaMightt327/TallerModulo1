@@ -7,21 +7,21 @@ public class AnchetaDulce {
 	private String nivelDulzor;
 	private boolean incluyeMarcaReconocida;
 	private boolean tieneProductoSinAzucar;
-	private boolean aptaParaNinnos;
+	private float precio;
 	
 	public AnchetaDulce() {
 		// TODO Auto-generated constructor stub
 	}
 
 	public AnchetaDulce(int cantidadDulces, String tiposDeDulces, String nivelDulzor, boolean incluyeMarcaReconocida,
-			boolean tieneProductoSinAzucar, boolean aptaParaNinnos) {
+			boolean tieneProductoSinAzucar, float precio) {
 		super();
 		this.cantidadDulces = cantidadDulces;
 		this.tiposDeDulces = tiposDeDulces;
 		this.nivelDulzor = nivelDulzor;
 		this.incluyeMarcaReconocida = incluyeMarcaReconocida;
 		this.tieneProductoSinAzucar = tieneProductoSinAzucar;
-		this.aptaParaNinnos = aptaParaNinnos;
+		this.precio = precio;
 	}
 
 	public int getCantidadDulces() {
@@ -64,19 +64,19 @@ public class AnchetaDulce {
 		this.tieneProductoSinAzucar = tieneProductoSinAzucar;
 	}
 
-	public boolean isAptaParaNinnos() {
-		return aptaParaNinnos;
+	public float getPrecio() {
+		return precio;
 	}
 
-	public void setAptaParaNinnos(boolean aptaParaNinnos) {
-		this.aptaParaNinnos = aptaParaNinnos;
+	public void setPrecio(float precio) {
+		this.precio = precio;
 	}
 
 	@Override
 	public String toString() {
 		return "AnchetaDulce: \ncantidadDulces: " + cantidadDulces + "\ntiposDeDulces: " + tiposDeDulces + "\nnivelDulzor: "
 				+ nivelDulzor + "\nincluyeMarcaReconocida: " + incluyeMarcaReconocida + "\ntieneProductoSinAzucar: "
-				+ tieneProductoSinAzucar + "\naptaParaNinnos: " + aptaParaNinnos;
+				+ tieneProductoSinAzucar + "\nprecio: " + precio;
 	}
 	
 	

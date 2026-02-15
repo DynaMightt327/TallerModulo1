@@ -6,21 +6,21 @@ public class AnchetaParaMujer {
 	private String accesorios;
 	private String paletaColor;
 	private String enfoque;
-	private String ocasion;
+	private float precio;
 	private String nivelDeDetalle;
 	
 	public AnchetaParaMujer() {
 		// TODO Auto-generated constructor stub
 	}
 
-	public AnchetaParaMujer(String estilo, String accesorios, String paletaColor, String enfoque, String ocasion,
+	public AnchetaParaMujer(String estilo, String accesorios, String paletaColor, String enfoque, float precio,
 			String nivelDeDetalle) {
 		super();
 		this.estilo = estilo;
 		this.accesorios = accesorios;
 		this.paletaColor = paletaColor;
 		this.enfoque = enfoque;
-		this.ocasion = ocasion;
+		this.precio = precio;
 		this.nivelDeDetalle = nivelDeDetalle;
 	}
 
@@ -56,12 +56,12 @@ public class AnchetaParaMujer {
 		this.enfoque = enfoque;
 	}
 
-	public String getOcasion() {
-		return ocasion;
+	public float getPrecio() {
+		return precio;
 	}
 
-	public void setOcasion(String ocasion) {
-		this.ocasion = ocasion;
+	public void setPrecio(float precio) {
+		this.precio = precio;
 	}
 
 	public String getNivelDeDetalle() {
@@ -75,7 +75,7 @@ public class AnchetaParaMujer {
 	@Override
 	public String toString() {
 		return "AnchetaParaMujer: \nestilo: " + estilo + "\naccesorios: " + accesorios + "\npaletaColor:" + paletaColor
-				+ "\nenfoque: " + enfoque + "\nocasion: " + ocasion + "\nnivelDeDetalle: " + nivelDeDetalle;
+				+ "\nenfoque: " + enfoque + "\nprecio: " + precio + "\nnivelDeDetalle: " + nivelDeDetalle;
 	}
 	
 	
