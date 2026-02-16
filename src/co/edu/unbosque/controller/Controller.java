@@ -413,10 +413,10 @@ public class Controller implements ActionListener {
 					sb.append("Ancheta #").append(i + 1).append(":\n");
 					sb.append(a.toString()).append("\n\n");
 					
-					rpw.getShowInfoPersonal().setText(sb.toString());
-					rpw.getShowInfoPersonal().setCaretPosition(0);
 				}
 			}
+			rpw.getShowInfoPersonal().setText(sb.toString());
+			rpw.getShowInfoPersonal().setCaretPosition(0);
 			
 			break;
 		}
@@ -433,10 +433,10 @@ public class Controller implements ActionListener {
 					sb.append("Ancheta #").append(i + 1).append(":\n");
 					sb.append(a.toString()).append("\n\n");
 					
-					rsw.getShowInfoSimple().setText(sb.toString());
-					rsw.getShowInfoSimple().setCaretPosition(0);
 				}
 			}
+			rsw.getShowInfoSimple().setText(sb.toString());
+			rsw.getShowInfoSimple().setCaretPosition(0);
 			break;
 		}
 		case "boton_woman_read": {
@@ -452,10 +452,10 @@ public class Controller implements ActionListener {
 					sb.append("Ancheta #").append(i + 1).append(":\n");
 					sb.append(a.toString()).append("\n\n");
 					
-					rww.getShowInfoWoman().setText(sb.toString());
-					rww.getShowInfoWoman().setCaretPosition(0);
 				}
 			}
+			rww.getShowInfoWoman().setText(sb.toString());
+			rww.getShowInfoWoman().setCaretPosition(0);
 			break;
 		}
 		case "boton_cup_read": {
@@ -471,10 +471,10 @@ public class Controller implements ActionListener {
 					sb.append("pocillo #").append(i + 1).append(":\n");
 					sb.append(a.toString()).append("\n\n");
 					
-					rcpw.getShowInfoCup().setText(sb.toString());
-					rcpw.getShowInfoCup().setCaretPosition(0);
 				}
 			}
+			rcpw.getShowInfoCup().setText(sb.toString());
+			rcpw.getShowInfoCup().setCaretPosition(0);
 			break;
 		}
 		//-----------------------------------
