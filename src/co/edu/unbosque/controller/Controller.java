@@ -242,8 +242,9 @@ public class Controller implements ActionListener {
 		uww.getbBack().addActionListener(this);
 		uww.getbBack().setActionCommand("boton_back_woman_upload");
 		
-		uprw.getbAnchetaParaMujer().addActionListener(this);
-		uprw.getbAnchetaParaMujer().setActionCommand("boton_woman_upload");
+		uww.getUpload().addActionListener(this);
+		uww.getUpload().setActionCommand("boton_update_woman");
+
 		
 		// ==VENTANA ELIMINAR==
 		dw.getbBack().addActionListener(this);
