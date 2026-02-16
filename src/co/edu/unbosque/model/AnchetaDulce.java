@@ -24,6 +24,9 @@ public class AnchetaDulce {
 		this.precio = precio;
 	}
 
+	
+
+
 	public int getCantidadDulce() {
 		return cantidadDulce;
 	}
@@ -48,7 +51,7 @@ public class AnchetaDulce {
 		this.nivelDulzor = nivelDulzor;
 	}
 
-	public String isIncluyeMarcaReconocida() {
+	public String getIncluyeMarcaReconocida() {
 		return incluyeMarcaReconocida;
 	}
 
@@ -56,7 +59,7 @@ public class AnchetaDulce {
 		this.incluyeMarcaReconocida = incluyeMarcaReconocida;
 	}
 
-	public String isTieneProductoSinAzucar() {
+	public String getTieneProductoSinAzucar() {
 		return tieneProductoSinAzucar;
 	}
 
@@ -64,21 +67,20 @@ public class AnchetaDulce {
 		this.tieneProductoSinAzucar = tieneProductoSinAzucar;
 	}
 
-	public float getPrecio() {
+	public int getPrecio() {
 		return precio;
 	}
 
 	public void setPrecio(int precio) {
 		this.precio = precio;
 	}
-
+	
 	@Override
 	public String toString() {
 		return "Ancheta Dulce: \ncantidad de dulces: " + cantidadDulce + "\ntipos de Dulces: " + tiposDeDulce + "\nnivel de dulzor: "
 				+ nivelDulzor + "\nincluye marca reconocida: " + incluyeMarcaReconocida + "\ntiene producto sin azucar: "
-				+ tieneProductoSinAzucar + "\nprecio: " + precio + "\nrecuerde que cada tarda 24 horas" + "\n---------------------";
+				+ tieneProductoSinAzucar + "\nprecio: " + precio + "\nrecuerde que cada pedido tarda 24 horas" + "\n---------------------";
 	}
-	
 	
 
 }

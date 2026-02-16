@@ -297,7 +297,9 @@ public class Controller implements ActionListener {
 		
 		dcw.getDelete().addActionListener(this);
 		dcw.getDelete().setActionCommand("boton_delete_candy");
-
+		
+		ucw.getUpload().addActionListener(this);
+		ucw.getUpload().setActionCommand("boton_upload_candy");
 	}
 
 	public void actionPerformed(ActionEvent e) {
@@ -839,6 +841,46 @@ public class Controller implements ActionListener {
 				}	
 			} catch (NumberFormatException ex) {
 				JOptionPane.showMessageDialog(null, "Error: el indice debe ser un numero entero.", "Error de formato", JOptionPane.ERROR_MESSAGE);
+				// TODO: handle exception
+			}
+			break;
+		}
+		case "boton_upload_candy": {
+			try {
+				
+				int indiceUsuario = Integer.parseInt(ucw.getPosicionDulce().getText());
+				int indiceLista = indiceUsuario - 1; 
+				
+				if(listaAnchetaDulce.isEmpty()) {
+					JOptionPane.showMessageDialog(null, "No hay anchetas dulces registradas.", "Lista vacia", JOptionPane.WARNING_MESSAGE);	
+				} else if(indiceLista < 0 || indiceLista >= listaAnchetaDulce.size()) {
+					JOptionPane.showMessageDialog(null, "Indice invalido. Debe estar entre 1 y " + listaAnchetaDulce.size(), "indice incorrecto", JOptionPane.WARNING_MESSAGE);
+				}else {
+					AnchetaDulce anchetaDulce = listaAnchetaDulce.get(indiceLista);
+					JOptionPane.showMessageDialog(null, "Ancheta a actualizar: (posicion" + indiceUsuario + "):\n\n" + anchetaDulce.toString(), "Informacion actual", JOptionPane.INFORMATION_MESSAGE);
+					
+					String nuevaCantidadStr = JOptionPane.showInputDialog(null, "Nueva cantidad de dulces:",anchetaDulce.getCantidadDulce());
+					String nuevosTipos = JOptionPane.showInputDialog(null, "Nuevos tipos de dulces:", anchetaDulce.getTiposDeDulce());
+					String nuevoNivelDulzor = JOptionPane.showInputDialog(null, "Nuevo nivel de dulzor:", anchetaDulce.getNivelDulzor());
+					String nuevaMarca = JOptionPane.showInputDialog(null, "Marca reconocida:", anchetaDulce.getIncluyeMarcaReconocida());
+					String nuevoSinAzucar = JOptionPane.showInputDialog(null, "Es sin azucar? (Si/No)", anchetaDulce.getTieneProductoSinAzucar());
+					String nuevoPrecioStr = JOptionPane.showInputDialog(null, "Nuevo precio:", anchetaDulce.getPrecio());
+					
+					int nuevaCantidad = Integer.parseInt(nuevaCantidadStr);
+					int nuevoPrecio = Integer.parseInt(nuevoPrecioStr);
+					
+					anchetaDulce.setCantidadDulce(nuevaCantidad);
+					anchetaDulce.setTiposDeDulce(nuevosTipos);
+					anchetaDulce.setNivelDulzor(nuevoNivelDulzor);
+					anchetaDulce.setIncluyeMarcaReconocida(nuevaMarca);
+					anchetaDulce.setTieneProductoSinAzucar(nuevoSinAzucar);
+					anchetaDulce.setPrecio(nuevoPrecio);
+					
+					JOptionPane.showMessageDialog(null, "Ancheta dulce actualizada:\n\n" + anchetaDulce.toString(), "Actualizacion exitosa", JOptionPane.INFORMATION_MESSAGE);				
+				}
+				
+			} catch (NumberFormatException ex) {
+				JOptionPane.showMessageDialog(null, "Error: El indice y los campos numericos deben ser numeros enteros validos.", "Error de formato", JOptionPane.ERROR_MESSAGE);
 				// TODO: handle exception
 			}
 			break;
