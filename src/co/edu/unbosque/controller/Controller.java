@@ -295,8 +295,23 @@ public class Controller implements ActionListener {
 		ccpw.getbSave().addActionListener(this);
 		ccpw.getbSave().setActionCommand("boton_save_cup");
 		
+		
 		dcw.getDelete().addActionListener(this);
 		dcw.getDelete().setActionCommand("boton_delete_candy");
+		
+		dww.getDelete().addActionListener(this);
+		dww.getDelete().setActionCommand("boton_delete_woman");
+		
+		dsw.getDelete().addActionListener(this);
+		dsw.getDelete().setActionCommand("boton_delete_simple");
+		
+		dpw.getDelete().addActionListener(this);
+		dpw.getDelete().setActionCommand("boton_delete_personal");
+		
+		dcpw.getDelete().addActionListener(this);
+		dcpw.getDelete().setActionCommand("boton_delete_cup");
+		
+		
 		
 		ucw.getUpload().addActionListener(this);
 		ucw.getUpload().setActionCommand("boton_upload_candy");
@@ -307,8 +322,13 @@ public class Controller implements ActionListener {
 		upw.getUpload().addActionListener(this);
 		upw.getUpload().setActionCommand("boton_upload_personal");
 		
+		usw.getUpload().addActionListener(this);
+		usw.getUpload().setActionCommand("boton_upload_simple");
+		
 		ucpw.getUpload().addActionListener(this);
 		ucpw.getUpload().setActionCommand("boton_upload_cup");
+		
+		
 	}
 
 	public void actionPerformed(ActionEvent e) {
