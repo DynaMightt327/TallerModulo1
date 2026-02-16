@@ -923,10 +923,13 @@ public class Controller implements ActionListener {
 				int indiceLista = indiceUsuario - 1;
 				
 				if(listaAnchetaMujer.isEmpty()) {
-					JOptionPane.showMessageDialog(null, "No hay anchetas para mujer registradas.", "Lista vacia", JOptionPane.WARNING_MESSAGE);	
-				} else if(indiceLista < 0 || indiceLista >= listaAnchetaMujer.size()) {
+					JOptionPane.showMessageDialog(null, "No hay anchetas para mujer registradas.", "Lista vacia", JOptionPane.WARNING_MESSAGE);
+					break;
+			} 
+				if(indiceLista < 0 || indiceLista >= listaAnchetaMujer.size()) {
 					JOptionPane.showMessageDialog(null, "Indice invalido. Debe estar entre 1 y " + listaAnchetaMujer.size(), "indice incorrecto", JOptionPane.WARNING_MESSAGE);
-				} else {
+					break;
+				}
 					
 					AnchetaParaMujer anchetaParaMujer = listaAnchetaMujer.get(indiceLista);
 					JOptionPane.showMessageDialog(null, "Ancheta a actualizar: (posicion" + indiceUsuario + "):\n\n" + anchetaParaMujer.toString(), "Informacion actual", JOptionPane.INFORMATION_MESSAGE);
@@ -949,8 +952,6 @@ public class Controller implements ActionListener {
 					anchetaParaMujer.setNivelDeDetalle(nuevoNivelDetalle);
 					
 					JOptionPane.showMessageDialog(null, "Ancheta para mujer actualizada:\n\n" + anchetaParaMujer.toString(), "Actualizacion exitosa", JOptionPane.INFORMATION_MESSAGE);
-					
-				}
 				
 			} catch (NumberFormatException ex) {
 				JOptionPane.showMessageDialog(null, "Error: El indice y los campos numericos deben ser numeros enteros validos.", "Error de formato", JOptionPane.ERROR_MESSAGE);
