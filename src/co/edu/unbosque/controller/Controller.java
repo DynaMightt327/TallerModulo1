@@ -300,6 +300,15 @@ public class Controller implements ActionListener {
 		
 		ucw.getUpload().addActionListener(this);
 		ucw.getUpload().setActionCommand("boton_upload_candy");
+		
+		uww.getUpload().addActionListener(this);
+		uww.getUpload().setActionCommand("boton_upload_women");
+		
+		upw.getUpload().addActionListener(this);
+		upw.getUpload().setActionCommand("boton_upload_personal");
+		
+		ucpw.getUpload().addActionListener(this);
+		ucpw.getUpload().setActionCommand("boton_upload_cup");
 	}
 
 	public void actionPerformed(ActionEvent e) {
@@ -877,6 +886,181 @@ public class Controller implements ActionListener {
 					anchetaDulce.setPrecio(nuevoPrecio);
 					
 					JOptionPane.showMessageDialog(null, "Ancheta dulce actualizada:\n\n" + anchetaDulce.toString(), "Actualizacion exitosa", JOptionPane.INFORMATION_MESSAGE);				
+				}
+				
+			} catch (NumberFormatException ex) {
+				JOptionPane.showMessageDialog(null, "Error: El indice y los campos numericos deben ser numeros enteros validos.", "Error de formato", JOptionPane.ERROR_MESSAGE);
+				// TODO: handle exception
+			}
+			break;
+		}
+		case "boton_upload_woman": {
+			
+			try {
+				
+				int indiceUsuario = Integer.parseInt(uww.getPosicion().getText());
+				int indiceLista = indiceUsuario - 1;
+				
+				if(listaAnchetaMujer.isEmpty()) {
+					JOptionPane.showMessageDialog(null, "No hay anchetas para mujer registradas.", "Lista vacia", JOptionPane.WARNING_MESSAGE);	
+				} else if(indiceLista < 0 || indiceLista >= listaAnchetaMujer.size()) {
+					JOptionPane.showMessageDialog(null, "Indice invalido. Debe estar entre 1 y " + listaAnchetaMujer.size(), "indice incorrecto", JOptionPane.WARNING_MESSAGE);
+				} else {
+					
+					AnchetaParaMujer anchetaParaMujer = listaAnchetaMujer.get(indiceLista);
+					JOptionPane.showMessageDialog(null, "Ancheta a actualizar: (posicion" + indiceUsuario + "):\n\n" + anchetaParaMujer.toString(), "Informacion actual", JOptionPane.INFORMATION_MESSAGE);
+					
+					
+					String nuevoEstilo = JOptionPane.showInputDialog(null, "Nueva estilo:",anchetaParaMujer.getEstilo());
+					String nuevoAccesorio = JOptionPane.showInputDialog(null, "Nuevos accesorios:", anchetaParaMujer.getAccesorio());
+					String nuevaPaletaColor = JOptionPane.showInputDialog(null, "Nueva paleta de colores:", anchetaParaMujer.getPaletaColor());
+					String nuevoEnfoque = JOptionPane.showInputDialog(null, "Nuevo enfoque:", anchetaParaMujer.getEnfoque());
+					String nuevoPrecioStr = JOptionPane.showInputDialog(null, "Nuevo precio", anchetaParaMujer.getPrecio());
+					String nuevoNivelDetalle = JOptionPane.showInputDialog(null, "Nuevo nivel de detalle:", anchetaParaMujer.getNivelDeDetalle());
+					
+					int nuevoPrecio = Integer.parseInt(nuevoPrecioStr);
+					
+					anchetaParaMujer.setEstilo(nuevoEstilo);
+					anchetaParaMujer.setAccesorio(nuevoAccesorio);
+					anchetaParaMujer.setPaletaColor(nuevaPaletaColor);
+					anchetaParaMujer.setEnfoque(nuevoEnfoque);
+					anchetaParaMujer.setPrecio(nuevoPrecio);
+					anchetaParaMujer.setNivelDeDetalle(nuevoNivelDetalle);
+					
+					JOptionPane.showMessageDialog(null, "Ancheta para mujer actualizada:\n\n" + anchetaParaMujer.toString(), "Actualizacion exitosa", JOptionPane.INFORMATION_MESSAGE);
+					
+				}
+				
+			} catch (NumberFormatException ex) {
+				JOptionPane.showMessageDialog(null, "Error: El indice y los campos numericos deben ser numeros enteros validos.", "Error de formato", JOptionPane.ERROR_MESSAGE);
+				// TODO: handle exception
+			}
+			break;
+		}
+		case "boton_upload_personal": {
+			
+			try {
+				
+				int indiceUsuario = Integer.parseInt(upw.getPosicionPersonal().getText());
+				int indiceLista = indiceUsuario - 1;
+				
+				if(listaAnchetaPersonalizable.isEmpty()) {
+					JOptionPane.showMessageDialog(null, "No hay anchetas personalizadas registradas.", "Lista vacia", JOptionPane.WARNING_MESSAGE);	
+				} else if(indiceLista < 0 || indiceLista >= listaAnchetaPersonalizable.size()) {
+					JOptionPane.showMessageDialog(null, "Indice invalido. Debe estar entre 1 y " + listaAnchetaPersonalizable.size(), "indice incorrecto", JOptionPane.WARNING_MESSAGE);
+				} else {
+					
+					AnchetaPersonalizable anchetaPersonalizable = listaAnchetaPersonalizable.get(indiceLista);
+					JOptionPane.showMessageDialog(null, "Ancheta a actualizar: (posicion" + indiceUsuario + "):\n\n" + anchetaPersonalizable.toString(), "Informacion actual", JOptionPane.INFORMATION_MESSAGE);
+					
+					
+					String tieneGlobo = JOptionPane.showInputDialog(null, "Tiene globos:",anchetaPersonalizable.getTieneGlobo());
+					String nuevaCantidadProducto = JOptionPane.showInputDialog(null, "Nueva cantidad de productos:", anchetaPersonalizable.getMaximaCantidadProducto());
+					String nuevoMensajeTarjeta = JOptionPane.showInputDialog(null, "Nuevo mensaje de tarjeta:", anchetaPersonalizable.getMensajeTarjeta());
+					String nuevoColorElegido = JOptionPane.showInputDialog(null, "Nuevo color elegido:", anchetaPersonalizable.getColorElegido());
+					String nuevoPreciostr = JOptionPane.showInputDialog(null, "Nuevo precio", anchetaPersonalizable.getPrecio());
+					String nuevoTamano = JOptionPane.showInputDialog(null, "Nuevo tamano:", anchetaPersonalizable.getTamano());
+					
+					int nuevoCantidadProducto = Integer.parseInt(nuevaCantidadProducto);
+					int nuevoPrecio = Integer.parseInt(nuevoPreciostr);
+					
+					anchetaPersonalizable.setTieneGlobo(tieneGlobo);
+					anchetaPersonalizable.setMaximaCantidadProducto(nuevoCantidadProducto);
+					anchetaPersonalizable.setMensajeTarjeta(nuevoMensajeTarjeta);
+					anchetaPersonalizable.setColorElegido(nuevoColorElegido);
+					anchetaPersonalizable.setPrecio(nuevoPrecio);
+					anchetaPersonalizable.setTamano(nuevoTamano);
+					
+					JOptionPane.showMessageDialog(null, "Ancheta personalizable actualizada:\n\n" + anchetaParaMujer.toString(), "Actualizacion exitosa", JOptionPane.INFORMATION_MESSAGE);
+					
+				}
+				
+			} catch (NumberFormatException ex) {
+				JOptionPane.showMessageDialog(null, "Error: El indice y los campos numericos deben ser numeros enteros validos.", "Error de formato", JOptionPane.ERROR_MESSAGE);
+				// TODO: handle exception
+			}
+			break;
+		}
+		case "boton_upload_simple": {
+			
+			try {
+				
+				int indiceUsuario = Integer.parseInt(usw.getPosicionSimple().getText());
+				int indiceLista = indiceUsuario - 1;
+				
+				if(listaAnchetaSencilla.isEmpty()) {
+					JOptionPane.showMessageDialog(null, "No hay anchetas sencillas registradas.", "Lista vacia", JOptionPane.WARNING_MESSAGE);	
+				} else if(indiceLista < 0 || indiceLista >= listaAnchetaSencilla.size()) {
+					JOptionPane.showMessageDialog(null, "Indice invalido. Debe estar entre 1 y " + listaAnchetaSencilla.size(), "indice incorrecto", JOptionPane.WARNING_MESSAGE);
+				} else {
+					
+					AnchetaSencilla anchetaSencilla = listaAnchetaSencilla.get(indiceLista);
+					JOptionPane.showMessageDialog(null, "Ancheta a actualizar: (posicion" + indiceUsuario + "):\n\n" + anchetaSencilla.toString(), "Informacion actual", JOptionPane.INFORMATION_MESSAGE);
+					
+					
+					String cantidadDeProductoStr = JOptionPane.showInputDialog(null, "Cantidad de productos:",anchetaSencilla.getCantidadDeProducto());
+					String tienePocillo = JOptionPane.showInputDialog(null, "tiene pocillo? (si/no)", anchetaSencilla.getTienePocillo());
+					String nuevoNivelDecoracion = JOptionPane.showInputDialog(null, "Nivel de decoracion:", anchetaSencilla.getNivelDeDecoracion());
+					String nuevoTipoEmpaque = JOptionPane.showInputDialog(null, "Nuevo tipo de empaque:", anchetaSencilla.getTipoEmpaque());
+					String nuevoPrecioStr = JOptionPane.showInputDialog(null, "Nuevo precio", anchetaSencilla.getPrecio());
+					String nuevoEstadoEntrega = JOptionPane.showInputDialog(null, "Nuevo estado de entrega:", anchetaSencilla.getAptaParaEntrega());
+					
+					int cantidadDeProducto = Integer.parseInt(cantidadDeProductoStr);
+					int nuevoPrecio = Integer.parseInt(nuevoPrecioStr);
+					
+					anchetaSencilla.setCantidadDeProducto(cantidadDeProducto);
+					anchetaSencilla.setTienePocillo(tienePocillo);
+					anchetaSencilla.setNivelDeDecoracion(nuevoNivelDecoracion);
+					anchetaSencilla.setTipoEmpaque(nuevoTipoEmpaque);
+					anchetaSencilla.setPrecio(nuevoPrecio);
+					anchetaSencilla.setAptaParaEntrega(nuevoEstadoEntrega);
+					
+					JOptionPane.showMessageDialog(null, "Ancheta sencilla actualizada:\n\n" + anchetaSencilla.toString(), "Actualizacion exitosa", JOptionPane.INFORMATION_MESSAGE);
+					
+				}
+				
+			} catch (NumberFormatException ex) {
+				JOptionPane.showMessageDialog(null, "Error: El indice y los campos numericos deben ser numeros enteros validos.", "Error de formato", JOptionPane.ERROR_MESSAGE);
+				// TODO: handle exception
+			}
+			break;
+		}
+		case "boton_upload_cup": {
+			
+			try {
+				
+				int indiceUsuario = Integer.parseInt(ucpw.getPosicionPocillo().getText());
+				int indiceLista = indiceUsuario - 1;
+				
+				if(listaPocilloPersonalizable.isEmpty()) {
+					JOptionPane.showMessageDialog(null, "No hay pocillos personalizados registrados.", "Lista vacia", JOptionPane.WARNING_MESSAGE);	
+				} else if(indiceLista < 0 || indiceLista >= listaPocilloPersonalizable.size()) {
+					JOptionPane.showMessageDialog(null, "Indice invalido. Debe estar entre 1 y " + listaPocilloPersonalizable.size(), "indice incorrecto", JOptionPane.WARNING_MESSAGE);
+				} else {
+					
+					PocilloPersonalizable pocilloPersonalizable = listaPocilloPersonalizable.get(indiceLista);
+					JOptionPane.showMessageDialog(null, "Pocillo a actualizar: (posicion" + indiceUsuario + "):\n\n" + pocilloPersonalizable.toString(), "Informacion actual", JOptionPane.INFORMATION_MESSAGE);
+					
+					
+					String NuevoMaterialPocillo = JOptionPane.showInputDialog(null, "Nuevo material:", pocilloPersonalizable.getMaterialPocillo());
+					String nuevoColor = JOptionPane.showInputDialog(null, "Nuevo color:", pocilloPersonalizable.getColor());
+					String nuevaCaracteristicaDePocillo = JOptionPane.showInputDialog(null, "Nueva caracteristica de pocillo:", pocilloPersonalizable.getCaracteristicaDePocillo());
+					String nuevoTamanoImpresionStr = JOptionPane.showInputDialog(null, "Nuevo tamaño de impresion:", pocilloPersonalizable.getTamanoImpresion());
+					String nuevoAptoMicroondas = JOptionPane.showInputDialog(null, "Apto para microondas? (si/no)", pocilloPersonalizable.getAptoMicroonda());
+					String nuevoPrecioStr = JOptionPane.showInputDialog(null, "Nuevo precio:", pocilloPersonalizable.getPrecio());
+					
+					int tamanoImpresion = Integer.parseInt(nuevoTamanoImpresionStr);
+					int nuevoPrecio = Integer.parseInt(nuevoPrecioStr);
+					
+					pocilloPersonalizable.setMaterialPocillo(NuevoMaterialPocillo);
+					pocilloPersonalizable.setColor(nuevoColor);
+					pocilloPersonalizable.setCaracteristicaDePocillo(nuevaCaracteristicaDePocillo);
+					pocilloPersonalizable.setTamanoImpresion(tamanoImpresion);
+					pocilloPersonalizable.setAptoMicroonda(nuevoAptoMicroondas);
+					pocilloPersonalizable.setPrecio(nuevoPrecio);
+					
+					JOptionPane.showMessageDialog(null, "Pocillo personalizable actualizado:\n\n" + pocilloPersonalizable.toString(), "Actualizacion exitosa", JOptionPane.INFORMATION_MESSAGE);
+					
 				}
 				
 			} catch (NumberFormatException ex) {
