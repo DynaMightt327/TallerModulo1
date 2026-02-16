@@ -915,7 +915,7 @@ public class Controller implements ActionListener {
 			}
 			break;
 		}
-		case "boton_upload_woman": {
+		case "boton_upload_women": {
 			
 			try {
 				
