@@ -76,7 +76,7 @@ public class AnchetaPersonalizable {
 	public String toString() {
 		return "Ancheta Personalizable: \ntiene Globos: " + tieneGlobo + "\nmaxima cantidad de productos: " + maximaCantidadProducto
 				+ "\nmensaje de la tarjeta: " + mensajeTarjeta + "\ncolores elegidos: " + colorElegido + "\nprecio: "
-				+ precio + "\ntamaño: " + tamano + "\nrecuerde que cada tarda 24 horas" + "\n---------------------";
+				+ precio + "\ntamaño: " + tamano + "\nrecuerde que cada pedido tarda 24 horas" + "\n---------------------";
 	}
 	
 	

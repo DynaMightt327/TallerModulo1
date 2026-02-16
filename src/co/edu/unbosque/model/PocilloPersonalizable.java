@@ -76,7 +76,7 @@ public class PocilloPersonalizable {
 	public String toString() {
 		return "Pocillo Personalizable: \nmaterial del pocillo: " + materialPocillo + "\ncolor: " + color
 				+ "\ncaracteristicas del pocillo: " + caracteristicaDePocillo + "\ntamaño de impresion: " + tamanoImpresion
-				+ "\napto para microonda: " + aptoMicroonda + "\nprecio: " + precio + "\nrecuerde que cada tarda 24 horas" + "\n---------------------";
+				+ "\napto para microonda: " + aptoMicroonda + "\nprecio: " + precio + "\nrecuerde que cada pedido tarda 24 horas" + "\n---------------------";
 	}
 	
 	
