@@ -242,6 +242,24 @@ public class Controller implements ActionListener {
 		uww.getbBack().addActionListener(this);
 		uww.getbBack().setActionCommand("boton_back_woman_upload");
 
+		uprw.getbAnchetaParaMujer().addActionListener(this);
+		uprw.getbAnchetaParaMujer().setActionCommand("boton_woman_upload");
+		
+		
+		ucw.getUpload().addActionListener(this);
+		ucw.getUpload().setActionCommand("boton_upload_candy");
+		
+		uww.getUpload().addActionListener(this);
+		uww.getUpload().setActionCommand("boton_upload_woman");
+		
+		upw.getUpload().addActionListener(this);
+		upw.getUpload().setActionCommand("boton_upload_personal");
+		
+		usw.getUpload().addActionListener(this);
+		usw.getUpload().setActionCommand("boton_upload_simple");
+		
+		ucpw.getUpload().addActionListener(this);
+		ucpw.getUpload().setActionCommand("boton_upload_cup");
 		
 		// ==VENTANA ELIMINAR==
 		dw.getbBack().addActionListener(this);
@@ -311,20 +329,6 @@ public class Controller implements ActionListener {
 		
 		
 		
-		ucw.getUpload().addActionListener(this);
-		ucw.getUpload().setActionCommand("boton_upload_candy");
-		
-		uww.getUpload().addActionListener(this);
-		uww.getUpload().setActionCommand("boton_upload_woman");
-		
-		upw.getUpload().addActionListener(this);
-		upw.getUpload().setActionCommand("boton_upload_personal");
-		
-		usw.getUpload().addActionListener(this);
-		usw.getUpload().setActionCommand("boton_upload_simple");
-		
-		ucpw.getUpload().addActionListener(this);
-		ucpw.getUpload().setActionCommand("boton_upload_cup");
 		
 		
 	}
