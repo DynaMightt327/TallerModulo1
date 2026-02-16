@@ -17,8 +17,7 @@ import javax.swing.table.DefaultTableModel;
 public class DeletedCandyWindow extends JFrame {
 
 	
-	private JLabel lImageOne;
-	private JLabel lImageTwo;
+	
 	private JButton bBack;
 	private JLabel title;
 	private JLabel logo;
@@ -77,21 +76,7 @@ public class DeletedCandyWindow extends JFrame {
 
 	}
 
-	public JLabel getlImageOne() {
-		return lImageOne;
-	}
-
-	public void setlImageOne(JLabel lImageOne) {
-		this.lImageOne = lImageOne;
-	}
-
-	public JLabel getlImageTwo() {
-		return lImageTwo;
-	}
-
-	public void setlImageTwo(JLabel lImageTwo) {
-		this.lImageTwo = lImageTwo;
-	}
+	
 
 	public JButton getbBack() {
 		return bBack;

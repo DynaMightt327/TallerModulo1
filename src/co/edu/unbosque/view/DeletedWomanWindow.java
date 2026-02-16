@@ -16,11 +16,9 @@ import javax.swing.table.DefaultTableModel;
 
 public class DeletedWomanWindow extends JFrame {
 
-	private JLabel lImageOne;
-	private JLabel lImageTwo;
+	
 	private JButton bBack;
 	private JLabel title;
-	private JLabel logo;
 	private JButton delete;
 	private JTextField posicion;
 
@@ -73,21 +71,6 @@ public class DeletedWomanWindow extends JFrame {
 
 	}
 
-	public JLabel getlImageOne() {
-		return lImageOne;
-	}
-
-	public void setlImageOne(JLabel lImageOne) {
-		this.lImageOne = lImageOne;
-	}
-
-	public JLabel getlImageTwo() {
-		return lImageTwo;
-	}
-
-	public void setlImageTwo(JLabel lImageTwo) {
-		this.lImageTwo = lImageTwo;
-	}
 
 	public JButton getbBack() {
 		return bBack;
@@ -97,13 +80,6 @@ public class DeletedWomanWindow extends JFrame {
 		this.bBack = bBack;
 	}
 
-	public JLabel getLogo() {
-		return logo;
-	}
-
-	public void setLogo(JLabel logo) {
-		this.logo = logo;
-	}
 
 	public JButton getDelete() {
 		return delete;

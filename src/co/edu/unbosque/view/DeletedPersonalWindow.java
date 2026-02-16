@@ -1,4 +1,5 @@
 package co.edu.unbosque.view;
+
 import java.awt.Color;
 import java.awt.Font;
 
@@ -12,80 +13,61 @@ import javax.swing.JTable;
 import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;
 
-public class DeletedPersonalWindow extends JFrame{
-	
-	private JLabel lImageOne;
-	private JLabel lImageTwo;
+public class DeletedPersonalWindow extends JFrame {
+
 	private JButton bBack;
 	private JLabel title;
-	private JLabel logo;
 	private JButton delete;
 	private JTextField posicionPersonal;
 
 	public DeletedPersonalWindow() {
 		initComponents();
-		setVisible(false);	}
+		setVisible(false);
+	}
 
 	public void initComponents() {
 
 		// CONFIGURACION DE LA VENTANA
-				this.setTitle("Lucky j3");
-				this.setBounds(520, 250, 350, 250);
-				this.setDefaultCloseOperation(EXIT_ON_CLOSE);
-				this.setResizable(false);
-				this.setLayout(null);
-				this.getContentPane().setBackground(Color.decode("#B7AADF"));
+		this.setTitle("Lucky j3");
+		this.setBounds(520, 250, 350, 250);
+		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+		this.setResizable(false);
+		this.setLayout(null);
+		this.getContentPane().setBackground(Color.decode("#B7AADF"));
 
+		// ==BOTONES==
+		bBack = new JButton("VOLVER");
+		bBack.setBounds(55, 145, 100, 40);
+		bBack.setFont(new Font("Agency FB", Font.BOLD, 22));
+		bBack.setBackground(Color.decode("#130344"));
+		bBack.setForeground(Color.decode("#ECE7FE"));
+		bBack.setBorderPainted(false);
+		bBack.setFocusPainted(false);
+		add(bBack);
 
-				// ==BOTONES==
-				bBack = new JButton("VOLVER");
-				bBack.setBounds(55, 145, 100, 40);
-				bBack.setFont(new Font("Agency FB", Font.BOLD, 22));
-				bBack.setBackground(Color.decode("#130344"));
-				bBack.setForeground(Color.decode("#ECE7FE"));
-				bBack.setBorderPainted(false);
-				bBack.setFocusPainted(false);
-				add(bBack);
+		delete = new JButton("ELIMINAR");
+		delete.setBounds(185, 145, 100, 40);
+		delete.setFont(new Font("Agency FB", Font.BOLD, 22));
+		delete.setBackground(Color.decode("#130344"));
+		delete.setForeground(Color.decode("#ECE7FE"));
+		delete.setBorderPainted(false);
+		delete.setFocusPainted(false);
+		add(delete);
 
-				delete = new JButton("ELIMINAR");
-				delete.setBounds(185, 145, 100, 40);
-				delete.setFont(new Font("Agency FB", Font.BOLD, 22));
-				delete.setBackground(Color.decode("#130344"));
-				delete.setForeground(Color.decode("#ECE7FE"));
-				delete.setBorderPainted(false);
-				delete.setFocusPainted(false);
-				add(delete);
+		// ==LABELS==
+		title = new JLabel("-> Ingrese el indice del producto que desea eliminar");
+		title.setBounds(16, 28, 700, 50);
+		title.setForeground(Color.decode("#18093E"));
+		title.setFont(new Font("Agency FB", Font.BOLD, 19));
+		add(title);
 
-				// ==LABELS==
-				title = new JLabel("-> Ingrese el indice del producto que desea eliminar");
-				title.setBounds(16, 28, 700, 50);
-				title.setForeground(Color.decode("#18093E"));
-				title.setFont(new Font("Agency FB", Font.BOLD, 19));
-				add(title);
+		posicionPersonal = new JTextField();
+		posicionPersonal.setBounds(143, 80, 50, 50);
+		posicionPersonal.setFont(new Font("Agency FB", Font.BOLD, 30));
+		posicionPersonal.setForeground(Color.decode("#18093E"));
+		posicionPersonal.setBorder(null);
+		add(posicionPersonal);
 
-				posicionPersonal = new JTextField();
-				posicionPersonal.setBounds(143, 80, 50, 50);
-				posicionPersonal.setFont(new Font("Agency FB", Font.BOLD, 30));
-				posicionPersonal.setForeground(Color.decode("#18093E"));
-				posicionPersonal.setBorder(null);
-				add(posicionPersonal);
-				
-	}
-
-	public JLabel getlImageOne() {
-		return lImageOne;
-	}
-
-	public void setlImageOne(JLabel lImageOne) {
-		this.lImageOne = lImageOne;
-	}
-
-	public JLabel getlImageTwo() {
-		return lImageTwo;
-	}
-
-	public void setlImageTwo(JLabel lImageTwo) {
-		this.lImageTwo = lImageTwo;
 	}
 
 	public JButton getbBack() {
@@ -94,14 +76,6 @@ public class DeletedPersonalWindow extends JFrame{
 
 	public void setbBack(JButton bBack) {
 		this.bBack = bBack;
-	}
-
-	public JLabel getLogo() {
-		return logo;
-	}
-
-	public void setLogo(JLabel logo) {
-		this.logo = logo;
 	}
 
 	public JButton getDelete() {
@@ -119,7 +93,5 @@ public class DeletedPersonalWindow extends JFrame{
 	public void setPosicion(JTextField posicion) {
 		this.posicionPersonal = posicion;
 	}
-
-	
 
 }

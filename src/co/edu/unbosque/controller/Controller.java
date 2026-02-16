@@ -21,7 +21,12 @@ import co.edu.unbosque.view.CreateProductWindow;
 import co.edu.unbosque.view.ReadProductWindow;
 import co.edu.unbosque.view.ReadSimpleWindow;
 import co.edu.unbosque.view.ReadWomanWindow;
+import co.edu.unbosque.view.UploadCandyWindow;
+import co.edu.unbosque.view.UploadCupWindow;
+import co.edu.unbosque.view.UploadPersonalWindow;
 import co.edu.unbosque.view.UploadProductWindow;
+import co.edu.unbosque.view.UploadSimpleWindow;
+import co.edu.unbosque.view.UploadWomanWindow;
 import co.edu.unbosque.model.*;
 
 import java.awt.event.ActionEvent;
@@ -46,9 +51,7 @@ public class Controller implements ActionListener {
 	private ArrayList<AnchetaPersonalizable> listaAnchetaPersonalizable;
 	private ArrayList<AnchetaSencilla> listaAnchetaSencilla;
 	private ArrayList<PocilloPersonalizable> listaPocilloPersonalizable;
-	
-	//aaaaa
-	
+
 	private PrincipalWindow pw;
 	private OpWindow ow;
 
@@ -67,6 +70,11 @@ public class Controller implements ActionListener {
 	private ReadCupWindow rcpw;
 
 	private UploadProductWindow uprw;
+	private UploadCandyWindow ucw;
+	private UploadCupWindow ucpw;
+	private UploadPersonalWindow upw;
+	private UploadSimpleWindow usw;
+	private UploadWomanWindow uww;
 
 	private DeletedProductWindow dw;
 	private DeletedCandyWindow dcw;
@@ -94,6 +102,11 @@ public class Controller implements ActionListener {
 		rww = new ReadWomanWindow();
 
 		uprw = new UploadProductWindow();
+		ucw = new UploadCandyWindow();
+		ucpw = new UploadCupWindow();
+		upw = new UploadPersonalWindow();
+		usw = new UploadSimpleWindow();
+		uww = new UploadWomanWindow();
 
 		dw = new DeletedProductWindow();
 		dcw = new DeletedCandyWindow();
@@ -201,7 +214,37 @@ public class Controller implements ActionListener {
 		// ==VENTANA ACTUALIZAR==
 		uprw.getbBack().addActionListener(this);
 		uprw.getbBack().setActionCommand("boton_back_upload");
+		
+		ucw.getbBack().addActionListener(this);
+		ucw.getbBack().setActionCommand("boton_back_candy_upload");
 
+		uprw.getbAnchetaDulce().addActionListener(this);
+		uprw.getbAnchetaDulce().setActionCommand("boton_candy_upload");
+
+		ucpw.getbBack().addActionListener(this);
+		ucpw.getbBack().setActionCommand("boton_back_cup_upload");
+		
+		uprw.getbPocilloPersonalizable().addActionListener(this);
+		uprw.getbPocilloPersonalizable().setActionCommand("boton_cup_upload");
+
+		upw.getbBack().addActionListener(this);
+		upw.getbBack().setActionCommand("boton_back_personal_upload");
+		
+		uprw.getbAnchetaPersonalizable().addActionListener(this);
+		uprw.getbAnchetaPersonalizable().setActionCommand("boton_personal_upload");
+
+		usw.getbBack().addActionListener(this);
+		usw.getbBack().setActionCommand("boton_back_simple_upload");
+		
+		uprw.getbAnchetaSencilla().addActionListener(this);
+		uprw.getbAnchetaSencilla().setActionCommand("boton_simple_upload");
+		
+		uww.getbBack().addActionListener(this);
+		uww.getbBack().setActionCommand("boton_back_woman_upload");
+		
+		uprw.getbAnchetaParaMujer().addActionListener(this);
+		uprw.getbAnchetaParaMujer().setActionCommand("boton_woman_upload");
+		
 		// ==VENTANA ELIMINAR==
 		dw.getbBack().addActionListener(this);
 		dw.getbBack().setActionCommand("boton_back_deleted");
@@ -409,6 +452,32 @@ public class Controller implements ActionListener {
 			uprw.setVisible(true);
 			break;
 		}
+		case "boton_candy_upload": {
+			uprw.setVisible(true);
+			ucw.setVisible(true);
+			break;
+		}
+		case "boton_cup_upload": {
+			uprw.setVisible(true);
+			ucpw.setVisible(true);
+			break;
+		}
+		case "boton_personal_upload": {
+			uprw.setVisible(true);
+			upw.setVisible(true);
+			break;
+		}
+		
+		case "boton_simple_upload": {
+			uprw.setVisible(true);
+			usw.setVisible(true);
+			break;
+		}
+		case "boton_woman_upload": {
+			uprw.setVisible(true);
+			uww.setVisible(true);
+			break;
+		}
 		
 		//--------------------------------
 		case "boton_deleted": {
@@ -510,6 +579,31 @@ public class Controller implements ActionListener {
 		case "boton_back_upload": {
 			uprw.setVisible(false);
 			ow.setVisible(true);
+			break;
+		}
+		case "boton_back_candy_upload": {
+			ucw.setVisible(false);
+			uprw.setVisible(true);
+			break;
+		}
+		case "boton_back_cup_upload": {
+			ucpw.setVisible(false);
+			uprw.setVisible(true);
+			break;
+		}
+		case "boton_back_personal_upload": {
+			upw.setVisible(false);
+			uprw.setVisible(true);
+			break;
+		}
+		case "boton_back_simple_upload": {
+			usw.setVisible(false);
+			uprw.setVisible(true);
+			break;
+		}
+		case "boton_back_woman_upload": {
+			uww.setVisible(false);
+			uprw.setVisible(true);
 			break;
 		}
 		//-----------------------------------
