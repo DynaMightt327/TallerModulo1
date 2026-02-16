@@ -241,9 +241,6 @@ public class Controller implements ActionListener {
 		
 		uww.getbBack().addActionListener(this);
 		uww.getbBack().setActionCommand("boton_back_woman_upload");
-		
-		uww.getUpload().addActionListener(this);
-		uww.getUpload().setActionCommand("boton_update_woman");
 
 		
 		// ==VENTANA ELIMINAR==
@@ -318,7 +315,7 @@ public class Controller implements ActionListener {
 		ucw.getUpload().setActionCommand("boton_upload_candy");
 		
 		uww.getUpload().addActionListener(this);
-		uww.getUpload().setActionCommand("boton_upload_women");
+		uww.getUpload().setActionCommand("boton_upload_woman");
 		
 		upw.getUpload().addActionListener(this);
 		upw.getUpload().setActionCommand("boton_upload_personal");
@@ -915,7 +912,7 @@ public class Controller implements ActionListener {
 			}
 			break;
 		}
-		case "boton_upload_women": {
+		case "boton_upload_woman": {
 			
 			try {
 				
